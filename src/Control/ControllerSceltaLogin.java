@@ -15,6 +15,7 @@ public class ControllerSceltaLogin {
     private void bottoneSceltaDottore(ActionEvent event) {
     }
 
+    // Scelta login CSS
     @FXML
     private Label titoloPannelloScelta;
     @FXML
