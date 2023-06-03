@@ -20,9 +20,9 @@
             <Label fx:id="passwordLabel" text="Password:"/>
             <PasswordField fx:id="passwordField"/>
         </VBox>
-        <HBox alignment="CENTER" spacing="20" layoutX="250" layoutY="275">
-            <Button fx:id="backButton" text="Indietro" onAction="#bottoneIndietro"/>
-            <Button fx:id="loginButton" text="Login" onAction="#bottoneLoginMedico"/>
+        <HBox alignment="CENTER" spacing="10" layoutX="245" layoutY="275">
+            <Button fx:id="backButton" text="Indietro" onAction="#bottoneIndietro" prefWidth="70"/>
+            <Button fx:id="loginButton" text="Login" onAction="#bottoneLoginMedico" prefWidth="70"/>
         </HBox>
     </AnchorPane>
 

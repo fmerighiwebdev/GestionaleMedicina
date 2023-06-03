@@ -60,6 +60,8 @@ public class ControllerLoginMedico {
         passwordLabel.getStyleClass().add("password-label");
         usernameField.getStyleClass().add("username-field");
         passwordField.getStyleClass().add("password-field");
+        backButton.getStyleClass().add("back-button");
+        loginButton.getStyleClass().add("login-button");
     }
 
 }
