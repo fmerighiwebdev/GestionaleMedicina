@@ -32,6 +32,12 @@
     -fx-background-color: #a1a1a1;
 }
 
+.title-login-medico{
+    -fx-font-weight: bold;
+    -fx-font-size: 24px;
+    -fx-text-fill: #333333;
+}
+
 .username-label, .password-label {
     -fx-font-weight: bold;
 }

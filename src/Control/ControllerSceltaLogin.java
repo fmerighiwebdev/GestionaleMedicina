@@ -20,7 +20,6 @@ public class ControllerSceltaLogin {
 
     @FXML
     private void bottoneSceltaPaziente(ActionEvent event) {
-
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/PazienteLogin.fxml"));
             Parent root = loader.load();
@@ -34,6 +33,14 @@ public class ControllerSceltaLogin {
 
     @FXML
     private void bottoneSceltaDottore(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/MedicoLogin.fxml"));
+            Parent root = loader.load();
+            Stage stage = (Stage) bottoneSceltaDottore.getScene().getWindow();
+            stage.setScene(new Scene(root));
+        } catch (Exception ePatientLogin) {
+            ePatientLogin.printStackTrace();
+        }
     }
 
     // Scelta login CSS
