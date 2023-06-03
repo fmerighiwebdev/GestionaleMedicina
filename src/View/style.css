@@ -5,7 +5,7 @@
     -fx-background-size: cover;
 }
 
-.title-choice {
+.title-choice, .title-login {
     -fx-font-weight: bold;
     -fx-font-size: 20;
 }
@@ -30,4 +30,12 @@
 
 .button-doctor-choice:hover {
     -fx-background-color: #a1a1a1;
+}
+
+.username-label, .password-label {
+    -fx-font-weight: bold;
+}
+
+.username-field, .password-field {
+    -fx-background-color: #D9D9D9;
 }
