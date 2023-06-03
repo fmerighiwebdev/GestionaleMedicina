@@ -14,7 +14,7 @@
            prefHeight="400.0" prefWidth="600.0"
            stylesheets="@style.css">
 
-    <AnchorPane>
+    <AnchorPane styleClass="login-sfondo">
         <VBox alignment="CENTER" spacing="20" layoutX="225" layoutY="125">
             <Label fx:id="titoloPannelloScelta" text="Seleziona l'accesso"/>
             <HBox alignment="CENTER" spacing="20">
