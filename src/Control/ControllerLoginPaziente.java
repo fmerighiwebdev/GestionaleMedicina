@@ -10,6 +10,15 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.scene.control.Alert;
+
+import java.io.FileReader;
+import java.io.IOException;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
 
 public class ControllerLoginPaziente {
 
@@ -27,7 +36,6 @@ public class ControllerLoginPaziente {
     private Button backButton;
     @FXML
     private Button loginButton;
-
 
     @FXML
     private void bottoneIndietro(ActionEvent event) {
@@ -47,11 +55,8 @@ public class ControllerLoginPaziente {
 
         String username = usernameField.getText();
         String password = passwordField.getText();
-
-        System.out.println(username);
-        System.out.println(password);
-
     }
+
 
     // Paziente login CSS
     public void initialize() {
