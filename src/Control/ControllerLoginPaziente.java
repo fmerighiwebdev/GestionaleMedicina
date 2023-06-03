@@ -12,6 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.scene.control.Alert;
 
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -39,7 +40,6 @@ public class ControllerLoginPaziente {
 
     @FXML
     private void bottoneIndietro(ActionEvent event) {
-
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/SceltaLogin.fxml"));
             Parent root = loader.load();
@@ -55,6 +55,37 @@ public class ControllerLoginPaziente {
 
         String username = usernameField.getText();
         String password = passwordField.getText();
+        try{
+            JsonElement fileElement = new Gson().fromJson(new FileReader("src/Model/user.json"), JsonElement.class);
+            JsonObject fileObject = fileElement.getAsJsonObject();
+
+            JsonArray pazientiArray = fileObject.getAsJsonArray("pazienti");
+            for (JsonElement pazienteElement : pazientiArray) {
+                JsonObject pazienteObject = pazienteElement.getAsJsonObject();
+                String pazienteUsername = pazienteObject.get("username").getAsString();
+                String pazientePassword = pazienteObject.get("password").getAsString();
+
+                if (username.equals(pazienteUsername) && password.equals(pazientePassword)) {
+                    // Login effettuato con successo
+                    // Aggiungi qui il codice per la logica successiva al login
+                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                    alert.setTitle("Successo di Login");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Credenziali esatte.");
+                    alert.showAndWait();
+                    return;
+                }
+            }
+
+            // Le credenziali sono errate, mostra una notifica
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Errore di login");
+            alert.setHeaderText(null);
+            alert.setContentText("Credenziali errate. Riprova.");
+            alert.showAndWait();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
 

@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Rimozione immagine">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Aggiunta file json">
       <change beforePath="$PROJECT_DIR$/src/Control/ControllerLoginMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerLoginMedico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/MedicoLogin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/MedicoLogin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/SceltaLogin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/SceltaLogin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/ControllerLoginPaziente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerLoginPaziente.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +27,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="2QeUmwqkQk3SpevnN91GJxpDIWL" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -74,7 +72,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685722504615</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Aggiunta file json">
+      <created>1685806721365</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685806721365</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -82,6 +87,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Rimozione immagine" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rimozione immagine" />
+    <MESSAGE value="Aggiunta file json" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunta file json" />
   </component>
 </project>

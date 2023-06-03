@@ -1,15 +1,19 @@
 package Control;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 
 public class ControllerLoginMedico {
 
@@ -31,7 +35,6 @@ public class ControllerLoginMedico {
 
     @FXML
     private void bottoneIndietro(ActionEvent event) {
-
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/SceltaLogin.fxml"));
             Parent root = loader.load();
@@ -48,9 +51,36 @@ public class ControllerLoginMedico {
         String username = usernameField.getText();
         String password = passwordField.getText();
 
-        System.out.println(username);
-        System.out.println(password);
+        try{
+            JsonElement fileElement = new Gson().fromJson(new FileReader("src/Model/user.json"), JsonElement.class);
+            JsonObject fileObject = fileElement.getAsJsonObject();
 
+            JsonArray mediciArray = fileObject.getAsJsonArray("medici");
+            for (JsonElement medicoElement : mediciArray) {
+                JsonObject medicoObject = medicoElement.getAsJsonObject();
+                String medicoUsername = medicoObject.get("username").getAsString();
+                String medicoPassword = medicoObject.get("password").getAsString();
+
+                if (username.equals(medicoUsername) && password.equals(medicoPassword)) {
+                    // Login effettuato con successo
+                    // Aggiungi qui il codice per la logica successiva al login
+                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                    alert.setTitle("Successo di Login");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Credenziali esatte.");
+                    alert.showAndWait();
+                    return;
+                }
+            }
+            // Le credenziali sono errate, mostra una notifica
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Errore di login");
+            alert.setHeaderText(null);
+            alert.setContentText("Credenziali errate. Riprova.");
+            alert.showAndWait();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     // Paziente login CSS
