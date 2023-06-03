@@ -39,3 +39,23 @@
 .username-field, .password-field {
     -fx-background-color: #D9D9D9;
 }
+
+.back-button {
+    -fx-border-radius: 20;
+    -fx-background-color: #D9D9D9;
+    -fx-cursor: hand;
+}
+
+.login-button {
+    -fx-border-radius: 20;
+    -fx-background-color: #b2f57a;
+    -fx-cursor: hand;
+}
+
+.back-button:hover {
+    -fx-background-color: #a1a1a1;
+}
+
+.login-button:hover {
+    -fx-background-color: #7eb054;
+}

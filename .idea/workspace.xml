@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Rimozione immagine">
+    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Aggiunto pannello login paziente">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/ControllerSceltaLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerSceltaLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/ControllerLoginPaziente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerLoginPaziente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/PazienteLogin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/PazienteLogin.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Telemedicina" beforeDir="false" afterPath="$PROJECT_DIR$/../Telemedicina" afterDir="false" />
     </list>
@@ -66,7 +66,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1685713705365</updated>
-      <workItem from="1685713706171" duration="14272000" />
+      <workItem from="1685713706171" duration="15059000" />
     </task>
     <task id="LOCAL-00001" summary="Rimozione immagine">
       <created>1685722504615</created>
@@ -83,6 +83,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Rimozione immagine" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rimozione immagine" />
+    <MESSAGE value="Aggiunto pannello login paziente" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunto pannello login paziente" />
   </component>
 </project>
