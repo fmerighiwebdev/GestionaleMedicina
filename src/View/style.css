@@ -70,6 +70,26 @@
     -fx-background-color: #46db5f;
 }
 
+/* */
+.titled-pane-lista>.title>.arrow-button{
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+}
+
+
+.split-pane-lista{
+    -fx-border-color: #83d6c0;
+    -fx-border-width: 2;
+}
+
+.anchor-pane-lista{
+    -fx-background-image: url("images/background.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: cover;
+
+}
+
 .details-title {
     -fx-font-weight: bold;
 }

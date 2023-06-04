@@ -45,11 +45,9 @@ public class ControllerLoginMedico {
     }
     @FXML
     private void bottoneLoginMedico(ActionEvent event) {
-
         String username = usernameField.getText();
         String password = passwordField.getText();
-
-        try{
+        try {
             JsonElement fileElement = new Gson().fromJson(new FileReader("src/Model/user.json"), JsonElement.class);
             JsonObject fileObject = fileElement.getAsJsonObject();
 
@@ -61,7 +59,7 @@ public class ControllerLoginMedico {
 
                 if (username.equals(medicoUsername) && password.equals(medicoPassword)) {
                     try {
-                        FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/MedicoDettagli.fxml"));
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/MedicoListaPazienti.fxml"));
                         Parent root = loader.load();
 
                         Stage stage = (Stage) loginButton.getScene().getWindow();
@@ -79,6 +77,7 @@ public class ControllerLoginMedico {
                     return;
                 }
             }
+
             // Le credenziali sono errate, mostra una notifica
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Errore di login");
