@@ -69,3 +69,7 @@
 .login-button:hover {
     -fx-background-color: #46db5f;
 }
+
+.details-title {
+    -fx-font-weight: bold;
+}
