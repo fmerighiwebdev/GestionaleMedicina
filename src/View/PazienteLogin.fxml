@@ -13,14 +13,14 @@
             stylesheets="@style.css">
 
     <AnchorPane>
-        <Label fx:id="titoloPannelloLogin" text="Paziente:" layoutX="275" layoutY="20"/>
+        <Label fx:id="titoloPannelloLogin" text="Paziente:" layoutX="280" layoutY="50"/>
         <VBox alignment="CENTER" spacing="10" layoutX="245" layoutY="125">
             <Label fx:id="usernameLabel" text="Username:"/>
             <TextField fx:id="usernameField"/>
             <Label fx:id="passwordLabel" text="Password:"/>
             <PasswordField fx:id="passwordField"/>
         </VBox>
-        <HBox alignment="CENTER" spacing="10" layoutX="245" layoutY="275">
+        <HBox alignment="CENTER" spacing="10" layoutX="255" layoutY="275">
             <Button fx:id="backButton" text="Indietro" onAction="#bottoneIndietro" prefWidth="70"/>
             <Button fx:id="loginButton" text="Login" onAction="#bottoneLoginPaziente" prefWidth="70"/>
         </HBox>

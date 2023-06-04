@@ -16,7 +16,6 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 
 public class ControllerLoginMedico {
-
     @FXML
     private Label titoloPannelloLogin;
     @FXML
@@ -31,7 +30,6 @@ public class ControllerLoginMedico {
     private Button backButton;
     @FXML
     private Button loginButton;
-
 
     @FXML
     private void bottoneIndietro(ActionEvent event) {

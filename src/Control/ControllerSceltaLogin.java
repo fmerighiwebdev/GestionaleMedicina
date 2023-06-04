@@ -28,7 +28,6 @@ public class ControllerSceltaLogin {
         } catch (Exception ePatientLogin) {
             ePatientLogin.printStackTrace();
         }
-
     }
 
     @FXML

@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Aggiunta file json">
+    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Aggiunto controllo credenziali">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Control/ControllerLoginMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerLoginMedico.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Control/ControllerLoginPaziente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerLoginPaziente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/ControllerSceltaLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerSceltaLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/MedicoLogin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/MedicoLogin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/PazienteLogin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/PazienteLogin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/SceltaLogin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/SceltaLogin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +25,8 @@
       <list>
         <option value="JavaFXApplication" />
         <option value="CSS File" />
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -40,7 +47,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/UNI/JavaFX/Projects&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/noname/Documenti/Secondo Anno/Ingegneria/GestionaleMedicina&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -55,6 +62,20 @@
       <recent name="C:\UNI\JavaFX\Projects\GestionaleMedicina\src\View\images" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="GestionaleMedicina" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -64,6 +85,9 @@
       <option name="presentableId" value="Default" />
       <updated>1685713705365</updated>
       <workItem from="1685713706171" duration="14272000" />
+      <workItem from="1685817357575" duration="23000" />
+      <workItem from="1685817419443" duration="1000" />
+      <workItem from="1685819901296" duration="6876000" />
     </task>
     <task id="LOCAL-00001" summary="Rimozione immagine">
       <created>1685722504615</created>
@@ -79,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685806721365</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Aggiunto controllo credenziali">
+      <created>1685813834099</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685813834099</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -88,6 +119,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Rimozione immagine" />
     <MESSAGE value="Aggiunta file json" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aggiunta file json" />
+    <MESSAGE value="Aggiunto controllo credenziali" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunto controllo credenziali" />
   </component>
 </project>

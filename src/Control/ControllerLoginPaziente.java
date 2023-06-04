@@ -52,7 +52,6 @@ public class ControllerLoginPaziente {
     }
     @FXML
     private void bottoneLoginPaziente(ActionEvent event) {
-
         String username = usernameField.getText();
         String password = passwordField.getText();
         try{
