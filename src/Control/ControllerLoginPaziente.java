@@ -54,7 +54,7 @@ public class ControllerLoginPaziente {
     private void bottoneLoginPaziente(ActionEvent event) {
         String username = usernameField.getText();
         String password = passwordField.getText();
-        try{
+        try {
             JsonElement fileElement = new Gson().fromJson(new FileReader("src/Model/user.json"), JsonElement.class);
             JsonObject fileObject = fileElement.getAsJsonObject();
 
@@ -65,8 +65,17 @@ public class ControllerLoginPaziente {
                 String pazientePassword = pazienteObject.get("password").getAsString();
 
                 if (username.equals(pazienteUsername) && password.equals(pazientePassword)) {
+                    try {
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/PazienteDettagli.fxml"));
+                        Parent root = loader.load();
+
+                        Stage stage = (Stage) loginButton.getScene().getWindow();
+                        stage.setScene(new Scene(root));
+                    } catch (Exception ePatientDetails) {
+                        ePatientDetails.printStackTrace();
+                    }
+
                     // Login effettuato con successo
-                    // Aggiungi qui il codice per la logica successiva al login
                     Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                     alert.setTitle("Successo di Login");
                     alert.setHeaderText(null);

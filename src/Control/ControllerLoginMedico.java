@@ -60,8 +60,17 @@ public class ControllerLoginMedico {
                 String medicoPassword = medicoObject.get("password").getAsString();
 
                 if (username.equals(medicoUsername) && password.equals(medicoPassword)) {
+                    try {
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/MedicoDettagli.fxml"));
+                        Parent root = loader.load();
+
+                        Stage stage = (Stage) loginButton.getScene().getWindow();
+                        stage.setScene(new Scene(root));
+                    } catch (Exception ePatientDetails) {
+                        ePatientDetails.printStackTrace();
+                    }
+
                     // Login effettuato con successo
-                    // Aggiungi qui il codice per la logica successiva al login
                     Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                     alert.setTitle("Successo di Login");
                     alert.setHeaderText(null);

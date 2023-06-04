@@ -31,7 +31,7 @@
                     <graphic>
                         <ImageView fitWidth="50" fitHeight="50" preserveRatio="true">
                             <image>
-                                <Image url="@images/patient_icon_64.png" />
+                                <Image url="@images/doctor_icon_64.png" />
                             </image>
                         </ImageView>
                     </graphic>
