@@ -6,34 +6,15 @@ import javafx.scene.layout.AnchorPane;
 
 public class ControllerListaPazientiMedico {
     @FXML
-    private TitledPane titledPane;
+    private  TextField title;
     @FXML
-    private AnchorPane anchorPane;
+    private TextField faketextfield1;
     @FXML
-    private SplitPane splitPane;
-    @FXML
-    private Label info;
-    @FXML
-    private Label nomeMedico;
-    @FXML
-    private Label cognomeMedico;
-    @FXML
-    private Label tuoiPazienti;
-    @FXML
-    private Button paziente1;
-    @FXML
-    private Button paziente2;
-
+    private TextField faketextfield2;
     public void initialize() {
-        titledPane.getStyleClass().add("titled-pane-lista");
-        anchorPane.getStyleClass().add("anchor-pane-lista");
-        splitPane.getStyleClass().add("split-pane-lista");
-        info.getStyleClass().add("title-info");
-        nomeMedico.getStyleClass().add("nome-medico-label");
-        cognomeMedico.getStyleClass().add("cognome-medico-label");
-        tuoiPazienti.getStyleClass().add("tuoi-pazienti-label");
-        paziente1.getStyleClass().add("bottone-paziente1");
-        paziente2.getStyleClass().add("bottone-paziente2");
+        title.getStyleClass().add("title");
+        faketextfield1.getStyleClass().add("faketextfield1");
+        faketextfield2.getStyleClass().add("faketextfield2");
     }
 
 }

@@ -70,26 +70,29 @@
     -fx-background-color: #46db5f;
 }
 
-/* */
-.titled-pane-lista>.title>.arrow-button{
-    -fx-padding: 0;
-    -fx-background-color: transparent;
-}
 
-
-.split-pane-lista{
-    -fx-border-color: #83d6c0;
-    -fx-border-width: 2;
-}
-
-.anchor-pane-lista{
+.titled-pane-lista{
     -fx-background-image: url("images/background.jpg");
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
-    -fx-background-size: cover;
-
 }
 
-.details-title {
-    -fx-font-weight: bold;
+#title{
+    -fx-background-color:  #5f9ea0;
+    -fx-text-alignment: center;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-text-fill:white;
+}
+
+#faketextfield1 {
+    -fx-border-color: black;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-background-color:white;
+}
+
+#faketextfield2 {
+    -fx-border-color: transparent, black;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-background-color: white;
 }
