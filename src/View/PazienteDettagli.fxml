@@ -9,7 +9,7 @@
    <children>
       <TextField fx:id="title" alignment="CENTER" layoutY="-1.0" prefHeight="51.0" prefWidth="600.0" text="Dettagli paziente:">
          <font>
-            <Font name="Arial Bold" size="18.0" />
+            <Font name="System Bold Italic" size="18.0" />
          </font>
       </TextField>
       <HBox layoutX="175.0" layoutY="65.0" prefHeight="30.0" prefWidth="250.0">
@@ -247,7 +247,7 @@
             </HBox>
             <HBox alignment="TOP_CENTER" prefHeight="90.0" prefWidth="600.0">
                <children>
-                  <Button fx:id="logoutButton" mnemonicParsing="false" text="Logout" onAction="#bottoneLogout">
+                  <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#bottoneLogout" text="Logout">
                      <font>
                         <Font name="Arial" size="13.0" />
                      </font>
