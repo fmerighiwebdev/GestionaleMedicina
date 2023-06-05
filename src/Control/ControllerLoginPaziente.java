@@ -77,7 +77,7 @@ public class ControllerLoginPaziente {
 
                     // Login effettuato con successo
                     Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                    alert.setTitle("Successo di Login");
+                    alert.setTitle("Login effettuato con successo");
                     alert.setHeaderText(null);
                     alert.setContentText("Credenziali esatte.");
                     alert.showAndWait();

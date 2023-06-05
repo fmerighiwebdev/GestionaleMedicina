@@ -5,13 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
-            minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="800.0" prefWidth="600.0"
-            xmlns="http://javafx.com/javafx/17.0.2-ea"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="Control.ControllerDettagliPaziente"
-            stylesheets="@style.css">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.ControllerDettagliPaziente">
    <children>
       <TextField fx:id="title" alignment="CENTER" layoutY="-1.0" prefHeight="51.0" prefWidth="600.0" text="Dettagli paziente:">
          <font>
@@ -100,6 +94,9 @@
                <VBox.margin>
                   <Insets left="30.0" right="30.0" top="15.0" />
                </VBox.margin>
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
             </TextArea>
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="197.0" layoutY="138.0" prefHeight="28.0" prefWidth="226.0" text="Terapia:" textAlignment="JUSTIFY">
                <font>
@@ -123,7 +120,10 @@
                         <TextField promptText="dd">
                            <VBox.margin>
                               <Insets top="5.0" />
-                           </VBox.margin></TextField>
+                           </VBox.margin>
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font></TextField>
                      </children>
                      <HBox.margin>
                         <Insets right="10.0" />
@@ -138,7 +138,10 @@
                         <TextField promptText="mm">
                            <VBox.margin>
                               <Insets top="5.0" />
-                           </VBox.margin></TextField>
+                           </VBox.margin>
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font></TextField>
                      </children>
                      <HBox.margin>
                         <Insets right="10.0" />
@@ -154,6 +157,9 @@
                            <VBox.margin>
                               <Insets right="10.0" top="5.0" />
                            </VBox.margin>
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
                         </TextField>
                      </children>
                   </VBox>
@@ -167,6 +173,9 @@
                            <VBox.margin>
                               <Insets top="5.0" />
                            </VBox.margin>
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
                         </TextField>
                      </children>
                   </VBox>
@@ -188,6 +197,9 @@
                            <VBox.margin>
                               <Insets top="5.0" />
                            </VBox.margin>
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
                         </TextField>
                      </children>
                      <HBox.margin>
@@ -205,6 +217,9 @@
                            <VBox.margin>
                               <Insets top="5.0" />
                            </VBox.margin>
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
                         </TextField>
                      </children>
                      <HBox.margin>
@@ -222,9 +237,32 @@
                            <VBox.margin>
                               <Insets top="5.0" />
                            </VBox.margin>
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
                         </TextField>
                      </children>
                   </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="90.0" prefWidth="600.0">
+               <children>
+                  <Button fx:id="logoutButton" mnemonicParsing="false" text="Logout" onAction="#bottoneLogout">
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" top="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="sendButton" mnemonicParsing="false" text="Invia">
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </HBox.margin>
+                  </Button>
                </children>
             </HBox>
          </children>
