@@ -6,10 +6,10 @@
 <StackPane prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.ControllerLoginPaziente">
 
     <AnchorPane>
-        <Label fx:id="titoloPannelloLogin" layoutX="300.0" layoutY="83.0" text="Paziente:" />
+        <Label fx:id="titoloPannelloLogin" layoutX="300.0" layoutY="117.0" text="Paziente:" />
         <VBox alignment="CENTER" layoutX="245" layoutY="125" spacing="10" />
         <HBox alignment="CENTER" layoutX="255" layoutY="275" spacing="10" />
-      <GridPane layoutX="257.0" layoutY="215.0" prefHeight="90.0" prefWidth="146.0">
+      <GridPane layoutX="257.0" layoutY="230.0" prefHeight="90.0" prefWidth="146.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -24,7 +24,7 @@
                <Button fx:id="loginButton" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" onAction="#bottoneLoginPaziente" prefWidth="70" text="Login" textAlignment="CENTER" GridPane.columnIndex="1" />
          </children>
       </GridPane>
-      <GridPane layoutX="192.0" layoutY="125.0" prefHeight="90.0" prefWidth="276.0">
+      <GridPane layoutX="192.0" layoutY="155.0" prefHeight="90.0" prefWidth="276.0">
         <columnConstraints>
           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="132.0" minWidth="10.0" prefWidth="105.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="187.0" minWidth="10.0" prefWidth="171.0" />
