@@ -14,12 +14,12 @@
          <AnchorPane layoutX="14.0" layoutY="89.0">
             <children>
                <TextField fx:id="faketextfield1" disable="true" editable="false" opacity="1" prefHeight="90.0" prefWidth="371.0" />
-               <ImageView fitHeight="31.0" fitWidth="34.0" layoutX="43.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="54.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                   <image>
                      <Image url="@images/profile_icon_32.png" />
                   </image>
                </ImageView>
-            <Label layoutX="103.0" layoutY="55.0" text="Nome">
+            <Label layoutX="97.0" layoutY="45.0" text="Nome">
                <font>
                   <Font name="System Italic" size="16.0" />
                </font>
@@ -29,7 +29,7 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <Label layoutX="157.0" layoutY="55.0" text="Cognome">
+            <Label layoutX="157.0" layoutY="45.0" text="Cognome">
                <font>
                   <Font name="System Italic" size="16.0" />
                </font>
