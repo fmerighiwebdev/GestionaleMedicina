@@ -7,7 +7,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="400.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.ControllerListaPazientiMedico">
       <children>
-         <TextField fx:id="title" alignment="CENTER" editable="false" layoutX="-8.0" prefHeight="53.0" prefWidth="408.0" text="Lista Pazienti">
+         <TextField fx:id="title" alignment="CENTER" editable="false" layoutX="-8.0" prefHeight="53.0" prefWidth="408.0">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font></TextField>
@@ -81,5 +81,10 @@
             <Button layoutX="155.0" layoutY="194.0" mnemonicParsing="false" text="Logout" />
             </children>
          </AnchorPane>
+      <Label layoutX="127.0" layoutY="16.0" text="Lista Pazienti" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
       </children>
 </AnchorPane>

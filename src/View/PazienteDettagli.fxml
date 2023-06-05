@@ -7,7 +7,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.ControllerDettagliPaziente">
    <children>
-      <TextField fx:id="title" alignment="CENTER" layoutY="-1.0" prefHeight="51.0" prefWidth="600.0" text="Dettagli paziente:">
+      <TextField fx:id="title" alignment="CENTER" editable="flase" layoutY="-1.0" prefHeight="51.0" prefWidth="600.0">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>
@@ -267,5 +267,10 @@
             </HBox>
          </children>
       </VBox>
+      <Label layoutX="212.0" layoutY="14.0" text="Dettagli Paziente" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
