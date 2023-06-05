@@ -67,13 +67,6 @@ public class ControllerLoginMedico {
                     } catch (Exception ePatientDetails) {
                         ePatientDetails.printStackTrace();
                     }
-
-                    // Login effettuato con successo
-                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                    alert.setTitle("Login effettuato con successo");
-                    alert.setHeaderText(null);
-                    alert.setContentText("Credenziali esatte.");
-                    alert.showAndWait();
                     return;
                 }
             }

@@ -22,7 +22,6 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 public class ControllerLoginPaziente {
-
     @FXML
     private Label titoloPannelloLogin;
     @FXML
@@ -48,7 +47,6 @@ public class ControllerLoginPaziente {
         } catch (Exception ePatientLogin) {
             ePatientLogin.printStackTrace();
         }
-
     }
     @FXML
     private void bottoneLoginPaziente(ActionEvent event) {
@@ -74,13 +72,6 @@ public class ControllerLoginPaziente {
                     } catch (Exception ePatientDetails) {
                         ePatientDetails.printStackTrace();
                     }
-
-                    // Login effettuato con successo
-                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                    alert.setTitle("Login effettuato con successo");
-                    alert.setHeaderText(null);
-                    alert.setContentText("Credenziali esatte.");
-                    alert.showAndWait();
                     return;
                 }
             }

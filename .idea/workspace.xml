@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Aggiunta dettagli">
-      <change beforePath="$PROJECT_DIR$/src/View/MedicoListaPazienti.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/MedicoListaPazienti.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/PazienteDettagli.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/PazienteDettagli.fxml" afterDir="false" />
+    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Modifica Labels">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/ControllerLoginMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerLoginMedico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/ControllerLoginPaziente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerLoginPaziente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/SceltaLogin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/SceltaLogin.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1685713705365</updated>
       <workItem from="1685713706171" duration="14272000" />
+      <workItem from="1685978026176" duration="309000" />
     </task>
     <task id="LOCAL-00001" summary="Rimozione immagine">
       <created>1685722504615</created>
@@ -107,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685977417926</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Modifica Labels">
+      <created>1685977825434</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1685977825434</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,6 +128,7 @@
     <MESSAGE value="Aggiunti layout e controller per dettagli medico e paziente" />
     <MESSAGE value="Agggiunta GUI PazienteDettagli.fxml" />
     <MESSAGE value="Aggiunta dettagli" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aggiunta dettagli" />
+    <MESSAGE value="Modifica Labels" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modifica Labels" />
   </component>
 </project>
