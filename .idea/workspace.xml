@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Aggiunti layout e controller per dettagli medico e paziente">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/ControllerListaPazientiMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerListaPazientiMedico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/MedicoListaPazienti.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/MedicoListaPazienti.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/ControllerDettagliPaziente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerDettagliPaziente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/PazienteDettagli.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/PazienteDettagli.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +41,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/noname/Documenti/Secondo Anno/Ingegneria/GestionaleMedicina&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/UNI/JavaFX/Projects&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -80,8 +79,6 @@
       <option name="presentableId" value="Default" />
       <updated>1685713705365</updated>
       <workItem from="1685713706171" duration="14272000" />
-      <workItem from="1685970819069" duration="25000" />
-      <workItem from="1685970955098" duration="1425000" />
     </task>
     <task id="LOCAL-00001" summary="Rimozione immagine">
       <created>1685722504615</created>
@@ -97,14 +94,7 @@
       <option name="project" value="LOCAL" />
       <updated>1685885182320</updated>
     </task>
-    <task id="LOCAL-00003" summary="Aggiunti layout e controller per dettagli medico e paziente">
-      <created>1685888626464</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1685888626464</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

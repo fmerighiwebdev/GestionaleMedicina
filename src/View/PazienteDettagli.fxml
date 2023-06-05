@@ -1,15 +1,233 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-
-<StackPane prefHeight="400.0" prefWidth="600.0"
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="800.0" prefWidth="600.0"
             xmlns="http://javafx.com/javafx/17.0.2-ea"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="Control.ControllerDettagliPaziente"
             stylesheets="@style.css">
-
-    <Label alignment="CENTER" text="Prova Paziente"/>
-
-</StackPane>
+   <children>
+      <TextField fx:id="title" alignment="CENTER" layoutY="-1.0" prefHeight="51.0" prefWidth="600.0" text="Dettagli paziente:">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </TextField>
+      <HBox layoutX="175.0" layoutY="65.0" prefHeight="30.0" prefWidth="250.0">
+         <children>
+            <Label text="Sei autenticato come: ">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <Label text="Nome Cognome">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="225.0" layoutY="87.0" prefHeight="30.0" prefWidth="150.0">
+         <children>
+            <Label text="Data di oggi: ">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <Label text="Data">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <VBox alignment="TOP_CENTER" layoutY="136.0" prefHeight="665.0" prefWidth="600.0">
+         <children>
+            <Label contentDisplay="CENTER" prefHeight="28.0" prefWidth="226.0" text="Rilevazioni (SBP e DBP):" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="26.0" prefWidth="270.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="150.0" prefHeight="0.0" prefWidth="270.0" text="SBP " textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField promptText="120">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets right="10.0" top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="270.0">
+                     <children>
+                        <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="269.0" text="DBP " textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField promptText="80">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="197.0" layoutY="10.0" prefHeight="28.0" prefWidth="226.0" text="Sintomi rilevati:" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextArea prefHeight="150.0" prefWidth="50.0" promptText="Sintomi rilevati durante la terapia...">
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" top="15.0" />
+               </VBox.margin>
+            </TextArea>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="197.0" layoutY="138.0" prefHeight="28.0" prefWidth="226.0" text="Terapia:" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="25.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" />
+               </VBox.margin>
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="150.0">
+                     <children>
+                        <Label text="Giorno">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font></Label>
+                        <TextField promptText="dd">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin></TextField>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="150.0">
+                     <children>
+                        <Label text="Mese">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font></Label>
+                        <TextField promptText="mm">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin></TextField>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="150.0">
+                     <children>
+                        <Label text="Anno">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font></Label>
+                        <TextField promptText="yyyy">
+                           <VBox.margin>
+                              <Insets right="10.0" top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="150.0">
+                     <children>
+                        <Label text="Ora">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font></Label>
+                        <TextField promptText="hh">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" />
+               </VBox.margin>
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="180.0">
+                     <children>
+                        <Label text="Farmaco">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField promptText="Tachipirina">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="180.0">
+                     <children>
+                        <Label text="N° Assunzioni">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField promptText="1">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="180.0">
+                     <children>
+                        <Label text="Quantità (in mg)">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField promptText="100">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
