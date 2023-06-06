@@ -1,0 +1,7 @@
+(Obbligatorio)
+- Creare DB con SQLite
+- Gestione dati nei pannelli
+- Gestione data
+
+(Opzionale)
+- Migliorare GUI pannelli
