@@ -41,7 +41,6 @@ public class ControllerLoginMedico {
         } catch (Exception ePatientLogin) {
             ePatientLogin.printStackTrace();
         }
-
     }
     @FXML
     private void bottoneLoginMedico(ActionEvent event) {
