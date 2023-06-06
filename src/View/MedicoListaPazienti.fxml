@@ -18,7 +18,7 @@
          </font></TextField>
          <AnchorPane layoutX="14.0" layoutY="89.0">
             <children>
-               <TextField fx:id="faketextfield1" disable="true" editable="false" opacity="0.8" prefHeight="90.0" prefWidth="371.0" />
+               <TextField fx:id="faketextfield1" disable="true" editable="false" opacity="1" prefHeight="90.0" prefWidth="371.0" />
                <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="54.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                   <image>
                      <Image url="@images/profile_icon_32.png" />
@@ -43,7 +43,7 @@
          </AnchorPane>
          <AnchorPane layoutX="16.0" layoutY="206.0">
             <children>
-               <TextField fx:id="faketextfield2" disable="true" editable="false" opacity="1" prefHeight="232.0" prefWidth="371.0">
+               <TextField fx:id="faketextfield1" disable="true" editable="false" opacity="1" prefHeight="232.0" prefWidth="371.0">
                </TextField>
             <Label layoutX="123.0" layoutY="25.0" text="I tuoi pazienti">
                <font>

@@ -19,6 +19,8 @@ public class ControllerDettagliPaziente {
     private Button logoutButton;
     @FXML
     private Button sendButton;
+    @FXML
+    private TextField faketextfield1;
 
     @FXML
     private void bottoneLogout(ActionEvent event) {
@@ -43,6 +45,7 @@ public class ControllerDettagliPaziente {
         title.getStyleClass().add("title");
         logoutButton.getStyleClass().add("logout-button");
         sendButton.getStyleClass().add("send-button");
+        faketextfield1.getStyleClass().add("faketextfield1");
     }
 
 }

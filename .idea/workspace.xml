@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Altre modifiche">
+    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Modifiche nuove">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/ControllerDettagliPaziente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerDettagliPaziente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/ControllerListaPazientiMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerListaPazientiMedico.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/MedicoListaPazienti.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/MedicoListaPazienti.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/PazienteDettagli.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/PazienteDettagli.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1685713705365</updated>
       <workItem from="1685713706171" duration="14272000" />
-      <workItem from="1685978026176" duration="3101000" />
+      <workItem from="1685978026176" duration="7941000" />
     </task>
     <task id="LOCAL-00001" summary="Rimozione immagine">
       <created>1685722504615</created>
@@ -136,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685979734891</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Modifiche nuove">
+      <created>1686057496223</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1686057496223</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +161,7 @@
     <MESSAGE value="Modifica Labels" />
     <MESSAGE value="Nuove modifiche estetiche" />
     <MESSAGE value="Altre modifiche" />
-    <option name="LAST_COMMIT_MESSAGE" value="Altre modifiche" />
+    <MESSAGE value="Modifiche nuove" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modifiche nuove" />
   </component>
 </project>
