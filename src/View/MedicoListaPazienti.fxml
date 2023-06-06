@@ -5,11 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-            minWidth="-Infinity" prefHeight="450.0" prefWidth="400.0"
-            stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="Control.ControllerListaPazientiMedico">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="400.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.ControllerListaPazientiMedico">
 
       <children>
          <TextField fx:id="title" alignment="CENTER" editable="false" layoutX="-8.0" prefHeight="53.0" prefWidth="408.0">
@@ -62,7 +58,7 @@
               </rowConstraints>
                <children>
 
-                  <Button mnemonicParsing="false" text="Button">
+                  <Button fx:id="pazientiBottone" mnemonicParsing="false" text="Button">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -71,7 +67,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1">
+                  <Button fx:id="pazientiBottone" mnemonicParsing="false" text="Button" GridPane.columnIndex="1">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -83,7 +79,7 @@
 
                </children>
             </GridPane>
-            <Button layoutX="155.0" layoutY="194.0" mnemonicParsing="false" text="Logout" />
+            <Button fx:id="logoutButton" layoutX="155.0" layoutY="194.0" mnemonicParsing="false" text="Logout" />
             </children>
          </AnchorPane>
       <Label layoutX="127.0" layoutY="16.0" text="Lista Pazienti" textFill="WHITE">
