@@ -5,7 +5,12 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="400.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.ControllerListaPazientiMedico">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="450.0" prefWidth="400.0"
+            stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Control.ControllerListaPazientiMedico">
+
       <children>
          <TextField fx:id="title" alignment="CENTER" editable="false" layoutX="-8.0" prefHeight="53.0" prefWidth="408.0">
          <font>
@@ -13,7 +18,7 @@
          </font></TextField>
          <AnchorPane layoutX="14.0" layoutY="89.0">
             <children>
-               <TextField fx:id="faketextfield1" disable="true" editable="false" opacity="1" prefHeight="90.0" prefWidth="371.0" />
+               <TextField fx:id="faketextfield1" disable="true" editable="false" opacity="0.8" prefHeight="90.0" prefWidth="371.0" />
                <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="54.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                   <image>
                      <Image url="@images/profile_icon_32.png" />
