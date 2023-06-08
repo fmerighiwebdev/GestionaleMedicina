@@ -1,5 +1,6 @@
 package Control;
 
+import Model.DBManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,11 +16,10 @@ import javafx.scene.control.Alert;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-
-import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class ControllerLoginPaziente {
     @FXML
@@ -52,37 +52,35 @@ public class ControllerLoginPaziente {
     private void bottoneLoginPaziente(ActionEvent event) {
         String username = usernameField.getText();
         String password = passwordField.getText();
+
+        Connection connection = DBManager.getConnection();
         try {
-            JsonElement fileElement = new Gson().fromJson(new FileReader("src/Model/user.json"), JsonElement.class);
-            JsonObject fileObject = fileElement.getAsJsonObject();
+            String patientLoginQuery = "SELECT * FROM Paziente WHERE Username = '" + username +
+                    "' AND Password = '" + password + "'";
+            PreparedStatement stat = connection.prepareStatement(patientLoginQuery);
+            ResultSet rs = stat.executeQuery();
 
-            JsonArray pazientiArray = fileObject.getAsJsonArray("pazienti");
-            for (JsonElement pazienteElement : pazientiArray) {
-                JsonObject pazienteObject = pazienteElement.getAsJsonObject();
-                String pazienteUsername = pazienteObject.get("username").getAsString();
-                String pazientePassword = pazienteObject.get("password").getAsString();
-
-                if (username.equals(pazienteUsername) && password.equals(pazientePassword)) {
-                    try {
-                        FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/PazienteDettagli.fxml"));
-                        Parent root = loader.load();
-
-                        Stage stage = (Stage) loginButton.getScene().getWindow();
-                        stage.setScene(new Scene(root));
-                    } catch (Exception ePatientDetails) {
-                        ePatientDetails.printStackTrace();
-                    }
-                    return;
+            if (rs.next()) {
+                try {
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/PazienteDettagli.fxml"));
+                    Parent root = loader.load();
+                    ControllerDettagliPaziente controller = loader.getController();
+                    controller.setUsername(username);
+                    Stage stage = (Stage) loginButton.getScene().getWindow();
+                    stage.setScene(new Scene(root));
+                } catch(Exception ePatient) {
+                    ePatient.printStackTrace();
                 }
+            } else {
+                Alert credentialsAlert = new Alert(Alert.AlertType.ERROR);
+                credentialsAlert.setTitle("Errore nell'accesso");
+                credentialsAlert.setHeaderText(null);
+                credentialsAlert.setContentText("Username o password errati :(");
+                credentialsAlert.showAndWait();
             }
-
-            // Le credenziali sono errate, mostra una notifica
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Errore di login");
-            alert.setHeaderText(null);
-            alert.setContentText("Credenziali errate. Riprova.");
-            alert.showAndWait();
-        } catch (FileNotFoundException e) {
+            rs.close();
+            stat.close();
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }

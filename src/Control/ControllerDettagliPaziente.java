@@ -22,6 +22,12 @@ public class ControllerDettagliPaziente {
     @FXML
     private TextField faketextfield1;
 
+    private String username;
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
     @FXML
     private void bottoneLogout(ActionEvent event) {
         try {
@@ -32,7 +38,7 @@ public class ControllerDettagliPaziente {
 
             // Logout effettuato con successo
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("Logout");
+            alert.setTitle("Logout: " + username);
             alert.setHeaderText(null);
             alert.setContentText("Logout eseguito con successo");
             alert.showAndWait();
