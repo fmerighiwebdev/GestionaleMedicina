@@ -5,7 +5,13 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
 public class Main extends Application {
+    private static final String URLDB="jdbc:sqlite:GestionaleMedicinaDB";
+    private Connection connection=null;
 
     @Override
     public void start(Stage primaryStage) {
@@ -23,6 +29,15 @@ public class Main extends Application {
             primaryStage.getIcons().add(icon);
         } catch (Exception eStart) {
             eStart.printStackTrace();
+        }
+        try{
+            if(connection==null||connection.isClosed()){
+                connection= DriverManager.getConnection(URLDB);
+                System.out.println("done");
+            }
+        } catch(SQLException e){
+            e.printStackTrace();
+            System.out.println("connection failed");
         }
     }
 
