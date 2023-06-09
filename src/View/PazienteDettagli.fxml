@@ -42,7 +42,7 @@
             </Label>
             <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="59.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/profile_icon_32.png" />
+                  <Image url="@images/patient_profile_icon.png" />
                </image>
             </ImageView>
             <Button fx:id="logoutButton" layoutX="264.0" layoutY="31.0" mnemonicParsing="false" onAction="#bottoneLogout" text="Logout">

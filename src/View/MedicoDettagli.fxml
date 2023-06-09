@@ -1,17 +1,207 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Control.ControllerDettagliMedico"
-            prefHeight="400.0" prefWidth="600.0"
-            stylesheets="@style.css">
-
-    <Label fx:id="titoloDettagli" alignment="CENTER" text="Prova Medico"/>
-
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="1000.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.ControllerDettagliMedico">
+    <children>
+        <TextField fx:id="title" alignment="CENTER" editable="flase" layoutY="-1.0" prefHeight="51.0" prefWidth="1000.0">
+            <font>
+                <Font name="System Bold Italic" size="18.0" />
+            </font>
+        </TextField>
+        <Label alignment="CENTER" layoutX="412.0" layoutY="14.0" text="Dettagli Medico" textFill="WHITE">
+            <font>
+                <Font name="System Bold Italic" size="18.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutX="26.0" layoutY="70.0" minWidth="-Infinity" prefHeight="90.0" prefWidth="358.0">
+            <children>
+                <TextField fx:id="faketextfield1" prefHeight="90.0" prefWidth="358.0" />
+                <HBox layoutX="104.0" layoutY="45.0" prefHeight="30.0" prefWidth="150.0">
+                    <children>
+                        <Label text="Data di oggi: ">
+                            <font>
+                                <Font name="Arial" size="13.0" />
+                            </font>
+                        </Label>
+                        <Label text="Data">
+                            <font>
+                                <Font name="Arial" size="13.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <Label fx:id="fullName" layoutX="105.0" layoutY="23.0" text="Nome Cognome">
+                    <font>
+                        <Font name="Arial" size="13.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="59.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/doctor_profile_icon.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="logoutButton" layoutX="264.0" layoutY="31.0" mnemonicParsing="false" onAction="#bottoneLogout" text="Logout">
+                    <font>
+                        <Font name="Arial" size="13.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="422.0" layoutY="69.0" prefHeight="373.0" prefWidth="548.0">
+            <children>
+                <TextField id="faketextfield1" prefHeight="513.0" prefWidth="548.0" />
+                <Label contentDisplay="CENTER" layoutX="238.0" layoutY="21.0" prefHeight="28.0" prefWidth="76.0" text="Terapia" textAlignment="JUSTIFY">
+                    <font>
+                        <Font name="Arial Bold" size="18.0" />
+                    </font>
+                </Label>
+                <HBox alignment="TOP_CENTER" layoutX="113.0" layoutY="70.0" prefHeight="100.0" prefWidth="317.0">
+                    <children>
+                        <VBox alignment="CENTER" prefHeight="26.0" prefWidth="270.0">
+                            <children>
+                                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="150.0" prefHeight="0.0" prefWidth="270.0" text="Farmaco" textAlignment="CENTER">
+                                    <font>
+                                        <Font name="Arial" size="13.0" />
+                                    </font>
+                                </Label>
+                                <TextField promptText="Zerinol">
+                                    <font>
+                                        <Font name="Arial" size="13.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets right="10.0" top="5.0" />
+                                    </VBox.margin>
+                                </TextField>
+                            </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="270.0">
+                            <children>
+                                <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="269.0" text="Assunzioni (per day)" textAlignment="CENTER">
+                                    <font>
+                                        <Font name="Arial" size="13.0" />
+                                    </font>
+                                </Label>
+                                <TextField promptText="3">
+                                    <font>
+                                        <Font name="Arial" size="13.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets left="10.0" top="5.0" />
+                                    </VBox.margin>
+                                </TextField>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <TextArea layoutX="35.0" layoutY="330.0" prefHeight="68.0" prefWidth="474.0" promptText="Informazioni aggiuntive su paziente">
+                    <font>
+                        <Font name="Arial" size="13.0" />
+                    </font>
+                </TextArea>
+                <Button fx:id="sendButton" layoutX="251.0" layoutY="461.0" mnemonicParsing="false" text="Invia">
+                    <font>
+                        <Font name="Arial" size="13.0" />
+                    </font>
+                </Button>
+                <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="197.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/pills_32.png" />
+                    </image>
+                </ImageView>
+            <HBox alignment="TOP_CENTER" layoutX="113.0" layoutY="177.0" prefHeight="100.0" prefWidth="317.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="26.0" prefWidth="270.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="150.0" prefHeight="0.0" prefWidth="270.0" text="Quantità (mg)" textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField promptText="10mg">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets right="10.0" top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="270.0">
+                     <children>
+                        <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="269.0" text="Indicazioni" textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField promptText="Dopo i pasti">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="172.0" layoutY="300.0" prefHeight="17.0" prefWidth="199.0" text="Informazioni sul paziente" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="26.0" layoutY="188.0" minWidth="-Infinity" prefHeight="337.0" prefWidth="358.0">
+            <children>
+                <TextField id="faketextfield1" prefHeight="391.0" prefWidth="358.0" />
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="103.0" layoutY="20.0" prefHeight="28.0" prefWidth="152.0" text="Dati Paziente" textAlignment="JUSTIFY">
+                    <font>
+                        <Font name="Arial Bold" size="18.0" />
+                    </font>
+                </Label>
+                <VBox layoutX="31.0" layoutY="68.0" prefHeight="291.0" prefWidth="296.0">
+                    <children>
+                        <HBox prefHeight="54.0" prefWidth="62.0">
+                            <children>
+                                <VBox alignment="CENTER" prefHeight="54.0" prefWidth="202.0">
+                                    <children>
+                                        <Label text="Nome" />
+                                        <Label text="Label" />
+                                    </children>
+                                </VBox>
+                                <VBox alignment="CENTER" prefHeight="54.0" prefWidth="198.0">
+                                    <children>
+                                        <Label text="Cognome" />
+                                        <Label text="Label" />
+                                    </children>
+                                </VBox>
+                            </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                        </HBox>
+                  <TableView prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn prefWidth="90.0" text="Data" />
+                      <TableColumn prefWidth="101.0" text="SBP" />
+                        <TableColumn prefWidth="117.0" text="DBP" />
+                    </columns>
+                  </TableView>
+                    </children>
+                </VBox>
+                <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="79.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/clinic_folder.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </children>
 </AnchorPane>

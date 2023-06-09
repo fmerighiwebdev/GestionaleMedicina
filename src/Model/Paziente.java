@@ -3,7 +3,6 @@ package Model;
 // Classe "modello" paziente
 // Inizializza i campi condivisi nei controller tramite getter e setter
 public class Paziente {
-
     private String username;
     private String password;
     private String name;
