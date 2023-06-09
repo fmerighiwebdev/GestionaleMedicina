@@ -23,7 +23,7 @@
             <TextField fx:id="faketextfield1" prefHeight="90.0" prefWidth="358.0" />
             <HBox layoutX="104.0" layoutY="45.0" prefHeight="30.0" prefWidth="150.0">
                <children>
-                  <Label text="Data di oggi: ">
+                  <Label text="Data:">
                      <font>
                         <Font name="Arial" size="13.0" />
                      </font>
@@ -292,7 +292,7 @@
                         </VBox>
                      </children>
                      <VBox.margin>
-                        <Insets bottom="10.0" top="10.0" />
+                        <Insets bottom="50.0" top="30.0" />
                      </VBox.margin>
                   </HBox>
                   <HBox layoutX="10.0" layoutY="10.0" prefHeight="121.0" prefWidth="296.0">
@@ -305,25 +305,6 @@
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
-                        </VBox>
-                     </children>
-                     <VBox.margin>
-                        <Insets bottom="10.0" top="10.0" />
-                     </VBox.margin>
-                  </HBox>
-                  <HBox layoutX="10.0" layoutY="10.0" prefHeight="54.0" prefWidth="62.0">
-                     <children>
-                        <VBox alignment="CENTER" prefHeight="54.0" prefWidth="202.0">
-                           <children>
-                              <Label text="Dal" />
-                              <Label text="Label" />
-                           </children>
-                        </VBox>
-                        <VBox alignment="CENTER" prefHeight="54.0" prefWidth="198.0">
-                           <children>
-                              <Label text="Al" />
-                              <Label text="Label" />
-                           </children>
                         </VBox>
                      </children>
                      <VBox.margin>

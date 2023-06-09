@@ -1,7 +1,9 @@
 (Obbligatorio)
-- Creare DB con SQLite
-- Gestione dati nei pannelli
-- Gestione data
+- Creare DB con SQLite --> FATTO
+- Gestione dati nei pannelli --> IN CORSO
+- Gestione data --> IN CORSO
+- Sezione medico per i bottone con noi dei pazienti
+- Logica di inserimento dei dati nelle tabelle
 
 (Opzionale)
-- Migliorare GUI pannelli
+- Migliorare GUI pannelli --> CORSO
