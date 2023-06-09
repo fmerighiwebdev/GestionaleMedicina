@@ -39,6 +39,7 @@ public class ControllerListaPazientiMedico {
     }
 
     public void initialize() {
+        // CSS Class
         title.getStyleClass().add("title");
         faketextfield1.getStyleClass().add("faketextfield1");
         pazientiBottone.getStyleClass().add("pazientiBottone");

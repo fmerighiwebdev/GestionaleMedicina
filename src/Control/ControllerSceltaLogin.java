@@ -42,8 +42,8 @@ public class ControllerSceltaLogin {
         }
     }
 
-    // Scelta login CSS
     public void initialize() {
+        // CSS Class
         titoloPannelloScelta.getStyleClass().add("title-choice");
         bottoneSceltaPaziente.getStyleClass().add("button-patient-choice");
         bottoneSceltaDottore.getStyleClass().add("button-doctor-choice");

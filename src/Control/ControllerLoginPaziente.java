@@ -55,17 +55,21 @@ public class ControllerLoginPaziente {
 
         Connection connection = DBManager.getConnection();
         try {
-            String patientLoginQuery = "SELECT * FROM Paziente WHERE Username = '" + username +
-                    "' AND Password = '" + password + "'";
+            String patientLoginQuery = "SELECT * FROM Paziente WHERE Username = ? AND Password = ?";
             PreparedStatement stat = connection.prepareStatement(patientLoginQuery);
+            stat.setString(1, username);
+            stat.setString(2, password);
             ResultSet rs = stat.executeQuery();
 
             if (rs.next()) {
                 try {
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/PazienteDettagli.fxml"));
                     Parent root = loader.load();
+
                     ControllerDettagliPaziente controller = loader.getController();
                     controller.setUsername(username);
+                    controller.initialize();
+
                     Stage stage = (Stage) loginButton.getScene().getWindow();
                     stage.setScene(new Scene(root));
                 } catch(Exception ePatient) {
@@ -86,8 +90,8 @@ public class ControllerLoginPaziente {
     }
 
 
-    // Paziente login CSS
     public void initialize() {
+        // CSS Class
         titoloPannelloLogin.getStyleClass().add("title-login");
         usernameLabel.getStyleClass().add("username-label");
         passwordLabel.getStyleClass().add("password-label");

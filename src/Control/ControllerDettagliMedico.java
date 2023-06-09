@@ -10,6 +10,7 @@ public class ControllerDettagliMedico {
 
     @FXML
     public void initialize() {
+        // CSS Class
         titoloDettagli.getStyleClass().add("details-title");
     }
 

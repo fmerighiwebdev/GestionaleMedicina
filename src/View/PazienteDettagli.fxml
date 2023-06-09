@@ -35,7 +35,7 @@
                   </Label>
                </children>
             </HBox>
-            <Label layoutX="105.0" layoutY="23.0" text="Nome Cognome">
+            <Label fx:id="fullName" layoutX="105.0" layoutY="23.0" text="Nome Cognome">
                <font>
                   <Font name="Arial" size="13.0" />
                </font>

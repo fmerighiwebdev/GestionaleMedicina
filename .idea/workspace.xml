@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Some fixes">
+    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Add login for Paziente">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestionaleMedicina.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GestionaleMedicina.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GestionaleMedicinaDB" beforeDir="false" afterPath="$PROJECT_DIR$/GestionaleMedicinaDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/ControllerDettagliMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerDettagliMedico.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Control/ControllerDettagliPaziente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerDettagliPaziente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/ControllerListaPazientiMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerListaPazientiMedico.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Control/ControllerLoginMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerLoginMedico.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Control/ControllerLoginPaziente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerLoginPaziente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/ControllerSceltaLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerSceltaLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/PazienteDettagli.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/PazienteDettagli.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,32 +41,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "azul-19",
-    "last_opened_file_path": "C:/UNI/JavaFX/Projects/GestionaleMedicina/src/resources/sqlite-jdbc-3.42.0.0.jar",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "database.query.execution",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;azul-19&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/UNI/JavaFX/Projects/GestionaleMedicina/src/resources/sqlite-jdbc-3.42.0.0.jar&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlite"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlite&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\UNI\JavaFX\Projects\GestionaleMedicina\src\resources" />
@@ -99,7 +101,10 @@
       <workItem from="1685978026176" duration="3101000" />
       <workItem from="1686162816894" duration="5167000" />
       <workItem from="1686224091751" duration="1631000" />
-      <workItem from="1686226975439" duration="5312000" />
+      <workItem from="1686226975439" duration="5639000" />
+      <workItem from="1686264728684" duration="2137000" />
+      <workItem from="1686266900221" duration="1584000" />
+      <workItem from="1686301601348" duration="3885000" />
     </task>
     <task id="LOCAL-00001" summary="Rimozione immagine">
       <created>1685722504615</created>
@@ -171,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686227033473</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Add login for Paziente">
+      <created>1686232344847</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1686232344847</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +210,7 @@
     <MESSAGE value="Altre modifiche" />
     <MESSAGE value="Aggiunta bottoni e dettagli" />
     <MESSAGE value="Some fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some fixes" />
+    <MESSAGE value="Add login for Paziente" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add login for Paziente" />
   </component>
 </project>

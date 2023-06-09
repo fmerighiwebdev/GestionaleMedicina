@@ -47,8 +47,8 @@ public class ControllerLoginMedico {
         String password = passwordField.getText();
     }
 
-    // Paziente login CSS
     public void initialize() {
+        // CSS Class
         titoloPannelloLogin.getStyleClass().add("title-login");
         usernameLabel.getStyleClass().add("username-label");
         passwordLabel.getStyleClass().add("password-label");
