@@ -20,7 +20,7 @@
                      <Image url="@images/doctor_profile_icon.png" />
                   </image>
                </ImageView>
-            <Label layoutX="109.0" layoutY="45.0" text="Nome">
+            <Label fx:id="nameLabel" layoutX="109.0" layoutY="45.0" text="Nome">
                <font>
                   <Font name="System Italic" size="16.0" />
                </font>
@@ -30,7 +30,7 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <Label layoutX="169.0" layoutY="45.0" text="Cognome">
+            <Label fx:id="surnameLabel" layoutX="169.0" layoutY="45.0" text="Cognome">
                <font>
                   <Font name="System Italic" size="16.0" />
                </font>

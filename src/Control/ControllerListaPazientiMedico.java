@@ -1,5 +1,9 @@
 package Control;
 
+import Model.Dottore;
+import Model.DottoreDAO;
+import Model.Paziente;
+import Model.PazienteDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,6 +22,16 @@ public class ControllerListaPazientiMedico {
     private Button pazientiBottone;
     @FXML
     private Button logoutButton;
+    @FXML
+    private Label nameLabel;
+    @FXML
+    private Label surnameLabel;
+
+    private String username;
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
     @FXML
     private void bottoneLogout(ActionEvent event) {
@@ -44,6 +58,18 @@ public class ControllerListaPazientiMedico {
         faketextfield1.getStyleClass().add("faketextfield1");
         pazientiBottone.getStyleClass().add("pazientiBottone");
         logoutButton.getStyleClass().add("logout-button");
+
+        // Name and surname in labels
+        // Uso l'username settato per recuperare i dati dalla tabella grazie al modello creato
+        DottoreDAO dottoreDAO = new DottoreDAO();
+        Dottore dottore = dottoreDAO.getDottoreByUsername(username);
+
+        if (dottore != null) {
+            String name = dottore.getName();
+            String surname = dottore.getSurname();
+            nameLabel.setText(name);
+            surnameLabel.setText(surname);
+        }
     }
 
 }

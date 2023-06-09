@@ -16,6 +16,7 @@ import Model.PazienteDAO;
 import Model.Paziente;
 
 import java.sql.*;
+import java.time.LocalDate;
 
 public class ControllerDettagliPaziente {
 
@@ -30,8 +31,11 @@ public class ControllerDettagliPaziente {
 
     @FXML
     private Label fullName;
+    @FXML
+    private Label todayDate;
 
     private String username;
+    private LocalDate date;
 
     // Setto l'username preso dal controller di login paziente
     public void setUsername(String username) {
@@ -66,7 +70,7 @@ public class ControllerDettagliPaziente {
         faketextfield1.getStyleClass().add("faketextfield1");
 
         // Name and surname in label
-        // Uso l'username settato per recuperare i dati dalla tabella grazie alla classe creata
+        // Uso l'username settato per recuperare i dati dalla tabella grazie al modello creato
         PazienteDAO pazienteDAO = new PazienteDAO();
         Paziente paziente = pazienteDAO.getPazienteByUsername(username);
 
@@ -75,6 +79,16 @@ public class ControllerDettagliPaziente {
             String surname = paziente.getSurname();
             fullName.setText(name + " " + surname);
         }
+
+        // Data di oggi
+        date = LocalDate.now();
+        int day = date.getDayOfMonth();
+        int month = date.getMonthValue();
+        int year = date.getYear();
+
+        String formattedDate = String.format("%02d/%02d/%04d", day, month, year);
+
+        todayDate.setText(formattedDate);
 
     }
 

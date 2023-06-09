@@ -1,5 +1,6 @@
 package Control;
 
+import Model.DBManager;
 import com.sun.tools.javac.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,10 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class ControllerLoginMedico {
     @FXML
@@ -45,6 +43,41 @@ public class ControllerLoginMedico {
     private void bottoneLoginMedico(ActionEvent event) {
         String username = usernameField.getText();
         String password = passwordField.getText();
+
+        Connection connection = DBManager.getConnection();
+        try {
+            String patientLoginQuery = "SELECT * FROM Dottore WHERE Username = ? AND Password = ?";
+            PreparedStatement stat = connection.prepareStatement(patientLoginQuery);
+            stat.setString(1, username);
+            stat.setString(2, password);
+            ResultSet rs = stat.executeQuery();
+
+            if (rs.next()) {
+                try {
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/MedicoListaPazienti.fxml"));
+                    Parent root = loader.load();
+
+                    ControllerListaPazientiMedico controller = loader.getController();
+                    controller.setUsername(username);
+                    controller.initialize();
+
+                    Stage stage = (Stage) loginButton.getScene().getWindow();
+                    stage.setScene(new Scene(root));
+                } catch(Exception ePatient) {
+                    ePatient.printStackTrace();
+                }
+            } else {
+                Alert credentialsAlert = new Alert(Alert.AlertType.ERROR);
+                credentialsAlert.setTitle("Errore nell'accesso");
+                credentialsAlert.setHeaderText(null);
+                credentialsAlert.setContentText("Username o password errati :(");
+                credentialsAlert.showAndWait();
+            }
+            rs.close();
+            stat.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public void initialize() {

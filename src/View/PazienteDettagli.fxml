@@ -28,7 +28,7 @@
                         <Font name="Arial" size="13.0" />
                      </font>
                   </Label>
-                  <Label text="Data">
+                  <Label fx:id="todayDate" text="Data">
                      <font>
                         <Font name="Arial" size="13.0" />
                      </font>
