@@ -1,15 +1,13 @@
 package Control;
 
 
+import Model.DBManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import Model.PazienteDAO;
@@ -28,6 +26,15 @@ public class ControllerDettagliPaziente {
     private Button sendButton;
     @FXML
     private TextField faketextfield1;
+
+    @FXML
+    private TextArea symptomsTextA;
+    @FXML
+    private TextField medicineTextF;
+    @FXML
+    private TextField assumptionsTextF;
+    @FXML
+    private TextField quantityTextF;
 
     @FXML
     private Label fullName;
@@ -59,6 +66,72 @@ public class ControllerDettagliPaziente {
         } catch (Exception ePatientLogin) {
             ePatientLogin.printStackTrace();
         }
+    }
+
+    @FXML
+    private void sendRilevations(ActionEvent event) {
+        String symptoms = symptomsTextA.getText();
+        String medicine = medicineTextF.getText();
+        String ass = assumptionsTextF.getText();
+        String quantity = quantityTextF.getText();
+
+        if (symptoms.isEmpty()) {
+            Alert isEmptyAlert = new Alert(Alert.AlertType.ERROR);
+            isEmptyAlert.setTitle("Errore in input");
+            isEmptyAlert.setHeaderText(null);
+            isEmptyAlert.setContentText("Inserisci i sintomi rilevati durante la terapia");
+            isEmptyAlert.showAndWait();
+            return;
+        } else if (medicine.isEmpty()) {
+            Alert isEmptyAlert = new Alert(Alert.AlertType.ERROR);
+            isEmptyAlert.setTitle("Errore in input");
+            isEmptyAlert.setHeaderText(null);
+            isEmptyAlert.setContentText("Inserisci il farmaco assunto");
+            isEmptyAlert.showAndWait();
+            return;
+        } else if (ass.isEmpty()) {
+            Alert isEmptyAlert = new Alert(Alert.AlertType.ERROR);
+            isEmptyAlert.setTitle("Errore in input");
+            isEmptyAlert.setHeaderText(null);
+            isEmptyAlert.setContentText("Inserisci il numero di assunzioni del farmaco");
+            isEmptyAlert.showAndWait();
+            return;
+        } else if (quantity.isEmpty()) {
+            Alert isEmptyAlert = new Alert(Alert.AlertType.ERROR);
+            isEmptyAlert.setTitle("Errore in input");
+            isEmptyAlert.setHeaderText(null);
+            isEmptyAlert.setContentText("Inserisci la quantità di farmaco assunta");
+            isEmptyAlert.showAndWait();
+            return;
+        }
+
+        try {
+            int assIntVal = Integer.parseInt(ass);
+            int quantityIntVal = Integer.parseInt(quantity);
+        } catch (NumberFormatException eNumber) {
+            Alert isWrongAlert = new Alert(Alert.AlertType.ERROR);
+            isWrongAlert.setTitle("Errore in input");
+            isWrongAlert.setHeaderText(null);
+            isWrongAlert.setContentText("Inserisci un valore numerico valido per N°assunzioni e/o quantità");
+            isWrongAlert.showAndWait();
+            return;
+        }
+
+        PazienteDAO pazienteDAO = new PazienteDAO();
+        Paziente paziente = pazienteDAO.getPazienteByUsername(username);
+
+        paziente.setSymptoms(symptoms);
+        paziente.setMedicine(medicine);
+        paziente.setAssumptions(Integer.parseInt(ass));
+        paziente.setQuantity(Integer.parseInt(quantity));
+
+        pazienteDAO.insertPaziente(paziente);
+
+        Alert sendSuccessfull = new Alert(Alert.AlertType.CONFIRMATION);
+        sendSuccessfull.setTitle("Invio completato");
+        sendSuccessfull.setHeaderText(null);
+        sendSuccessfull.setContentText("I dati sono stati inviati correttamente al database");
+        sendSuccessfull.showAndWait();
     }
 
     @FXML

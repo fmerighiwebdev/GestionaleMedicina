@@ -103,7 +103,7 @@
                   <Font name="Arial Bold" size="18.0" />
                </font>
             </Label>
-            <TextArea layoutX="34.0" layoutY="167.0" prefHeight="68.0" prefWidth="474.0" promptText="Sintomi rilevati durante la terapia...">
+            <TextArea fx:id="symptomsTextA" layoutX="34.0" layoutY="167.0" prefHeight="68.0" prefWidth="474.0" promptText="Sintomi rilevati durante la terapia...">
                <font>
                   <Font name="Arial" size="13.0" />
                </font>
@@ -195,7 +195,7 @@
                               <Font name="Arial" size="13.0" />
                            </font>
                         </Label>
-                        <TextField promptText="Tachipirina">
+                        <TextField fx:id="medicineTextF" promptText="Tachipirina">
                            <VBox.margin>
                               <Insets top="5.0" />
                            </VBox.margin>
@@ -215,7 +215,7 @@
                               <Font name="Arial" size="13.0" />
                            </font>
                         </Label>
-                        <TextField promptText="1">
+                        <TextField fx:id="assumptionsTextF" promptText="1">
                            <VBox.margin>
                               <Insets top="5.0" />
                            </VBox.margin>
@@ -235,7 +235,7 @@
                               <Font name="Arial" size="13.0" />
                            </font>
                         </Label>
-                        <TextField promptText="100">
+                        <TextField fx:id="quantityTextF" promptText="100">
                            <VBox.margin>
                               <Insets top="5.0" />
                            </VBox.margin>
@@ -247,7 +247,7 @@
                   </VBox>
                </children>
             </HBox>
-            <Button fx:id="sendButton" layoutX="251.0" layoutY="461.0" mnemonicParsing="false" text="Invia">
+            <Button fx:id="sendButton" onAction="#sendRilevations" layoutX="251.0" layoutY="461.0" mnemonicParsing="false" text="Invia">
                <font>
                   <Font name="Arial" size="13.0" />
                </font>
