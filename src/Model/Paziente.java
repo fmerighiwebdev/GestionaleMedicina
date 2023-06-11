@@ -26,6 +26,7 @@ public class Paziente {
         this.quantity = quantity;
     }
 
+    // Getters and setters
     public void setUsername(String username) {
         this.username = username;
     }

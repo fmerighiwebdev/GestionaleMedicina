@@ -49,9 +49,11 @@ public class ControllerDettagliPaziente {
         this.username = username;
     }
 
+    // Evento collegato al bottone "Logout" in PazienteDettagli.fxml
     @FXML
     private void bottoneLogout(ActionEvent event) {
         try {
+            // Carica il template precedente PazienteLogin.fxml
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/PazienteLogin.fxml"));
             Parent root = loader.load();
             Stage stage = (Stage) logoutButton.getScene().getWindow();
@@ -68,13 +70,16 @@ public class ControllerDettagliPaziente {
         }
     }
 
+    // Evento collegato al bottone "Invia" in PazienteDettagli.fxml
     @FXML
     private void sendRilevations(ActionEvent event) {
+        // Prendo i dati dagli input
         String symptoms = symptomsTextA.getText();
         String medicine = medicineTextF.getText();
         String ass = assumptionsTextF.getText();
         String quantity = quantityTextF.getText();
 
+        // Controllo sui valori - campo vuoto
         if (symptoms.isEmpty()) {
             Alert isEmptyAlert = new Alert(Alert.AlertType.ERROR);
             isEmptyAlert.setTitle("Errore in input");
@@ -105,6 +110,7 @@ public class ControllerDettagliPaziente {
             return;
         }
 
+        // Controllo sui valori - valore errato
         try {
             int assIntVal = Integer.parseInt(ass);
             int quantityIntVal = Integer.parseInt(quantity);
@@ -117,16 +123,20 @@ public class ControllerDettagliPaziente {
             return;
         }
 
+        // Creo il nuovo Access Data Object e l'oggetto Paziente
         PazienteDAO pazienteDAO = new PazienteDAO();
         Paziente paziente = pazienteDAO.getPazienteByUsername(username);
 
+        // Setto tramite i setter della classe modello i valori presi in input
         paziente.setSymptoms(symptoms);
         paziente.setMedicine(medicine);
         paziente.setAssumptions(Integer.parseInt(ass));
         paziente.setQuantity(Integer.parseInt(quantity));
 
+        // Aggiorna la tabella
         pazienteDAO.insertPaziente(paziente);
 
+        // Invio eseguito
         Alert sendSuccessfull = new Alert(Alert.AlertType.CONFIRMATION);
         sendSuccessfull.setTitle("Invio completato");
         sendSuccessfull.setHeaderText(null);
@@ -134,6 +144,7 @@ public class ControllerDettagliPaziente {
         sendSuccessfull.showAndWait();
     }
 
+    // Setting proprietà statiche
     @FXML
     public void initialize() {
         // CSS Class
@@ -162,7 +173,6 @@ public class ControllerDettagliPaziente {
         String formattedDate = String.format("%02d/%02d/%04d", day, month, year);
 
         todayDate.setText(formattedDate);
-
     }
 
 }

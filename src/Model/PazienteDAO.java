@@ -6,9 +6,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 // Classe Data Access Object
-// Si occupa di recuperare i dati dal DB - tabella Paziente (con username)
+// Si occupa di gestire i dati del DB - tabella Paziente (con username)
 public class PazienteDAO {
 
+    // Prendo tutti i dati dal paziente con username = username
     public Paziente getPazienteByUsername(String username) {
         Connection conn = null;
         PreparedStatement stat = null;
@@ -56,6 +57,7 @@ public class PazienteDAO {
         return paziente;
     }
 
+    // Aggiorno la tabella paziente utilizzando la classe modello
     public void insertPaziente(Paziente paziente) {
         Connection conn = null;
         PreparedStatement stat = null;
