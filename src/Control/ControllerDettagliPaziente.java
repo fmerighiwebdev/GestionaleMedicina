@@ -229,6 +229,17 @@ public class ControllerDettagliPaziente {
         sendButton.getStyleClass().add("send-button");
         faketextfield1.getStyleClass().add("faketextfield1");
 
+        symptomsTextA.getStyleClass().add("patient-details-text-area");
+        medicineTextF.getStyleClass().add("patient-details-text-field");
+        assumptionsTextF.getStyleClass().add("patient-details-text-field");
+        quantityTextF.getStyleClass().add("patient-details-text-field");
+        sbpTextF.getStyleClass().add("patient-details-text-field");
+        dbpTextF.getStyleClass().add("patient-details-text-field");
+        dayTextF.getStyleClass().add("patient-details-text-field");
+        monthTextF.getStyleClass().add("patient-details-text-field");
+        yearTextF.getStyleClass().add("patient-details-text-field");
+        hoursTextF.getStyleClass().add("patient-details-text-field");
+
         // Name and surname in label
         // Uso l'username settato per recuperare i dati dalla tabella grazie al modello creato
         PazienteDAO pazienteDAO = new PazienteDAO();
