@@ -204,8 +204,6 @@ public class ControllerDettagliPaziente {
                 isWrongAlert.showAndWait();
                 return;
             }
-            // Relativi controlli su data e ora (IN CORSO)
-
         } catch (NumberFormatException eNumber) {
             Alert isWrongAlert = new Alert(Alert.AlertType.ERROR);
             isWrongAlert.setTitle("Errore in input");
@@ -266,6 +264,7 @@ public class ControllerDettagliPaziente {
         monthTextF.getStyleClass().add("patient-details-text-field");
         yearTextF.getStyleClass().add("patient-details-text-field");
         hoursTextF.getStyleClass().add("patient-details-text-field");
+        todayDate.getStyleClass().add("today-date");
 
         // Name and surname in label
         // Uso l'username settato per recuperare i dati dalla tabella grazie al modello creato

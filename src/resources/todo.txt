@@ -1,7 +1,7 @@
 (Obbligatorio)
 - Creare DB con SQLite --> COMPLETO
 - Gestione dati nei pannelli:
-    Paziente --> COMPLETO (rivedere data)
+    Paziente --> COMPLETO
     Dottore --> IN CORSO
 - Sezione medico per i bottone con noi dei pazienti --> IN CORSO
 - Logica di inserimento dei dati nelle tabelle --> COMPLETA per paziente e rilevazioni
