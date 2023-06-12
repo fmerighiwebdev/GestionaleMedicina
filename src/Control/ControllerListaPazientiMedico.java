@@ -1,16 +1,13 @@
 package Control;
 
-import Model.Dottore;
-import Model.DottoreDAO;
-import Model.Paziente;
-import Model.PazienteDAO;
+import Model.Medico;
+import Model.MedicoDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class ControllerListaPazientiMedico {
@@ -61,12 +58,12 @@ public class ControllerListaPazientiMedico {
 
         // Name and surname in labels
         // Uso l'username settato per recuperare i dati dalla tabella grazie al modello creato
-        DottoreDAO dottoreDAO = new DottoreDAO();
-        Dottore dottore = dottoreDAO.getDottoreByUsername(username);
+        MedicoDAO medicoDAO = new MedicoDAO();
+        Medico medico = medicoDAO.getDottoreByUsername(username);
 
-        if (dottore != null) {
-            String name = dottore.getName();
-            String surname = dottore.getSurname();
+        if (medico != null) {
+            String name = medico.getName();
+            String surname = medico.getSurname();
             nameLabel.setText(name);
             surnameLabel.setText(surname);
         }

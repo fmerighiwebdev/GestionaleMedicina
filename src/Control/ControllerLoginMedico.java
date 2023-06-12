@@ -46,7 +46,7 @@ public class ControllerLoginMedico {
 
         Connection connection = DBManager.getConnection();
         try {
-            String patientLoginQuery = "SELECT * FROM Dottore WHERE Username = ? AND Password = ?";
+            String patientLoginQuery = "SELECT * FROM Medico WHERE Username = ? AND Password = ?";
             PreparedStatement stat = connection.prepareStatement(patientLoginQuery);
             stat.setString(1, username);
             stat.setString(2, password);

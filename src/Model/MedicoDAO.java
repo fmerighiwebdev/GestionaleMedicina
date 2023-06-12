@@ -6,19 +6,19 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 // Classe Data Access Object
-// Si occupa di recuperare i dati dal DB - tabella Dottore (con username)
-public class DottoreDAO {
+// Si occupa di recuperare i dati dal DB - tabella Medico (con username)
+public class MedicoDAO {
 
-    public Dottore getDottoreByUsername(String username) {
+    public Medico getDottoreByUsername(String username) {
         Connection conn = null;
         PreparedStatement stat = null;
         ResultSet rs = null;
-        Dottore dottore = null;
+        Medico medico = null;
 
         try {
             conn = DBManager.getConnection();
 
-            String query = "SELECT * FROM Dottore WHERE Username = ?";
+            String query = "SELECT * FROM Medico WHERE Username = ?";
             stat = conn.prepareStatement(query);
             stat.setString(1, username);
             rs = stat.executeQuery();
@@ -27,7 +27,7 @@ public class DottoreDAO {
                 String password = rs.getString("Password");
                 String name = rs.getString("Name");
                 String surname = rs.getString("Surname");
-                dottore = new Dottore(username, password, name, surname);
+                medico = new Medico(username, password, name, surname);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -49,7 +49,7 @@ public class DottoreDAO {
             }
         }
 
-        return dottore;
+        return medico;
     }
 
 }
