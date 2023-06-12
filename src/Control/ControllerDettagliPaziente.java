@@ -195,6 +195,15 @@ public class ControllerDettagliPaziente {
                 isWrongAlert.showAndWait();
                 return;
             }
+
+            if (hoursIntVal < 0 || hoursIntVal > 24) {
+                Alert isWrongAlert = new Alert(Alert.AlertType.ERROR);
+                isWrongAlert.setTitle("Errore in input");
+                isWrongAlert.setHeaderText(null);
+                isWrongAlert.setContentText("Ora non valida");
+                isWrongAlert.showAndWait();
+                return;
+            }
             // Relativi controlli su data e ora (IN CORSO)
 
         } catch (NumberFormatException eNumber) {
