@@ -177,6 +177,24 @@ public class ControllerDettagliPaziente {
             int yearIntVal = Integer.parseInt(year);
             int hoursIntVal = Integer.parseInt(hours);
 
+            LocalDate inputDate = LocalDate.of(yearIntVal, monthIntVal, dayIntVal);
+            date = LocalDate.now();
+
+            if (inputDate.isAfter(date)) {
+                Alert isWrongAlert = new Alert(Alert.AlertType.ERROR);
+                isWrongAlert.setTitle("Errore in input");
+                isWrongAlert.setHeaderText(null);
+                isWrongAlert.setContentText("Non puoi inserire un giorno successivo alla data odierna");
+                isWrongAlert.showAndWait();
+                return;
+            } else if (inputDate.isBefore(date)) {
+                Alert isWrongAlert = new Alert(Alert.AlertType.ERROR);
+                isWrongAlert.setTitle("Errore in input");
+                isWrongAlert.setHeaderText(null);
+                isWrongAlert.setContentText("Non puoi inserire un giorno precedente alla data odierna");
+                isWrongAlert.showAndWait();
+                return;
+            }
             // Relativi controlli su data e ora (IN CORSO)
 
         } catch (NumberFormatException eNumber) {

@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Tabella rilevazioni completata - Input per il paziente gestiti">
+    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Aggiunto stile ai pannelli">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Control/ControllerDettagliPaziente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerDettagliPaziente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +100,7 @@
       <workItem from="1686301601348" duration="3885000" />
       <workItem from="1686328753017" duration="8934000" />
       <workItem from="1686485494136" duration="318000" />
-      <workItem from="1686487215350" duration="6753000" />
+      <workItem from="1686487215350" duration="7957000" />
     </task>
     <task id="LOCAL-00001" summary="Rimozione immagine">
       <created>1685722504615</created>
@@ -229,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686558432018</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Aggiunto stile ai pannelli">
+      <created>1686572608623</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1686572608623</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,6 +270,7 @@
     <MESSAGE value="Add comments" />
     <MESSAGE value="Aggiunta foreign key IDPaziente a tabella Rilevazioni" />
     <MESSAGE value="Tabella rilevazioni completata - Input per il paziente gestiti" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tabella rilevazioni completata - Input per il paziente gestiti" />
+    <MESSAGE value="Aggiunto stile ai pannelli" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunto stile ai pannelli" />
   </component>
 </project>
