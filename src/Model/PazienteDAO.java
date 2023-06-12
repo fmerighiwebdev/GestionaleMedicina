@@ -25,6 +25,7 @@ public class PazienteDAO {
             rs = stat.executeQuery();
 
             if (rs.next()) {
+                int id = rs.getInt("ID");
                 String password = rs.getString("Password");
                 String name = rs.getString("Name");
                 String surname = rs.getString("Surname");
@@ -32,7 +33,7 @@ public class PazienteDAO {
                 String medicine = rs.getString("Medicine");
                 int ass = rs.getInt("Assumptions");
                 int quantity = rs.getInt("Quantity");
-                paziente = new Paziente(username, password, name, surname, symptoms, medicine, ass, quantity);
+                paziente = new Paziente(id, username, password, name, surname, symptoms, medicine, ass, quantity);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -77,23 +78,6 @@ public class PazienteDAO {
             stat.executeUpdate();
         } catch (SQLException eInsert) {
             eInsert.printStackTrace();
-        } finally {
-            // Chiudi le risorse
-            if (stat != null) {
-                try {
-                    stat.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-            if (conn != null) {
-                try {
-                    conn.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
         }
     }
-
 }

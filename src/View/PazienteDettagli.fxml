@@ -69,7 +69,7 @@
                               <Font name="Arial" size="13.0" />
                            </font>
                         </Label>
-                        <TextField promptText="120">
+                        <TextField fx:id="sbpTextF" promptText="120">
                            <font>
                               <Font name="Arial" size="13.0" />
                            </font>
@@ -86,7 +86,7 @@
                               <Font name="Arial" size="13.0" />
                            </font>
                         </Label>
-                        <TextField promptText="80">
+                        <TextField fx:id="dbpTextF" promptText="80">
                            <font>
                               <Font name="Arial" size="13.0" />
                            </font>
@@ -117,7 +117,7 @@
                               <Font name="Arial" size="13.0" />
                            </font>
                         </Label>
-                        <TextField promptText="dd">
+                        <TextField fx:id="dayTextF" promptText="dd">
                            <VBox.margin>
                               <Insets top="5.0" />
                            </VBox.margin>
@@ -137,7 +137,7 @@
                               <Font name="Arial" size="13.0" />
                            </font>
                         </Label>
-                        <TextField promptText="mm">
+                        <TextField fx:id="monthTextF" promptText="mm">
                            <VBox.margin>
                               <Insets top="5.0" />
                            </VBox.margin>
@@ -157,7 +157,7 @@
                               <Font name="Arial" size="13.0" />
                            </font>
                         </Label>
-                        <TextField promptText="yyyy">
+                        <TextField fx:id="yearTextF" promptText="yyyy">
                            <VBox.margin>
                               <Insets right="10.0" top="5.0" />
                            </VBox.margin>
@@ -174,7 +174,7 @@
                                 <Font name="Arial" size="13.0" />
                            </font>
                         </Label>
-                        <TextField promptText="hh">
+                        <TextField fx:id="hoursTextF" promptText="hh">
                            <VBox.margin>
                               <Insets top="5.0" />
                            </VBox.margin>

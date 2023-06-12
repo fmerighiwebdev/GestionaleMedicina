@@ -1,7 +1,7 @@
 package Control;
 
 
-import Model.DBManager;
+import Model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,9 +9,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-
-import Model.PazienteDAO;
-import Model.Paziente;
 
 import java.sql.*;
 import java.time.LocalDate;
@@ -35,6 +32,19 @@ public class ControllerDettagliPaziente {
     private TextField assumptionsTextF;
     @FXML
     private TextField quantityTextF;
+
+    @FXML
+    private TextField sbpTextF;
+    @FXML
+    private TextField dbpTextF;
+    @FXML
+    private TextField dayTextF;
+    @FXML
+    private TextField monthTextF;
+    @FXML
+    private TextField yearTextF;
+    @FXML
+    private TextField hoursTextF;
 
     @FXML
     private Label fullName;
@@ -79,6 +89,13 @@ public class ControllerDettagliPaziente {
         String ass = assumptionsTextF.getText();
         String quantity = quantityTextF.getText();
 
+        String sbp = sbpTextF.getText();
+        String dbp = dbpTextF.getText();
+        String day = dayTextF.getText();
+        String month = monthTextF.getText();
+        String year = yearTextF.getText();
+        String hours = hoursTextF.getText();
+
         // Controllo sui valori - campo vuoto
         if (symptoms.isEmpty()) {
             Alert isEmptyAlert = new Alert(Alert.AlertType.ERROR);
@@ -108,6 +125,27 @@ public class ControllerDettagliPaziente {
             isEmptyAlert.setContentText("Inserisci la quantità di farmaco assunta");
             isEmptyAlert.showAndWait();
             return;
+        } else if (sbp.isEmpty()) {
+            Alert isEmptyAlert = new Alert(Alert.AlertType.ERROR);
+            isEmptyAlert.setTitle("Errore in input");
+            isEmptyAlert.setHeaderText(null);
+            isEmptyAlert.setContentText("Inserisci un valore per SBP");
+            isEmptyAlert.showAndWait();
+            return;
+        } else if (dbp.isEmpty()) {
+            Alert isEmptyAlert = new Alert(Alert.AlertType.ERROR);
+            isEmptyAlert.setTitle("Errore in input");
+            isEmptyAlert.setHeaderText(null);
+            isEmptyAlert.setContentText("Inserisci un valore per DBP");
+            isEmptyAlert.showAndWait();
+            return;
+        } else if (day.isEmpty() || month.isEmpty() || year.isEmpty() || hours.isEmpty()) {
+            Alert isEmptyAlert = new Alert(Alert.AlertType.ERROR);
+            isEmptyAlert.setTitle("Errore in input");
+            isEmptyAlert.setHeaderText(null);
+            isEmptyAlert.setContentText("Inserisci la data e/o l'ora");
+            isEmptyAlert.showAndWait();
+            return;
         }
 
         // Controllo sui valori - valore errato
@@ -122,10 +160,47 @@ public class ControllerDettagliPaziente {
             isWrongAlert.showAndWait();
             return;
         }
+        try {
+            int sbpIntVal = Integer.parseInt(sbp);
+            int dbpIntVal = Integer.parseInt(dbp);
+        } catch (NumberFormatException eNumber) {
+            Alert isWrongAlert = new Alert(Alert.AlertType.ERROR);
+            isWrongAlert.setTitle("Errore in input");
+            isWrongAlert.setHeaderText(null);
+            isWrongAlert.setContentText("Inserisci un valore numerico valido per SBP e/o DBP");
+            isWrongAlert.showAndWait();
+            return;
+        }
+        try {
+            int dayIntVal = Integer.parseInt(day);
+            int monthIntVal = Integer.parseInt(month);
+            int yearIntVal = Integer.parseInt(year);
+            int hoursIntVal = Integer.parseInt(hours);
+
+            // Relativi controlli su data e ora (IN CORSO)
+
+        } catch (NumberFormatException eNumber) {
+            Alert isWrongAlert = new Alert(Alert.AlertType.ERROR);
+            isWrongAlert.setTitle("Errore in input");
+            isWrongAlert.setHeaderText(null);
+            isWrongAlert.setContentText("Inserisci un valore numerico valido per data e/o ora");
+            isWrongAlert.showAndWait();
+            return;
+        }
 
         // Creo il nuovo Access Data Object e l'oggetto Paziente
         PazienteDAO pazienteDAO = new PazienteDAO();
         Paziente paziente = pazienteDAO.getPazienteByUsername(username);
+
+        // Creo il nuovo Access Data Object e l'oggetto Rilevazioni
+        RilevazioniDAO rilevazioniDAO = new RilevazioniDAO();
+        int sbpInt = Integer.parseInt(sbp);
+        int dbpInt = Integer.parseInt(dbp);
+        int dayInt = Integer.parseInt(day);
+        int monthInt = Integer.parseInt(month);
+        int yearInt = Integer.parseInt(year);
+        int hoursInt = Integer.parseInt(hours);
+        Rilevazioni rilevazioni = new Rilevazioni(sbpInt, dbpInt, dayInt, monthInt, yearInt, hoursInt, paziente.getId());
 
         // Setto tramite i setter della classe modello i valori presi in input
         paziente.setSymptoms(symptoms);
@@ -135,6 +210,7 @@ public class ControllerDettagliPaziente {
 
         // Aggiorna la tabella
         pazienteDAO.insertPaziente(paziente);
+        rilevazioniDAO.insertRilevazione(rilevazioni);
 
         // Invio eseguito
         Alert sendSuccessfull = new Alert(Alert.AlertType.CONFIRMATION);
