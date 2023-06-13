@@ -65,10 +65,13 @@
     -fx-cursor: hand;
 }
 
-.back-button:hover, .logout-button:hover {
+.back-button:hover  {
     -fx-background-color: #a1a1a1;
 }
 
+.logout-button:hover{
+    -fx-background-color: #ed5353;
+}
 .login-button:hover, .send-button:hover {
     -fx-background-color: #46db5f;
 }
@@ -92,7 +95,7 @@
     -fx-background-color:white;
 }
 
-#pazientiBottone{
+.pazientiBotton{
     -fx-border-radius: 10;
     -fx-background-radius: 10;
     -fx-background-color: #D9D9D9;

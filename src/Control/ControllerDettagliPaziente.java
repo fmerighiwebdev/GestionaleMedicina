@@ -32,7 +32,6 @@ public class ControllerDettagliPaziente {
     private TextField assumptionsTextF;
     @FXML
     private TextField quantityTextF;
-
     @FXML
     private TextField sbpTextF;
     @FXML

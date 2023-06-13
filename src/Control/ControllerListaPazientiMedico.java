@@ -9,8 +9,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 import java.util.List;
 
@@ -76,12 +81,31 @@ public class ControllerListaPazientiMedico {
             List<Paziente> pazienti = medicoDAO.getPazientiByMedicoId(medico.getId());
 
             for (Paziente paziente : pazienti) {
+                ImageView Icon = new ImageView((new Image("/View/images/cartel_32.png")));
                 Button pazientiButton = new Button(paziente.getName() + " " + paziente.getSurname());
+                pazientiButton.setStyle("-fx-background-color: #D9D9D9; " +
+                        "-fx-padding: 10px 15px; " +
+                        "-fx-background-radius: 20px;" +
+                        "-fx-border-radius: 10px;" +
+                        "-fx-cursor: hand;");
+
+                pazientiButton.setOnMouseEntered(e ->{
+                    pazientiButton.setStyle("-fx-background-color: #a1a1a1; " +
+                            "-fx-padding: 10px 15px; " +
+                            "-fx-background-radius: 20px;" +
+                            "-fx-border-radius: 10px;" +
+                            "-fx-cursor: hand;");
+                });
+                pazientiButton.setOnMouseExited(e -> {
+                    pazientiButton.setStyle("-fx-background-color: #D9D9D9; " +
+                            "-fx-padding: 10px 15px; " +
+                            "-fx-background-radius: 20px;" +
+                            "-fx-border-radius: 10px;" +
+                            "-fx-cursor: hand;");
+                });
+                pazientiButton.setGraphic(Icon);
                 hboxButton.getChildren().add(pazientiButton);
             }
-        } else {
-            // Gestisci il caso in cui medico sia nullo
-            System.out.println("Nessun medico trovato con l'username fornito.");
         }
     }
 
