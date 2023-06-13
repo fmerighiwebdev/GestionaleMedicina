@@ -113,7 +113,7 @@ public class ControllerListaPazientiMedico {
                         controller.setPaziente(paziente);
                         controller.setMedico(medico);
 
-                        Stage stage = (Stage) pazientiButton.getScene().getWindow();
+                        Stage stage = new Stage();
                         stage.setScene(new Scene(root));
                         stage.show();
                     } catch (Exception e) {

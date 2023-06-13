@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 public class ControllerDettagliMedico {
 
     @FXML
-    private Button logoutButton;
+    private Button backButton;
 
     @FXML
     private Label doctorFullName;
@@ -44,27 +44,14 @@ public class ControllerDettagliMedico {
     }
 
     @FXML
-    private void bottoneLogout(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/MedicoLogin.fxml"));
-            Parent root = loader.load();
-            Stage stage = (Stage) logoutButton.getScene().getWindow();
-            stage.setScene(new Scene(root));
-
-            // Logout effettuato con successo
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("Logout: " + username);
-            alert.setHeaderText(null);
-            alert.setContentText("Logout eseguito con successo");
-            alert.showAndWait();
-        } catch (Exception ePatientLogin) {
-            ePatientLogin.printStackTrace();
-        }
+    private void indietroButton(ActionEvent event) {
+        Stage stage = (Stage) backButton.getScene().getWindow();
+        stage.close();
     }
     @FXML
     public void initialize() {
         // CSS Class
-        logoutButton.getStyleClass().add("logout-button");
+        backButton.getStyleClass().add("back-button");
     }
 
 }
