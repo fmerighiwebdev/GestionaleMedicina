@@ -8,6 +8,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
 import java.sql.*;
@@ -77,6 +79,13 @@ public class ControllerLoginMedico {
             stat.close();
         } catch (SQLException e) {
             e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void handleInvio(KeyEvent key) {
+        if (key.getCode() == KeyCode.ENTER) {
+            bottoneLoginMedico(new ActionEvent());
         }
     }
 

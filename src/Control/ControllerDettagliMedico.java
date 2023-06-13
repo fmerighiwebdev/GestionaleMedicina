@@ -48,6 +48,7 @@ public class ControllerDettagliMedico {
         Stage stage = (Stage) backButton.getScene().getWindow();
         stage.close();
     }
+
     @FXML
     public void initialize() {
         // CSS Class
