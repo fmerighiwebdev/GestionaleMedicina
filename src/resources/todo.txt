@@ -1,10 +1,15 @@
 (Obbligatorio)
 - Creare DB con SQLite --> COMPLETO
+- Sezione medico per il bottone con nomi dei pazienti --> COMPLETO
+
+
 - Gestione dati nei pannelli:
     Paziente --> COMPLETO
-    Dottore --> IN CORSO
-- Sezione medico per i bottone con noi dei pazienti --> IN CORSO
-- Logica di inserimento dei dati nelle tabelle --> COMPLETA per paziente e rilevazioni
+    Dottore --> DA FARE/FINIRE
+
+
+- Visualizzazione dello storico delle rilevazioni del paziente in MedicoDettagli --> DA FARE
+- Inserimento della terapia da parte del medico per il paziente --> DA FARE
 
 (Opzionale)
 - Migliorare GUI pannelli --> IN CORSO
