@@ -45,7 +45,7 @@
                         <Image url="@images/doctor_profile_icon.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="backButton" layoutX="264.0" layoutY="31.0" mnemonicParsing="false" onAction="#indietroButton" text="Indietro">
+                <Button fx:id="backButton" layoutX="264.0" layoutY="31.0" mnemonicParsing="false" onAction="#indietroButton" text="Cambia...">
                     <font>
                         <Font name="Arial" size="13.0" />
                     </font>

@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Aggiunta transition tra Lista Pazienti Medico e Medico Dettagli">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/ControllerDettagliMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerDettagliMedico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/ControllerListaPazientiMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerListaPazientiMedico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/MedicoDettagli.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/MedicoDettagli.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Aggiunta possibilità di tornare indietro da dettagli medico" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,7 +100,7 @@
       <workItem from="1686485494136" duration="318000" />
       <workItem from="1686487215350" duration="11095000" />
       <workItem from="1686658326612" duration="7028000" />
-      <workItem from="1686677614886" duration="369000" />
+      <workItem from="1686677614886" duration="1044000" />
     </task>
     <task id="LOCAL-00001" summary="Rimozione immagine">
       <created>1685722504615</created>
@@ -289,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686668525616</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Aggiunta possibilità di tornare indietro da dettagli medico">
+      <created>1686678648110</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1686678648110</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,7 +309,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Rimozione immagine" />
     <MESSAGE value="Aggiunti layout e controller per dettagli medico e paziente" />
     <MESSAGE value="Agggiunta GUI PazienteDettagli.fxml" />
     <MESSAGE value="Aggiunta dettagli" />
@@ -332,6 +333,7 @@
     <MESSAGE value="Aggiunti bottoni in ListaPazienti del Medico" />
     <MESSAGE value="Gestito l'inserimento / aggiornamento dei dati nella tabella rilevazioni" />
     <MESSAGE value="Aggiunta transition tra Lista Pazienti Medico e Medico Dettagli" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aggiunta transition tra Lista Pazienti Medico e Medico Dettagli" />
+    <MESSAGE value="Aggiunta possibilità di tornare indietro da dettagli medico" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunta possibilità di tornare indietro da dettagli medico" />
   </component>
 </project>
