@@ -20,7 +20,7 @@
         </rowConstraints>
          <children>
                <TextField fx:id="usernameField" GridPane.columnIndex="1" />
-               <PasswordField fx:id="passwordField" onKeyPressed="#handleInvio" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                <Label fx:id="passwordLabel" text="Password:" GridPane.rowIndex="1" />
                <Label fx:id="usernameLabel" text="Username:" />
          </children>
