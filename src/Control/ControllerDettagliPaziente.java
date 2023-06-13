@@ -187,13 +187,6 @@ public class ControllerDettagliPaziente {
                 isWrongAlert.setContentText("Non puoi inserire un giorno successivo alla data odierna");
                 isWrongAlert.showAndWait();
                 return;
-            } else if (inputDate.isBefore(date)) {
-                Alert isWrongAlert = new Alert(Alert.AlertType.ERROR);
-                isWrongAlert.setTitle("Errore in input");
-                isWrongAlert.setHeaderText(null);
-                isWrongAlert.setContentText("Non puoi inserire un giorno precedente alla data odierna");
-                isWrongAlert.showAndWait();
-                return;
             }
 
             if (hoursIntVal < 0 || hoursIntVal > 24) {
@@ -233,9 +226,16 @@ public class ControllerDettagliPaziente {
         paziente.setAssumptions(Integer.parseInt(ass));
         paziente.setQuantity(Integer.parseInt(quantity));
 
-        // Aggiorna la tabella
-        pazienteDAO.insertPaziente(paziente);
-        rilevazioniDAO.insertRilevazione(rilevazioni);
+        // Controllo se esistono già delle rilevazioni effettuate in data odierna
+        boolean rilevazioniEsistenti = rilevazioniDAO.rilevazioniExist(paziente.getId(), dayInt, monthInt, yearInt);
+
+        if (rilevazioniEsistenti) {
+            // Aggiorna la tabella se era già presente una voce in data odierna
+            rilevazioniDAO.updateRilevazione(rilevazioni);
+        } else {
+            // Inserisci una rilevazione alla tabella se non presente in data odierna
+            rilevazioniDAO.insertRilevazione(rilevazioni);
+        }
 
         // Invio eseguito
         Alert sendSuccessfull = new Alert(Alert.AlertType.CONFIRMATION);
