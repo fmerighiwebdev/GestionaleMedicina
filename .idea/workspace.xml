@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Cambiati i nomi da Dottore a Medico per correttezza nello sviluppo">
+    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Aggiunti bottoni in ListaPazienti del Medico">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GestionaleMedicinaDB" beforeDir="false" afterPath="$PROJECT_DIR$/GestionaleMedicinaDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/ControllerListaPazientiMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerListaPazientiMedico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Medico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Medico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/MedicoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/MedicoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/MedicoListaPazienti.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/MedicoListaPazienti.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/ControllerDettagliPaziente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerDettagliPaziente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/RilevazioniDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/RilevazioniDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +104,7 @@
       <workItem from="1686328753017" duration="8934000" />
       <workItem from="1686485494136" duration="318000" />
       <workItem from="1686487215350" duration="11095000" />
-      <workItem from="1686658326612" duration="3504000" />
+      <workItem from="1686658326612" duration="5595000" />
     </task>
     <task id="LOCAL-00001" summary="Rimozione immagine">
       <created>1685722504615</created>
@@ -269,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686578810642</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Aggiunti bottoni in ListaPazienti del Medico">
+      <created>1686662214881</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1686662214881</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,6 +314,7 @@
     <MESSAGE value="Aggiunto controllo sull'ora in dettagli paziente" />
     <MESSAGE value="Cambiato nome tabella Medico" />
     <MESSAGE value="Cambiati i nomi da Dottore a Medico per correttezza nello sviluppo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambiati i nomi da Dottore a Medico per correttezza nello sviluppo" />
+    <MESSAGE value="Aggiunti bottoni in ListaPazienti del Medico" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunti bottoni in ListaPazienti del Medico" />
   </component>
 </project>

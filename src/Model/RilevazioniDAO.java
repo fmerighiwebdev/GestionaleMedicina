@@ -2,6 +2,7 @@ package Model;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class RilevazioniDAO {
@@ -28,22 +29,58 @@ public class RilevazioniDAO {
             stat.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
-            // Chiudi le risorse
-            if (stat != null) {
-                try {
-                    stat.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-            if (conn != null) {
-                try {
-                    conn.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
         }
     }
+
+    public void updateRilevazione(Rilevazioni rilevazioni) {
+        Connection conn = null;
+        PreparedStatement stat = null;
+
+        try {
+            conn = DBManager.getConnection();
+
+            String query = "UPDATE Rilevazioni SET SBP = ?, DBP = ?, Day = ?, Month = ?, Year = ?, Hours = ?, IDPaziente = ?";
+
+            stat = conn.prepareStatement(query);
+            stat.setInt(1, rilevazioni.getSbp());
+            stat.setInt(2, rilevazioni.getDbp());
+            stat.setInt(3, rilevazioni.getDay());
+            stat.setInt(4, rilevazioni.getMonth());
+            stat.setInt(5, rilevazioni.getYear());
+            stat.setInt(6, rilevazioni.getHours());
+            stat.setInt(7, rilevazioni.getIdPaziente());
+
+            stat.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public boolean rilevazioniExist(int idPaziente, int day, int month, int year) {
+        Connection conn = null;
+        PreparedStatement stat = null;
+        ResultSet rs = null;
+
+        try {
+            conn = DBManager.getConnection();
+
+            String query = "SELECT COUNT(*) FROM Rilevazioni WHERE IDPaziente = ? AND Day = ? AND Month = ? AND Year = ?";
+            stat = conn.prepareStatement(query);
+            stat.setInt(1, idPaziente);
+            stat.setInt(2, day);
+            stat.setInt(3, month);
+            stat.setInt(4, year);
+
+            rs = stat.executeQuery();
+            if (rs.next()) {
+                int count = rs.getInt(1);
+                return count > 0;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return false;
+    }
+
 }
