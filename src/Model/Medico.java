@@ -3,18 +3,23 @@ package Model;
 // Classe "modello" dottore
 // Inizializza i campi condivisi nei controller tramite getter e setter
 public class Medico {
+    private int id;
     private String username;
     private String password;
     private String name;
     private String surname;
 
     // Costruttore
-    public Medico(String username, String password, String name, String surname) {
+    public Medico(int id, String username, String password, String name, String surname) {
+        this.id = id;
         this.username = username;
         this.password = password;
         this.name = name;
         this.surname = surname;
     }
+
+    public void setId(int id) { this.id = id; }
+    public int getId() { return id; }
 
     public void setUsername(String username) {
         this.username = username;

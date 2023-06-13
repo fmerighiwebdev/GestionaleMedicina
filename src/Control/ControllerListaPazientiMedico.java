@@ -2,13 +2,17 @@ package Control;
 
 import Model.Medico;
 import Model.MedicoDAO;
+import Model.Paziente;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
+
+import java.util.List;
 
 public class ControllerListaPazientiMedico {
     @FXML
@@ -16,7 +20,7 @@ public class ControllerListaPazientiMedico {
     @FXML
     private TextField faketextfield1;
     @FXML
-    private Button pazientiBottone;
+    private HBox hboxButton;
     @FXML
     private Button logoutButton;
     @FXML
@@ -53,7 +57,6 @@ public class ControllerListaPazientiMedico {
         // CSS Class
         title.getStyleClass().add("title");
         faketextfield1.getStyleClass().add("faketextfield1");
-        pazientiBottone.getStyleClass().add("pazientiBottone");
         logoutButton.getStyleClass().add("logout-button");
 
         // Name and surname in labels
@@ -66,6 +69,19 @@ public class ControllerListaPazientiMedico {
             String surname = medico.getSurname();
             nameLabel.setText(name);
             surnameLabel.setText(surname);
+        }
+
+        // Bottoni pazienti
+        if (medico != null) {
+            List<Paziente> pazienti = medicoDAO.getPazientiByMedicoId(medico.getId());
+
+            for (Paziente paziente : pazienti) {
+                Button pazientiButton = new Button(paziente.getName() + " " + paziente.getSurname());
+                hboxButton.getChildren().add(pazientiButton);
+            }
+        } else {
+            // Gestisci il caso in cui medico sia nullo
+            System.out.println("Nessun medico trovato con l'username fornito.");
         }
     }
 

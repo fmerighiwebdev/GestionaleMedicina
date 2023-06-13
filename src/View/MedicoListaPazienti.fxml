@@ -46,40 +46,8 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <GridPane layoutX="53.0" layoutY="76.0" prefHeight="103.0" prefWidth="267.0">
-              <columnConstraints>
-                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-
-                  <Button fx:id="pazientiBottone" mnemonicParsing="false" text="Button">
-                     <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@images/cartel_32.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button fx:id="pazientiBottone" mnemonicParsing="false" text="Button" GridPane.columnIndex="1">
-                     <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@images/cartel_32.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-
-               </children>
-            </GridPane>
             <Button fx:id="logoutButton" layoutX="155.0" layoutY="179.0" mnemonicParsing="false" onAction="#bottoneLogout" text="Logout" />
+            <HBox fx:id="hboxButton" layoutX="28.0" layoutY="66.0" prefHeight="100.0" prefWidth="314.0" />
             </children>
          </AnchorPane>
       <Label layoutX="127.0" layoutY="16.0" text="Lista Pazienti" textFill="WHITE">
