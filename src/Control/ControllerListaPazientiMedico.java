@@ -9,13 +9,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.HBox;
-import javafx.stage.Stage;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
 
 import java.util.List;
 
@@ -83,6 +80,7 @@ public class ControllerListaPazientiMedico {
             for (Paziente paziente : pazienti) {
                 ImageView Icon = new ImageView((new Image("/View/images/cartel_32.png")));
                 Button pazientiButton = new Button(paziente.getName() + " " + paziente.getSurname());
+
                 pazientiButton.setStyle("-fx-background-color: #D9D9D9; " +
                         "-fx-padding: 10px 15px; " +
                         "-fx-background-radius: 20px;" +
@@ -104,7 +102,24 @@ public class ControllerListaPazientiMedico {
                             "-fx-cursor: hand;");
                 });
                 pazientiButton.setGraphic(Icon);
+
                 hboxButton.getChildren().add(pazientiButton);
+                pazientiButton.setOnAction(event -> {
+                    try {
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/MedicoDettagli.fxml"));
+                        Parent root = loader.load();
+                        ControllerDettagliMedico controller = loader.getController();
+                        // Imposta i dati del paziente nel controller del dettaglio medico
+                        controller.setPaziente(paziente);
+                        controller.setMedico(medico);
+
+                        Stage stage = (Stage) pazientiButton.getScene().getWindow();
+                        stage.setScene(new Scene(root));
+                        stage.show();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                });
             }
         }
     }

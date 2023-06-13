@@ -1,5 +1,7 @@
 package Control;
 
+import Model.Medico;
+import Model.Paziente;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,12 +18,29 @@ public class ControllerDettagliMedico {
     private Button logoutButton;
 
     @FXML
-    private Label fullName;
+    private Label doctorFullName;
+    @FXML
+    private Label patientName;
+    @FXML
+    private Label patientSurname;
 
     private String username;
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public void setPaziente(Paziente paziente) {
+        String name = paziente.getName();
+        String surname = paziente.getSurname();
+        patientName.setText(name);
+        patientSurname.setText(surname);
+    }
+
+    public void setMedico(Medico medico) {
+        String name = medico.getName();
+        String surname = medico.getSurname();
+        doctorFullName.setText(name + " " + surname);
     }
 
     @FXML

@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Aggiunta bottoni pazienti sezione medico" />
+    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Gestito l'inserimento / aggiornamento dei dati nella tabella rilevazioni">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/ControllerDettagliMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerDettagliMedico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/ControllerListaPazientiMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerListaPazientiMedico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/MedicoDettagli.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/MedicoDettagli.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -276,14 +281,7 @@
       <option name="project" value="LOCAL" />
       <updated>1686664541584</updated>
     </task>
-    <task id="LOCAL-00026" summary="Aggiunta bottoni pazienti sezione medico">
-      <created>1686667090402</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1686667090402</updated>
-    </task>
-    <option name="localTasksCounter" value="27" />
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,7 +323,6 @@
     <MESSAGE value="Cambiati i nomi da Dottore a Medico per correttezza nello sviluppo" />
     <MESSAGE value="Aggiunti bottoni in ListaPazienti del Medico" />
     <MESSAGE value="Gestito l'inserimento / aggiornamento dei dati nella tabella rilevazioni" />
-    <MESSAGE value="Aggiunta bottoni pazienti sezione medico" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aggiunta bottoni pazienti sezione medico" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gestito l'inserimento / aggiornamento dei dati nella tabella rilevazioni" />
   </component>
 </project>
