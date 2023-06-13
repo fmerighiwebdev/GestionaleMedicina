@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 // Classe Data Access Object
 // Si occupa di recuperare i dati dal DB - tabella Medico (con username)
@@ -24,32 +26,53 @@ public class MedicoDAO {
             rs = stat.executeQuery();
 
             if (rs.next()) {
+                int id = rs.getInt("ID");
                 String password = rs.getString("Password");
                 String name = rs.getString("Name");
                 String surname = rs.getString("Surname");
-                medico = new Medico(username, password, name, surname);
+                medico = new Medico(id, username, password, name, surname);
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
-            // Chiudi le risorse
-            if (rs != null) {
-                try {
-                    rs.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-            if (stat != null) {
-                try {
-                    stat.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
         }
 
         return medico;
     }
+
+    public List<Paziente> getPazientiByMedicoId(int medicoId) {
+        Connection conn = null;
+        PreparedStatement stat = null;
+        ResultSet rs = null;
+        List<Paziente> pazienti = new ArrayList<>();
+
+        try {
+            conn = DBManager.getConnection();
+
+            String query = "SELECT * FROM Paziente WHERE MedicoAss = ?";
+            stat = conn.prepareStatement(query);
+            stat.setInt(1, medicoId);
+            rs = stat.executeQuery();
+
+            while (rs.next()) {
+                int id = rs.getInt("ID");
+                String username = rs.getString("Username");
+                String password = rs.getString("Password");
+                String name = rs.getString("Name");
+                String surname = rs.getString("Surname");
+                String symptoms = rs.getString("Symptoms");
+                String medicine = rs.getString("Medicine");
+                int ass = rs.getInt("Assumptions");
+                int quantity = rs.getInt("Quantity");
+                Paziente paziente = new Paziente(id, username, password, name, surname, symptoms, medicine, ass, quantity);
+                pazienti.add(paziente);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return pazienti;
+    }
+
 
 }

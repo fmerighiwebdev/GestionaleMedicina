@@ -47,7 +47,7 @@
                </font>
             </Label>
             <Button fx:id="logoutButton" layoutX="155.0" layoutY="179.0" mnemonicParsing="false" onAction="#bottoneLogout" text="Logout" />
-            <HBox fx:id="buttonBox" layoutX="33.0" layoutY="60.0" prefHeight="100.0" prefWidth="305.0" />
+            <HBox fx:id="hboxButton" layoutX="28.0" layoutY="66.0" prefHeight="100.0" prefWidth="314.0" />
             </children>
          </AnchorPane>
       <Label layoutX="127.0" layoutY="16.0" text="Lista Pazienti" textFill="WHITE">
