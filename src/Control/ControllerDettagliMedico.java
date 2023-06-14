@@ -44,7 +44,6 @@ public class ControllerDettagliMedico {
         this.paziente = paziente;
         String name = paziente.getName();
         String surname = paziente.getSurname();
-        String username = paziente.getUsername();
         patientName.setText(name);
         patientSurname.setText(surname);
     }

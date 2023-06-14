@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Aggiunta tabella Terapia">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Aggiunta valori in input a tabella Terapia e relativi controlli">
       <change beforePath="$PROJECT_DIR$/GestionaleMedicinaDB" beforeDir="false" afterPath="$PROJECT_DIR$/GestionaleMedicinaDB" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Control/ControllerDettagliMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerDettagliMedico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/MedicoDettagli.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/MedicoDettagli.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +105,7 @@
       <workItem from="1686658326612" duration="7028000" />
       <workItem from="1686677614886" duration="2870000" />
       <workItem from="1686680524661" duration="776000" />
-      <workItem from="1686749019383" duration="6542000" />
+      <workItem from="1686749019383" duration="6842000" />
     </task>
     <task id="LOCAL-00001" summary="Rimozione immagine">
       <created>1685722504615</created>
@@ -326,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686750551361</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Aggiunta valori in input a tabella Terapia e relativi controlli">
+      <created>1686755725194</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1686755725194</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +349,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Nuove modifiche estetiche" />
     <MESSAGE value="Altre modifiche" />
     <MESSAGE value="Aggiunta bottoni e dettagli" />
     <MESSAGE value="Some fixes" />
@@ -369,6 +373,7 @@
     <MESSAGE value="Possibilità di premere INVIO al login per accedere" />
     <MESSAGE value="Bug fix - Tab in login" />
     <MESSAGE value="Aggiunta tabella Terapia" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aggiunta tabella Terapia" />
+    <MESSAGE value="Aggiunta valori in input a tabella Terapia e relativi controlli" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunta valori in input a tabella Terapia e relativi controlli" />
   </component>
 </project>
