@@ -69,7 +69,7 @@
                                         <Font name="Arial" size="13.0" />
                                     </font>
                                 </Label>
-                                <TextField promptText="Zerinol">
+                                <TextField fx:id="medTherapyTextF" promptText="Zerinol">
                                     <font>
                                         <Font name="Arial" size="13.0" />
                                     </font>
@@ -86,7 +86,7 @@
                                         <Font name="Arial" size="13.0" />
                                     </font>
                                 </Label>
-                                <TextField promptText="3">
+                                <TextField fx:id="assTherapyTextF" promptText="3">
                                     <font>
                                         <Font name="Arial" size="13.0" />
                                     </font>
@@ -98,12 +98,12 @@
                         </VBox>
                     </children>
                 </HBox>
-                <TextArea layoutX="35.0" layoutY="330.0" prefHeight="68.0" prefWidth="474.0" promptText="Informazioni aggiuntive su paziente">
+                <TextArea fx:id="infoTextF" layoutX="35.0" layoutY="330.0" prefHeight="68.0" prefWidth="474.0" promptText="Informazioni aggiuntive su paziente">
                     <font>
                         <Font name="Arial" size="13.0" />
                     </font>
                 </TextArea>
-                <Button fx:id="sendButton" layoutX="251.0" layoutY="461.0" mnemonicParsing="false" text="Invia">
+                <Button fx:id="sendButton" layoutX="251.0" layoutY="461.0" onAction="#sendTherapy" mnemonicParsing="false" text="Invia">
                     <font>
                         <Font name="Arial" size="13.0" />
                     </font>
@@ -122,7 +122,7 @@
                               <Font name="Arial" size="13.0" />
                            </font>
                         </Label>
-                        <TextField promptText="10mg">
+                        <TextField fx:id="quantityTherapyTextF" promptText="10mg">
                            <font>
                               <Font name="Arial" size="13.0" />
                            </font>
@@ -139,7 +139,7 @@
                               <Font name="Arial" size="13.0" />
                            </font>
                         </Label>
-                        <TextField promptText="Dopo i pasti">
+                        <TextField fx:id="indTherapyTextF" promptText="Dopo i pasti">
                            <font>
                               <Font name="Arial" size="13.0" />
                            </font>
