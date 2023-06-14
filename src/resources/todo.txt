@@ -1,15 +1,18 @@
-(Obbligatorio)
-- Creare DB con SQLite --> COMPLETO
-- Sezione medico per il bottone con nomi dei pazienti --> COMPLETO
+Paziente:
+- Autenticazione --> FATTO
+- Memorizzazione le rilevazioni giornaliere --> FATTO
+(SBP, DBP, Sintomi, Assunzioni, Farmaco, ora, quantità, giorno)
 
+Medico:
+- Autenticazione --> FATTO
+- Specifica terapie (farmaco, numero ass, quantità, indicazioni) --> IN CORSO
+- Visualizzazione dati del paziente in forma sintetica --> DA FARE
+- Aggiunta o modifica delle terapie --> DA FARE
+- Aggiunta o modifica sezione informativa --> DA FARE
 
-- Gestione dati nei pannelli:
-    Paziente --> COMPLETO
-    Dottore --> DA FARE/FINIRE
-
-
-- Visualizzazione dello storico delle rilevazioni del paziente in MedicoDettagli --> DA FARE
-- Inserimento della terapia da parte del medico per il paziente --> DA FARE
-
-(Opzionale)
-- Migliorare GUI pannelli --> IN CORSO
+Sistema:
+- Verifica che le assunzioni siano coerenti --> DA FARE
+- Invito al paziente di inserire le relative assunzioni, se si dimentica
+di assumere farmaci per 3 giorni va avvisato il medico con un alert. --> DA FARE
+- Segnala al medico i pazienti che registrano dati oltre le soglie predefinite. --> DA FARE
+    (Con diverse mod. a seconda della gravità).
