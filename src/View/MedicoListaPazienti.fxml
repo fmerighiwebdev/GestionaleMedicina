@@ -6,7 +6,6 @@
 <?import javafx.scene.text.*?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="550.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.ControllerListaPazientiMedico">
-
       <children>
          <TextField fx:id="title" alignment="CENTER" editable="false" layoutX="-8.0" prefHeight="53.0" prefWidth="560.0">
          <font>
