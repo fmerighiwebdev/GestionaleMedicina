@@ -33,7 +33,8 @@ public class PazienteDAO {
                 String medicine = rs.getString("Medicine");
                 int ass = rs.getInt("Assumptions");
                 int quantity = rs.getInt("Quantity");
-                paziente = new Paziente(id, username, password, name, surname, symptoms, medicine, ass, quantity);
+                String info = rs.getString("Informations");
+                paziente = new Paziente(id, username, password, name, surname, symptoms, medicine, ass, quantity, info);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -78,6 +79,24 @@ public class PazienteDAO {
             stat.executeUpdate();
         } catch (SQLException eInsert) {
             eInsert.printStackTrace();
+        }
+    }
+
+    public void updatePazienteInfo(String username, String info) {
+        Connection conn = null;
+        PreparedStatement stat = null;
+
+        try {
+            conn = DBManager.getConnection();
+
+            String query = "UPDATE Paziente SET Informations = ? WHERE Username = ?";
+            stat = conn.prepareStatement(query);
+            stat.setString(1, info);
+            stat.setString(2, username);
+
+            stat.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 }

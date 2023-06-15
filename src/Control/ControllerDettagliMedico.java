@@ -9,6 +9,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
+import java.util.Optional;
+
 public class ControllerDettagliMedico {
 
     @FXML
@@ -66,6 +68,7 @@ public class ControllerDettagliMedico {
         String assTherapy = assTherapyTextF.getText();
         String quantityTherapy = quantityTherapyTextF.getText();
         String indTherapy = indTherapyTextF.getText();
+        String info = infoTextA.getText();
 
         if (medTherapy.isEmpty()) {
             Alert isEmptyAlert = new Alert(Alert.AlertType.ERROR);
@@ -95,6 +98,22 @@ public class ControllerDettagliMedico {
             isEmptyAlert.setContentText("Inserisci eventuali indicazioni riguardanti la terapia");
             isEmptyAlert.showAndWait();
             return;
+        } else if (info.isEmpty()) {
+            Alert isEmptyAlert = new Alert(Alert.AlertType.ERROR);
+            isEmptyAlert.setTitle("Conferma invio");
+            isEmptyAlert.setHeaderText(null);
+            isEmptyAlert.setContentText("Il campo informazioni è vuoto. Vuoi inviare comunque i dati? Le informazioni del paziente non verranno aggiunte / aggiornate.");
+
+            ButtonType buttonTypeSi = new ButtonType("Si");
+            ButtonType buttonTypeNo = new ButtonType("No");
+
+            isEmptyAlert.getButtonTypes().setAll(buttonTypeSi, buttonTypeNo);
+
+            Optional<ButtonType> res = isEmptyAlert.showAndWait();
+
+            if (res.isPresent() && res.get() == buttonTypeNo) {
+                return;
+            }
         }
 
         try {
@@ -108,8 +127,6 @@ public class ControllerDettagliMedico {
             isWrongAlert.showAndWait();
             return;
         }
-
-        PazienteDAO pazienteDAO = new PazienteDAO();
 
         TerapiaDAO terapiaDAO = new TerapiaDAO();
         int assIntVal = Integer.parseInt(assTherapy);
@@ -126,6 +143,9 @@ public class ControllerDettagliMedico {
             // Inserisce una voce alla tabella se non era presente per il paziente
             terapiaDAO.insertTerapia(terapia);
         }
+
+        PazienteDAO pazienteDAO = new PazienteDAO();
+        pazienteDAO.updatePazienteInfo(paziente.getUsername(), info);
 
         // Invio eseguito
         Alert sendSuccessfull = new Alert(Alert.AlertType.CONFIRMATION);

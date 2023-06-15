@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Modifica ListaPazienti, non prende più i pazienti associati al medico, ma tutti">
+    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Modifiche a pannelli e dati terapia">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/ControllerListaPazientiMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerListaPazientiMedico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/MedicoListaPazienti.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/MedicoListaPazienti.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/PazienteLogin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/PazienteLogin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionaleMedicinaDB" beforeDir="false" afterPath="$PROJECT_DIR$/GestionaleMedicinaDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/ControllerDettagliMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerDettagliMedico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/MedicoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/MedicoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Paziente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Paziente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/PazienteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/PazienteDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/MedicoDettagli.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/MedicoDettagli.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +110,7 @@
       <workItem from="1686658326612" duration="7028000" />
       <workItem from="1686677614886" duration="2870000" />
       <workItem from="1686680524661" duration="776000" />
-      <workItem from="1686749019383" duration="9774000" />
+      <workItem from="1686749019383" duration="12640000" />
     </task>
     <task id="LOCAL-00001" summary="Rimozione immagine">
       <created>1685722504615</created>
@@ -361,7 +364,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686832176109</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Modifiche a pannelli e dati terapia">
+      <created>1686833376674</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1686833376674</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,7 +389,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Some fixes" />
     <MESSAGE value="Add login for Paziente" />
     <MESSAGE value="Creata tabella Dottore e aggiornate le labels nome e cognome" />
     <MESSAGE value="Aggiunta tabella Misurazioni e voci in tabella Paziente" />
@@ -404,6 +413,7 @@
     <MESSAGE value="Bug fix" />
     <MESSAGE value="Aggiornato todo.txt" />
     <MESSAGE value="Modifica ListaPazienti, non prende più i pazienti associati al medico, ma tutti" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modifica ListaPazienti, non prende più i pazienti associati al medico, ma tutti" />
+    <MESSAGE value="Modifiche a pannelli e dati terapia" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modifiche a pannelli e dati terapia" />
   </component>
 </project>

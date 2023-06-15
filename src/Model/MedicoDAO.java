@@ -62,7 +62,8 @@ public class MedicoDAO {
                 String medicine = rs.getString("Medicine");
                 int ass = rs.getInt("Assumptions");
                 int quantity = rs.getInt("Quantity");
-                Paziente paziente = new Paziente(id, username, password, name, surname, symptoms, medicine, ass, quantity);
+                String info = rs.getString("Informations");
+                Paziente paziente = new Paziente(id, username, password, name, surname, symptoms, medicine, ass, quantity, info);
                 pazienti.add(paziente);
             }
 

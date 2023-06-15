@@ -98,7 +98,7 @@
                         </VBox>
                     </children>
                 </HBox>
-                <TextArea fx:id="infoTextF" layoutX="35.0" layoutY="330.0" prefHeight="68.0" prefWidth="474.0" promptText="Informazioni aggiuntive su paziente">
+                <TextArea fx:id="infoTextA" layoutX="35.0" layoutY="330.0" prefHeight="68.0" prefWidth="474.0" promptText="Informazioni aggiuntive su paziente">
                     <font>
                         <Font name="Arial" size="13.0" />
                     </font>
