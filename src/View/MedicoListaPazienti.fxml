@@ -5,14 +5,14 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.ControllerListaPazientiMedico">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="550.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.ControllerListaPazientiMedico">
 
       <children>
-         <TextField fx:id="title" alignment="CENTER" editable="false" layoutX="-8.0" prefHeight="53.0" prefWidth="609.0">
+         <TextField fx:id="title" alignment="CENTER" editable="false" layoutX="-8.0" prefHeight="53.0" prefWidth="560.0">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font></TextField>
-         <AnchorPane layoutX="116.0" layoutY="65.0" prefHeight="90.0" prefWidth="369.0">
+         <AnchorPane layoutX="88.0" layoutY="66.0" prefHeight="90.0" prefWidth="369.0">
             <children>
                <TextField fx:id="faketextfield1" disable="true" editable="false" opacity="1" prefHeight="90.0" prefWidth="369.0" />
                <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="57.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
@@ -37,20 +37,20 @@
             </Label>
             </children>
          </AnchorPane>
-         <AnchorPane layoutX="15.0" layoutY="170.0" prefHeight="400.0" prefWidth="570.0">
+         <AnchorPane layoutX="15.0" layoutY="170.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="519.0">
             <children>
-               <TextField fx:id="faketextfield1" disable="true" editable="false" opacity="1" prefHeight="400.0" prefWidth="570.0">
+               <TextField fx:id="faketextfield1" disable="true" editable="false" opacity="1" prefHeight="400.0" prefWidth="516.0">
                </TextField>
-            <Label layoutX="221.0" layoutY="29.0" text="Lista pazienti:">
+            <Label layoutX="194.0" layoutY="28.0" text="Lista pazienti:">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <Button fx:id="logoutButton" layoutX="254.0" layoutY="353.0" mnemonicParsing="false" onAction="#bottoneLogout" text="Logout" />
-            <FlowPane fx:id="hboxButton" alignment="CENTER" layoutX="52.0" layoutY="70.0" prefHeight="261.0" prefWidth="445.0" />
+            <Button fx:id="logoutButton" layoutX="227.0" layoutY="351.0" mnemonicParsing="false" onAction="#bottoneLogout" text="Logout" />
+            <FlowPane fx:id="hboxButton" alignment="CENTER" layoutX="37.0" layoutY="70.0" prefHeight="261.0" prefWidth="445.0" />
             </children>
          </AnchorPane>
-      <Label layoutX="232.0" layoutY="16.0" text="Lista Pazienti" textFill="WHITE">
+      <Label layoutX="206.0" layoutY="16.0" text="Lista Pazienti" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>
