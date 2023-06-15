@@ -39,7 +39,7 @@ public class MedicoDAO {
         return medico;
     }
 
-    public List<Paziente> getPazientiByMedicoId(int medicoId) {
+    public List<Paziente> getPazienti() {
         Connection conn = null;
         PreparedStatement stat = null;
         ResultSet rs = null;
@@ -48,9 +48,8 @@ public class MedicoDAO {
         try {
             conn = DBManager.getConnection();
 
-            String query = "SELECT * FROM Paziente WHERE MedicoAss = ?";
+            String query = "SELECT * FROM Paziente";
             stat = conn.prepareStatement(query);
-            stat.setInt(1, medicoId);
             rs = stat.executeQuery();
 
             while (rs.next()) {

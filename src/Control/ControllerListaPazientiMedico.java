@@ -75,7 +75,7 @@ public class ControllerListaPazientiMedico {
 
         // Bottoni pazienti
         if (medico != null) {
-            List<Paziente> pazienti = medicoDAO.getPazientiByMedicoId(medico.getId());
+            List<Paziente> pazienti = medicoDAO.getPazienti();
 
             for (Paziente paziente : pazienti) {
                 ImageView Icon = new ImageView((new Image("/View/images/cartel_32.png")));
