@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Gestiti dati e controlli per il campo Informations">
-      <change beforePath="$PROJECT_DIR$/src/Control/ControllerDettagliMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerDettagliMedico.java" afterDir="false" />
+    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Aggiunto testo formattato all'alert per le informazioni">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/ControllerDettagliPaziente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerDettagliPaziente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/PazienteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/PazienteDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Terapia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Terapia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/TerapiaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/TerapiaDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/PazienteDettagli.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/PazienteDettagli.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +109,7 @@
       <workItem from="1686658326612" duration="7028000" />
       <workItem from="1686677614886" duration="2870000" />
       <workItem from="1686680524661" duration="776000" />
-      <workItem from="1686749019383" duration="12954000" />
+      <workItem from="1686749019383" duration="16171000" />
     </task>
     <task id="LOCAL-00001" summary="Rimozione immagine">
       <created>1685722504615</created>
@@ -372,7 +377,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686836171855</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Aggiunto testo formattato all'alert per le informazioni">
+      <created>1686836637956</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1686836637956</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -390,7 +402,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Creata tabella Dottore e aggiornate le labels nome e cognome" />
     <MESSAGE value="Aggiunta tabella Misurazioni e voci in tabella Paziente" />
     <MESSAGE value="Aggiunta voce in tabella Paziente per medico associato" />
     <MESSAGE value="Aggiunto controllo su alcuni input in dettagli paziente - aggiunte entità alla tabella Paziente" />
@@ -415,6 +426,7 @@
     <MESSAGE value="Modifica ListaPazienti, non prende più i pazienti associati al medico, ma tutti" />
     <MESSAGE value="Modifiche a pannelli e dati terapia" />
     <MESSAGE value="Gestiti dati e controlli per il campo Informations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gestiti dati e controlli per il campo Informations" />
+    <MESSAGE value="Aggiunto testo formattato all'alert per le informazioni" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunto testo formattato all'alert per le informazioni" />
   </component>
 </project>

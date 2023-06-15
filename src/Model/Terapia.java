@@ -25,9 +25,9 @@ public class Terapia {
     public void setQuantityTherapy(int quantityTherapy) { this.quantityTherapy = quantityTherapy; }
     public int getQuantityTherapy() { return quantityTherapy; }
 
-    public String getIndTheray() { return indTheray; }
+    public String getIndTherapy() { return indTheray; }
 
-    public void setIndTheray(String indTheray) { this.indTheray = indTheray; }
+    public void setIndTherapy(String indTheray) { this.indTheray = indTheray; }
 
     public void setIdPaziente(int idPaziente) { this.idPaziente = idPaziente; }
     public int getIdPaziente() { return idPaziente; }

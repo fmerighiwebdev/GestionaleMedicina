@@ -46,17 +46,28 @@ public class ControllerDettagliPaziente {
     private TextField hoursTextF;
 
     @FXML
+    private Label medicineThLabel;
+    @FXML
+    private Label assThLabel;
+    @FXML
+    private Label quantThLabel;
+    @FXML
+    private Label indThLabel;
+
+    @FXML
     private Label fullName;
     @FXML
     private Label todayDate;
 
     private String username;
+    private int id;
     private LocalDate date;
 
     // Setto l'username preso dal controller di login paziente
     public void setUsername(String username) {
         this.username = username;
     }
+    public void setId(int id) { this.id = id; }
 
     // Evento collegato al bottone "Logout" in PazienteDettagli.fxml
     @FXML
@@ -274,6 +285,20 @@ public class ControllerDettagliPaziente {
             String name = paziente.getName();
             String surname = paziente.getSurname();
             fullName.setText(name + " " + surname);
+
+            Terapia terapia = pazienteDAO.getTerapiaByPazienteID(paziente.getId());
+
+            if (terapia != null) {
+                String medTh = terapia.getMedicineTherapy();
+                int assTh = terapia.getAssTherapy();
+                int quantTh = terapia.getQuantityTherapy();
+                String indTh = terapia.getIndTherapy();
+
+                medicineThLabel.setText(medTh);
+                assThLabel.setText(String.valueOf(assTh));
+                quantThLabel.setText(String.valueOf(quantTh));
+                indThLabel.setText(indTh);
+            }
         }
 
         // Data di oggi

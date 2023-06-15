@@ -95,8 +95,37 @@ public class PazienteDAO {
             stat.setString(2, username);
 
             stat.executeUpdate();
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public Terapia getTerapiaByPazienteID(int pazienteID) {
+        Connection conn = null;
+        PreparedStatement stat = null;
+        ResultSet rs = null;
+        Terapia terapia = null;
+
+        try {
+            conn = DBManager.getConnection();
+
+            String query = "SELECT * FROM Terapia WHERE IDPaziente = ?";
+            stat = conn.prepareStatement(query);
+            stat.setInt(1, pazienteID);
+            rs = stat.executeQuery();
+
+            if (rs.next()) {
+                int id = rs.getInt("ID");
+                String medTh = rs.getString("MedicineTherapy");
+                int assTh = rs.getInt("AssumptionsTherapy");
+                int quantTh = rs.getInt("QuantityTherapy");
+                String indTh = rs.getString("IndicationsTherapy");
+                terapia = new Terapia(medTh, assTh, quantTh, indTh, pazienteID);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return terapia;
     }
 }

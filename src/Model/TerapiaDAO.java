@@ -21,7 +21,7 @@ public class TerapiaDAO {
             stat.setString(1, terapia.getMedicineTherapy());
             stat.setInt(2, terapia.getAssTherapy());
             stat.setInt(3, terapia.getQuantityTherapy());
-            stat.setString(4, terapia.getIndTheray());
+            stat.setString(4, terapia.getIndTherapy());
             stat.setInt(5, terapia.getIdPaziente());
 
             stat.executeUpdate();
@@ -44,7 +44,7 @@ public class TerapiaDAO {
             stat.setString(1, terapia.getMedicineTherapy());
             stat.setInt(2, terapia.getAssTherapy());
             stat.setInt(3, terapia.getQuantityTherapy());
-            stat.setString(4, terapia.getIndTheray());
+            stat.setString(4, terapia.getIndTherapy());
             stat.setInt(5, terapia.getIdPaziente());
             stat.setInt(6, terapia.getIdPaziente());
 
