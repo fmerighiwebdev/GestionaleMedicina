@@ -11,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
@@ -22,7 +23,7 @@ public class ControllerListaPazientiMedico {
     @FXML
     private TextField faketextfield1;
     @FXML
-    private HBox hboxButton;
+    private FlowPane hboxButton;
     @FXML
     private Button logoutButton;
     @FXML
@@ -102,6 +103,10 @@ public class ControllerListaPazientiMedico {
                             "-fx-cursor: hand;");
                 });
                 pazientiButton.setGraphic(Icon);
+
+                hboxButton.setHgap(10);
+                hboxButton.setVgap(10);
+                hboxButton.setPrefWrapLength(400);
 
                 hboxButton.getChildren().add(pazientiButton);
                 pazientiButton.setOnAction(event -> {
