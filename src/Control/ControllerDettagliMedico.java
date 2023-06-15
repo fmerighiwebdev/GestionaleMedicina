@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.util.Optional;
@@ -102,7 +103,12 @@ public class ControllerDettagliMedico {
             Alert isEmptyAlert = new Alert(Alert.AlertType.ERROR);
             isEmptyAlert.setTitle("Conferma invio");
             isEmptyAlert.setHeaderText(null);
-            isEmptyAlert.setContentText("Il campo informazioni è vuoto. Vuoi inviare comunque i dati? Le informazioni del paziente non verranno aggiunte / aggiornate.");
+
+            String message = "Il campo informazioni è VUOTO.\n" +
+                    "Vuoi inviare comunque i dati?\n" +
+                    "Le informazioni del paziente non verranno aggiunte / aggiornate.";
+
+            isEmptyAlert.getDialogPane().setContentText(message);
 
             ButtonType buttonTypeSi = new ButtonType("Si");
             ButtonType buttonTypeNo = new ButtonType("No");
