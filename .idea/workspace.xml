@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Aggiunto testo formattato all'alert per le informazioni">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/ControllerDettagliPaziente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerDettagliPaziente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/PazienteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/PazienteDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Terapia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Terapia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/TerapiaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/TerapiaDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/PazienteDettagli.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/PazienteDettagli.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Unknown commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -110,6 +103,7 @@
       <workItem from="1686677614886" duration="2870000" />
       <workItem from="1686680524661" duration="776000" />
       <workItem from="1686749019383" duration="16171000" />
+      <workItem from="1686840935090" duration="243000" />
     </task>
     <task id="LOCAL-00001" summary="Rimozione immagine">
       <created>1685722504615</created>
@@ -384,7 +378,21 @@
       <option name="project" value="LOCAL" />
       <updated>1686836637956</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Unknown commit">
+      <created>1686840966072</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1686840966072</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Unknown commit">
+      <created>1686841137554</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1686841137554</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,7 +410,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Aggiunta tabella Misurazioni e voci in tabella Paziente" />
     <MESSAGE value="Aggiunta voce in tabella Paziente per medico associato" />
     <MESSAGE value="Aggiunto controllo su alcuni input in dettagli paziente - aggiunte entità alla tabella Paziente" />
     <MESSAGE value="Add comments" />
@@ -427,6 +434,7 @@
     <MESSAGE value="Modifiche a pannelli e dati terapia" />
     <MESSAGE value="Gestiti dati e controlli per il campo Informations" />
     <MESSAGE value="Aggiunto testo formattato all'alert per le informazioni" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aggiunto testo formattato all'alert per le informazioni" />
+    <MESSAGE value="Unknown commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unknown commit" />
   </component>
 </project>
