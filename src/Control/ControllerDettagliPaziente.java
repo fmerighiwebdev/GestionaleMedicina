@@ -56,9 +56,13 @@ public class ControllerDettagliPaziente {
     private Label fullName;
     @FXML
     private Label todayDate;
-
     private String username;
     private LocalDate date;
+
+    @FXML
+    private Label nomeMedico;
+    @FXML
+    private Label emailMedico;
 
     // Setto l'username preso dal controller di login paziente
     public void setUsername(String username) {
