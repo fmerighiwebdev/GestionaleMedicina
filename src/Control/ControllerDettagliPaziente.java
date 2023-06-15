@@ -14,7 +14,6 @@ import java.sql.*;
 import java.time.LocalDate;
 
 public class ControllerDettagliPaziente {
-
     @FXML
     private TextField title;
     @FXML
@@ -23,7 +22,6 @@ public class ControllerDettagliPaziente {
     private Button sendButton;
     @FXML
     private TextField faketextfield1;
-
     @FXML
     private TextArea symptomsTextA;
     @FXML
@@ -58,10 +56,14 @@ public class ControllerDettagliPaziente {
     private Label fullName;
     @FXML
     private Label todayDate;
-
     private String username;
     private int id;
     private LocalDate date;
+
+    @FXML
+    private Label nomeMedico;
+    @FXML
+    private Label emailMedico;
 
     // Setto l'username preso dal controller di login paziente
     public void setUsername(String username) {
