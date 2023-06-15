@@ -14,7 +14,6 @@ import java.sql.*;
 import java.time.LocalDate;
 
 public class ControllerDettagliPaziente {
-
     @FXML
     private TextField title;
     @FXML
@@ -23,7 +22,6 @@ public class ControllerDettagliPaziente {
     private Button sendButton;
     @FXML
     private TextField faketextfield1;
-
     @FXML
     private TextArea symptomsTextA;
     @FXML
@@ -60,14 +58,12 @@ public class ControllerDettagliPaziente {
     private Label todayDate;
 
     private String username;
-    private int id;
     private LocalDate date;
 
     // Setto l'username preso dal controller di login paziente
     public void setUsername(String username) {
         this.username = username;
     }
-    public void setId(int id) { this.id = id; }
 
     // Evento collegato al bottone "Logout" in PazienteDettagli.fxml
     @FXML

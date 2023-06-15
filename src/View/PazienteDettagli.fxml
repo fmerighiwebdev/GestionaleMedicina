@@ -18,16 +18,11 @@
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Label>
-      <AnchorPane layoutX="26.0" layoutY="70.0" minWidth="-Infinity" prefHeight="90.0" prefWidth="358.0">
+      <AnchorPane layoutX="26.0" layoutY="70.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="74.0" prefWidth="358.0">
          <children>
-            <TextField fx:id="faketextfield1" prefHeight="90.0" prefWidth="358.0" />
+            <TextField fx:id="faketextfield1" prefHeight="74.0" prefWidth="358.0" />
             <HBox layoutX="104.0" layoutY="45.0" prefHeight="30.0" prefWidth="150.0">
                <children>
-                  <Label text="Data:">
-                     <font>
-                        <Font name="Arial" size="13.0" />
-                     </font>
-                  </Label>
                   <Label fx:id="todayDate" text="Data">
                      <font>
                         <Font name="Arial" size="13.0" />
@@ -45,7 +40,7 @@
                   <Image url="@images/patient_profile_icon.png" />
                </image>
             </ImageView>
-            <Button fx:id="logoutButton" layoutX="264.0" layoutY="31.0" mnemonicParsing="false" onAction="#bottoneLogout" text="Logout">
+            <Button fx:id="logoutButton" layoutX="266.0" layoutY="25.0" mnemonicParsing="false" onAction="#bottoneLogout" text="Logout">
                <font>
                   <Font name="Arial" size="13.0" />
                </font>
@@ -55,7 +50,7 @@
       <AnchorPane layoutX="422.0" layoutY="69.0" prefHeight="373.0" prefWidth="548.0">
          <children>
             <TextField id="faketextfield1" prefHeight="513.0" prefWidth="548.0" />
-            <Label contentDisplay="CENTER" layoutX="175.0" layoutY="21.0" prefHeight="28.0" prefWidth="226.0" text="Rilevazioni giornaliere:" textAlignment="JUSTIFY">
+            <Label contentDisplay="CENTER" layoutX="175.0" layoutY="21.0" prefHeight="28.0" prefWidth="226.0" text="Rilevazioni giornaliere" textAlignment="JUSTIFY">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
@@ -247,7 +242,7 @@
                   </VBox>
                </children>
             </HBox>
-            <Button fx:id="sendButton" onAction="#sendRilevations" layoutX="251.0" layoutY="461.0" mnemonicParsing="false" text="Invia">
+            <Button fx:id="sendButton" layoutX="251.0" layoutY="461.0" mnemonicParsing="false" onAction="#sendRilevations" text="Invia">
                <font>
                   <Font name="Arial" size="13.0" />
                </font>
@@ -259,15 +254,15 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="26.0" layoutY="188.0" minWidth="-Infinity" prefHeight="391.0" prefWidth="358.0">
+      <AnchorPane layoutX="26.0" layoutY="168.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="256.0" prefWidth="358.0">
          <children>
-            <TextField id="faketextfield1" prefHeight="391.0" prefWidth="358.0" />
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="66.0" layoutY="20.0" prefHeight="28.0" prefWidth="226.0" text="Terapia:" textAlignment="JUSTIFY">
+            <TextField id="faketextfield1" minHeight="-Infinity" minWidth="-Infinity" prefHeight="256.0" prefWidth="358.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="135.0" layoutY="20.0" prefHeight="28.0" prefWidth="88.0" text="Terapia" textAlignment="JUSTIFY">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
             </Label>
-            <VBox layoutX="31.0" layoutY="68.0" prefHeight="291.0" prefWidth="296.0">
+            <VBox layoutX="31.0" layoutY="68.0" prefHeight="145.0" prefWidth="296.0">
                <children>
                   <HBox prefHeight="54.0" prefWidth="251.0">
                      <children>
@@ -292,7 +287,7 @@
                         </VBox>
                      </children>
                      <VBox.margin>
-                        <Insets bottom="50.0" top="30.0" />
+                        <Insets bottom="30.0" top="10.0" />
                      </VBox.margin>
                   </HBox>
                   <HBox layoutX="10.0" layoutY="10.0" prefHeight="121.0" prefWidth="296.0">
@@ -318,6 +313,33 @@
                   <Image url="@images/therapy.png" />
                </image>
             </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="26.0" layoutY="448.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="134.0" prefWidth="358.0">
+         <children>
+            <TextField fx:id="faketextfield1" prefHeight="134.0" prefWidth="358.0" />
+            <Label fx:id="fullName1" layoutX="43.0" layoutY="59.0" text="Medico di riferimento:">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="132.0" layoutY="14.0" prefHeight="28.0" prefWidth="94.0" text="Contatti" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="fullName11" layoutX="43.0" layoutY="90.0" text="E-mail:">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="97.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/mail_32.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="nomeMedico" layoutX="199.0" layoutY="59.0" text="Label" />
+            <Label fx:id="emailMedico" layoutX="97.0" layoutY="90.0" text="Label" />
          </children>
       </AnchorPane>
    </children>
