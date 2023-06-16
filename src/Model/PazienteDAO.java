@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 // Classe Data Access Object
 // Si occupa di gestire i dati del DB - tabella Paziente (con username)
@@ -157,5 +159,36 @@ public class PazienteDAO {
             e.printStackTrace();
         }
         return medico;
+    }
+
+    public List<Rilevazioni> getRilevazioneByPazienteID(int pazienteId) {
+        Connection conn = null;
+        PreparedStatement stat = null;
+        ResultSet rs = null;
+        List<Rilevazioni> rilevazioniList = new ArrayList<>();
+
+        try {
+            conn = DBManager.getConnection();
+            String query = "SELECT * FROM Rilevazioni WHERE IDPaziente = ?";
+            stat = conn.prepareStatement(query);
+            stat.setInt(1, pazienteId);
+            rs = stat.executeQuery();
+
+            if (rs.next()) {
+                int id = rs.getInt("ID");
+                int sbp = rs.getInt("SBP");
+                int dbp = rs.getInt("DBP");
+                int day = rs.getInt("Day");
+                int month = rs.getInt("Month");
+                int year = rs.getInt("Year");
+                int hours = rs.getInt("Hours");
+                int idPaziente = rs.getInt("IDPaziente");
+                Rilevazioni rilevazioni = new Rilevazioni(sbp, dbp, day, month, year, hours, idPaziente);
+                rilevazioniList.add(rilevazioni);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return rilevazioniList;
     }
 }

@@ -114,7 +114,7 @@
 
 .today-date {
     -fx-background-color: #64cad1;
-    -fx-padding: 2;
+    -fx-padding: 3;
     -fx-border-radius: 10;
     -fx-background-radius: 10;
 }

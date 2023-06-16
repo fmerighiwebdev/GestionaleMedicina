@@ -1,5 +1,9 @@
 package Model;
 
+import java.time.LocalDate;
+import java.util.Calendar;
+import java.util.Date;
+
 public class Rilevazioni {
 
     private int sbp;
@@ -40,5 +44,9 @@ public class Rilevazioni {
 
     public void setIdPaziente(int idPaziente) { this.idPaziente = idPaziente; }
     public int getIdPaziente() { return idPaziente; }
+
+    public String getDate() {
+        return String.format("%02d/%02d/%04d", getDay(), getMonth(), getYear());
+    }
 
 }

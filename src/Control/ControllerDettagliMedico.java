@@ -1,15 +1,19 @@
 package Control;
 
 import Model.*;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 
 public class ControllerDettagliMedico {
@@ -36,6 +40,15 @@ public class ControllerDettagliMedico {
     @FXML
     private TextArea infoTextA;
 
+    @FXML
+    private TableView<Rilevazioni> rilevationsTable;
+    @FXML
+    private TableColumn<Rilevazioni, String> dataColumn;
+    @FXML
+    private TableColumn<Rilevazioni, Integer> sbpColumn;
+    @FXML
+    private TableColumn<Rilevazioni, Integer> dbpColumn;
+
     private String username;
     private Paziente paziente;
 
@@ -49,6 +62,10 @@ public class ControllerDettagliMedico {
         String surname = paziente.getSurname();
         patientName.setText(name);
         patientSurname.setText(surname);
+
+        PazienteDAO pazienteDAO = new PazienteDAO();
+        List<Rilevazioni> rilevazioniList = pazienteDAO.getRilevazioneByPazienteID(paziente.getId());
+        rilevationsTable.setItems(FXCollections.observableList(rilevazioniList));
     }
 
     public void setMedico(Medico medico) {
@@ -166,6 +183,10 @@ public class ControllerDettagliMedico {
         // CSS Class
         backButton.getStyleClass().add("back-button");
         sendButton.getStyleClass().add("send-button");
+
+        dataColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
+        sbpColumn.setCellValueFactory(new PropertyValueFactory<>("sbp"));
+        dbpColumn.setCellValueFactory(new PropertyValueFactory<>("dbp"));
     }
 
 }

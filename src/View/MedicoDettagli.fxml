@@ -187,11 +187,11 @@
                         <Insets bottom="20.0" />
                      </VBox.margin>
                         </HBox>
-                  <TableView prefHeight="200.0" prefWidth="200.0">
+                  <TableView prefHeight="200.0" prefWidth="200.0" fx:id="rilevationsTable">
                     <columns>
-                      <TableColumn prefWidth="90.0" text="Data" />
-                      <TableColumn prefWidth="101.0" text="SBP" />
-                        <TableColumn prefWidth="117.0" text="DBP" />
+                      <TableColumn prefWidth="90.0" text="Data" fx:id="dataColumn"/>
+                      <TableColumn prefWidth="101.0" text="SBP" fx:id="sbpColumn"/>
+                        <TableColumn prefWidth="117.0" text="DBP" fx:id="dbpColumn"/>
                     </columns>
                   </TableView>
                     </children>

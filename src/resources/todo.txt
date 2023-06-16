@@ -7,8 +7,8 @@ Medico:
 - Autenticazione --> FATTO
 - Specifica terapie (farmaco, numero ass, quantità, indicazioni) --> FATTO
 - Visualizzazione dati del paziente in forma sintetica --> DA FARE
-- Aggiunta o modifica delle terapie --> DA FARE
-- Aggiunta o modifica sezione informativa --> DA FARE
+- Aggiunta o modifica delle terapie --> FATTO
+- Aggiunta o modifica sezione informativa --> FATTO
 
 Sistema:
 - Verifica che le assunzioni siano coerenti --> DA FARE
