@@ -118,3 +118,24 @@
     -fx-border-radius: 10;
     -fx-background-radius: 10;
 }
+
+/* Stili valori tabella */
+.optimal-value {
+    -fx-text-fill: green;
+    -fx-font-weight: bold;
+}
+
+.normal-value {
+    -fx-text-fill: #c9bf28;
+    -fx-font-weight: bold;
+}
+
+.warning-value {
+    -fx-text-fill: orange;
+    -fx-font-weight: bold;
+}
+
+.danger-value {
+    -fx-text-fill: red;
+    -fx-font-weight: bold;
+}

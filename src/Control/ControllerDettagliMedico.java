@@ -187,6 +187,47 @@ public class ControllerDettagliMedico {
         dataColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
         sbpColumn.setCellValueFactory(new PropertyValueFactory<>("sbp"));
         dbpColumn.setCellValueFactory(new PropertyValueFactory<>("dbp"));
+
+        // Imposto uno stile per le varie soglie di valori
+        sbpColumn.setCellFactory(column -> new TableCell<Rilevazioni, Integer>() {
+            protected void updateItem(Integer item, boolean empty) {
+                super.updateItem(item, empty);
+
+                if (item != null && !empty) {
+                    setText(item.toString());
+
+                    if (item < 120) {
+                        getStyleClass().add("optimal-value");
+                    } else if (item >= 120 && item < 140) {
+                        getStyleClass().add("normal-value");
+                    } else if (item >= 140 && item < 180) {
+                        getStyleClass().add("warning-value");
+                    } else {
+                        getStyleClass().add("danger-value");
+                    }
+                }
+            }
+        });
+
+        dbpColumn.setCellFactory(column -> new TableCell<Rilevazioni, Integer>() {
+            protected void updateItem(Integer item, boolean empty) {
+                super.updateItem(item, empty);
+
+                if (item != null && !empty) {
+                    setText(item.toString());
+
+                    if (item < 80) {
+                        getStyleClass().add("optimal-value");
+                    } else if (item >= 80 && item < 90) {
+                        getStyleClass().add("normal-value");
+                    } else if (item >= 90 && item < 110) {
+                        getStyleClass().add("warning-value");
+                    } else {
+                        getStyleClass().add("danger-value");
+                    }
+                }
+            }
+        });
     }
 
 }

@@ -6,7 +6,7 @@ Paziente:
 Medico:
 - Autenticazione --> FATTO
 - Specifica terapie (farmaco, numero ass, quantità, indicazioni) --> FATTO
-- Visualizzazione dati del paziente in forma sintetica --> DA FARE
+- Visualizzazione dati del paziente in forma sintetica --> FATTO
 - Aggiunta o modifica delle terapie --> FATTO
 - Aggiunta o modifica sezione informativa --> FATTO
 

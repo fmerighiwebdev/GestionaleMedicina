@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="La TableView in dettagliMedico mostra le rilevazioni del paziente aggiornate">
-      <change beforePath="$PROJECT_DIR$/GestionaleMedicinaDB" beforeDir="false" afterPath="$PROJECT_DIR$/GestionaleMedicinaDB" afterDir="false" />
+    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Test per TableView rilevazioni">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/ControllerDettagliMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerDettagliMedico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/todo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/todo.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +108,7 @@
       <workItem from="1686677614886" duration="2870000" />
       <workItem from="1686680524661" duration="776000" />
       <workItem from="1686749019383" duration="16171000" />
-      <workItem from="1686840935090" duration="7042000" />
+      <workItem from="1686840935090" duration="9183000" />
     </task>
     <task id="LOCAL-00001" summary="Rimozione immagine">
       <created>1685722504615</created>
@@ -415,7 +418,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686921237170</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Test per TableView rilevazioni">
+      <created>1686921591589</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1686921591589</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -433,7 +443,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Aggiunta foreign key IDPaziente a tabella Rilevazioni" />
     <MESSAGE value="Tabella rilevazioni completata - Input per il paziente gestiti" />
     <MESSAGE value="Aggiunto stile ai pannelli" />
     <MESSAGE value="Aggiunto controllo sulla data nei dettagli paziente" />
@@ -458,6 +467,7 @@
     <MESSAGE value="Aggiustamenti dimensioni" />
     <MESSAGE value="Aggiunta foreign key MedicoAss - Gestione contatti medico in DettagliPaziente" />
     <MESSAGE value="La TableView in dettagliMedico mostra le rilevazioni del paziente aggiornate" />
-    <option name="LAST_COMMIT_MESSAGE" value="La TableView in dettagliMedico mostra le rilevazioni del paziente aggiornate" />
+    <MESSAGE value="Test per TableView rilevazioni" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test per TableView rilevazioni" />
   </component>
 </project>
