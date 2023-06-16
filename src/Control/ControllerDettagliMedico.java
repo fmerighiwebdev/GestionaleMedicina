@@ -33,6 +33,8 @@ public class ControllerDettagliMedico {
     private Label patientName;
     @FXML
     private Label patientSurname;
+    @FXML
+    private Label todayDate;
 
     @FXML
     private TextField faketextfield1;
@@ -65,6 +67,7 @@ public class ControllerDettagliMedico {
 
     private String username;
     private Paziente paziente;
+    private LocalDate date;
 
     public void setUsername(String username) {
         this.username = username;
@@ -247,6 +250,7 @@ public class ControllerDettagliMedico {
         faketextfield2.getStyleClass().add("faketextfield2");
         faketextfield3.getStyleClass().add("faketextfield3");
         faketextfield4.getStyleClass().add("faketextfield4-patient");
+        todayDate.getStyleClass().add("today-date");
 
         medTherapyTextF.getStyleClass().add("doctor-details-text-field");
         assTherapyTextF.getStyleClass().add("doctor-details-text-field");
@@ -298,6 +302,16 @@ public class ControllerDettagliMedico {
                 }
             }
         });
+
+        // Data di oggi
+        date = LocalDate.now();
+        int day = date.getDayOfMonth();
+        int month = date.getMonthValue();
+        int year = date.getYear();
+
+        String formattedDate = String.format("%02d/%02d/%04d", day, month, year);
+
+        todayDate.setText(formattedDate);
     }
 }
 

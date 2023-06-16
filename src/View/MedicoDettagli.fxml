@@ -23,7 +23,7 @@
                 <TextField fx:id="faketextfield1" prefHeight="90.0" prefWidth="358.0" />
                 <HBox layoutX="104.0" layoutY="45.0" prefHeight="30.0" prefWidth="150.0">
                     <children>
-                        <Label text="Data">
+                        <Label fx:id="todayDate" text="Data">
                             <font>
                                 <Font name="Arial" size="13.0" />
                             </font>

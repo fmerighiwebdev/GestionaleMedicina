@@ -32,7 +32,7 @@
             </HBox>
             <Label fx:id="fullName" layoutX="105.0" layoutY="23.0" text="Nome Cognome">
                <font>
-                  <Font name="Arial" size="13.0" />
+                  <Font name="System Bold" size="13.0" />
                </font>
             </Label>
             <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="59.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
@@ -49,7 +49,7 @@
       </AnchorPane>
       <AnchorPane layoutX="422.0" layoutY="69.0" prefHeight="373.0" prefWidth="548.0">
          <children>
-            <TextField id="faketextfield1" prefHeight="513.0" prefWidth="548.0" />
+            <TextField fx:id="faketextfield2" prefHeight="513.0" prefWidth="548.0" />
             <Label contentDisplay="CENTER" layoutX="175.0" layoutY="21.0" prefHeight="28.0" prefWidth="226.0" text="Rilevazioni giornaliere" textAlignment="JUSTIFY">
                <font>
                   <Font name="Arial Bold" size="18.0" />
@@ -61,7 +61,7 @@
                      <children>
                         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="150.0" prefHeight="0.0" prefWidth="270.0" text="SBP " textAlignment="CENTER">
                            <font>
-                              <Font name="Arial" size="13.0" />
+                              <Font name="System Bold" size="13.0" />
                            </font>
                         </Label>
                         <TextField fx:id="sbpTextF" promptText="120">
@@ -78,7 +78,7 @@
                      <children>
                         <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="269.0" text="DBP " textAlignment="CENTER">
                            <font>
-                              <Font name="Arial" size="13.0" />
+                              <Font name="System Bold" size="13.0" />
                            </font>
                         </Label>
                         <TextField fx:id="dbpTextF" promptText="80">
@@ -95,7 +95,7 @@
             </HBox>
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="158.0" layoutY="139.0" prefHeight="28.0" prefWidth="226.0" text="Sintomi rilevati:" textAlignment="JUSTIFY">
                <font>
-                  <Font name="Arial Bold" size="18.0" />
+                  <Font name="System Bold" size="13.0" />
                </font>
             </Label>
             <TextArea fx:id="symptomsTextA" layoutX="34.0" layoutY="167.0" prefHeight="68.0" prefWidth="474.0" promptText="Sintomi rilevati durante la terapia...">
@@ -109,7 +109,7 @@
                      <children>
                         <Label text="Giorno">
                            <font>
-                              <Font name="Arial" size="13.0" />
+                              <Font name="System Bold" size="13.0" />
                            </font>
                         </Label>
                         <TextField fx:id="dayTextF" promptText="dd">
@@ -129,7 +129,7 @@
                      <children>
                         <Label text="Mese">
                            <font>
-                              <Font name="Arial" size="13.0" />
+                              <Font name="System Bold" size="13.0" />
                            </font>
                         </Label>
                         <TextField fx:id="monthTextF" promptText="mm">
@@ -149,7 +149,7 @@
                      <children>
                         <Label text="Anno">
                            <font>
-                              <Font name="Arial" size="13.0" />
+                              <Font name="System Bold" size="13.0" />
                            </font>
                         </Label>
                         <TextField fx:id="yearTextF" promptText="yyyy">
@@ -166,7 +166,7 @@
                      <children>
                         <Label text="Ora">
                            <font>
-                                <Font name="Arial" size="13.0" />
+                                <Font name="System Bold" size="13.0" />
                            </font>
                         </Label>
                         <TextField fx:id="hoursTextF" promptText="hh">
@@ -187,7 +187,7 @@
                      <children>
                         <Label text="Farmaco">
                            <font>
-                              <Font name="Arial" size="13.0" />
+                              <Font name="System Bold" size="13.0" />
                            </font>
                         </Label>
                         <TextField fx:id="medicineTextF" promptText="Tachipirina">
@@ -207,7 +207,7 @@
                      <children>
                         <Label text="N° Assunzioni">
                            <font>
-                              <Font name="Arial" size="13.0" />
+                              <Font name="System Bold" size="13.0" />
                            </font>
                         </Label>
                         <TextField fx:id="assumptionsTextF" promptText="1">
@@ -227,7 +227,7 @@
                      <children>
                         <Label text="Quantità (in mg)">
                            <font>
-                              <Font name="Arial" size="13.0" />
+                              <Font name="System Bold" size="13.0" />
                            </font>
                         </Label>
                         <TextField fx:id="quantityTextF" promptText="100">
@@ -256,7 +256,7 @@
       </AnchorPane>
       <AnchorPane layoutX="26.0" layoutY="168.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="256.0" prefWidth="358.0">
          <children>
-            <TextField id="faketextfield1" minHeight="-Infinity" minWidth="-Infinity" prefHeight="256.0" prefWidth="358.0" />
+            <TextField fx:id="faketextfield3" minHeight="-Infinity" minWidth="-Infinity" prefHeight="256.0" prefWidth="358.0" />
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="135.0" layoutY="20.0" prefHeight="28.0" prefWidth="88.0" text="Terapia" textAlignment="JUSTIFY">
                <font>
                   <Font name="Arial Bold" size="18.0" />
@@ -268,12 +268,20 @@
                      <children>
                         <VBox alignment="CENTER" prefHeight="54.0" prefWidth="122.0">
                            <children>
-                              <Label text="Farmaco" />
+                              <Label text="Farmaco">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
                               <Label fx:id="medicineThLabel" text="-" />
                            </children></VBox>
                         <VBox alignment="CENTER" prefHeight="54.0" prefWidth="116.0">
                            <children>
-                              <Label text="Assunzioni" />
+                              <Label text="Assunzioni">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
                               <Label fx:id="assThLabel" text="-" />
                            </children>
                            <HBox.margin>
@@ -281,7 +289,11 @@
                            </HBox.margin></VBox>
                         <VBox alignment="CENTER" prefHeight="54.0" prefWidth="122.0">
                            <children>
-                              <Label text="Quantità" />
+                              <Label text="Quantità">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
                               <Label fx:id="quantThLabel" text="-" />
                            </children>
                         </VBox>
@@ -294,7 +306,11 @@
                      <children>
                         <VBox alignment="TOP_CENTER" prefHeight="96.0" prefWidth="296.0">
                            <children>
-                              <Label text="Indicazioni" />
+                              <Label text="Indicazioni">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
                               <Label fx:id="indThLabel" text="-" />
                            </children>
                            <HBox.margin>
@@ -317,10 +333,10 @@
       </AnchorPane>
       <AnchorPane layoutX="26.0" layoutY="448.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="134.0" prefWidth="358.0">
          <children>
-            <TextField fx:id="faketextfield1" prefHeight="134.0" prefWidth="358.0" />
+            <TextField fx:id="faketextfield4" prefHeight="134.0" prefWidth="358.0" />
             <Label fx:id="fullName1" layoutX="43.0" layoutY="59.0" text="Medico di riferimento:">
                <font>
-                  <Font name="Arial" size="13.0" />
+                  <Font name="System Bold" size="13.0" />
                </font>
             </Label>
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="132.0" layoutY="14.0" prefHeight="28.0" prefWidth="94.0" text="Contatti" textAlignment="JUSTIFY">
@@ -330,7 +346,7 @@
             </Label>
             <Label fx:id="fullName11" layoutX="43.0" layoutY="90.0" text="E-mail:">
                <font>
-                  <Font name="Arial" size="13.0" />
+                  <Font name="System Bold" size="13.0" />
                </font>
             </Label>
             <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="97.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
