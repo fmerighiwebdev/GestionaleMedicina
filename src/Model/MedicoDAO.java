@@ -30,7 +30,8 @@ public class MedicoDAO {
                 String password = rs.getString("Password");
                 String name = rs.getString("Name");
                 String surname = rs.getString("Surname");
-                medico = new Medico(id, username, password, name, surname);
+                String email = rs.getString("Email");
+                medico = new Medico(id, username, password, name, surname, email);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -63,7 +64,8 @@ public class MedicoDAO {
                 int ass = rs.getInt("Assumptions");
                 int quantity = rs.getInt("Quantity");
                 String info = rs.getString("Informations");
-                Paziente paziente = new Paziente(id, username, password, name, surname, symptoms, medicine, ass, quantity, info);
+                int medicoAss = rs.getInt("MedicoAss");
+                Paziente paziente = new Paziente(id, username, password, name, surname, symptoms, medicine, ass, quantity, info, medicoAss);
                 pazienti.add(paziente);
             }
 

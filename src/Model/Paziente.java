@@ -13,10 +13,11 @@ public class Paziente {
     private int assumptions;
     private int quantity;
     private String info;
+    private int medicoAss;
 
     // Costruttore
     public Paziente(int id, String username, String password, String name, String surname,
-                        String symptoms, String medicine, int assumptions, int quantity, String info) {
+                        String symptoms, String medicine, int assumptions, int quantity, String info, int medicoAss) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -27,6 +28,7 @@ public class Paziente {
         this.assumptions = assumptions;
         this.quantity = quantity;
         this.info = info;
+        this.medicoAss = medicoAss;
     }
 
     // Getters and setters
@@ -69,4 +71,7 @@ public class Paziente {
 
     public void setInfo(String info) { this.info = info; }
     public String getInfo() { return info; }
+
+    public void setMedicoAss(int medicoAss) { this.medicoAss = medicoAss; }
+    public int getMedicoAss() { return medicoAss; }
 }

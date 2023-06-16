@@ -53,6 +53,11 @@ public class ControllerDettagliPaziente {
     private Label indThLabel;
 
     @FXML
+    private Label nomeMedico;
+    @FXML
+    private Label emailMedico;
+
+    @FXML
     private Label fullName;
     @FXML
     private Label todayDate;
@@ -293,6 +298,17 @@ public class ControllerDettagliPaziente {
                 assThLabel.setText(String.valueOf(assTh));
                 quantThLabel.setText(String.valueOf(quantTh));
                 indThLabel.setText(indTh);
+            }
+
+            Medico medico = pazienteDAO.getMedicoByMedicoAss(paziente.getMedicoAss());
+
+            if (medico != null) {
+                String nameDoc = medico.getName();
+                String surnameDoc = medico.getSurname();
+                String emailDoc = medico.getEmail();
+
+                nomeMedico.setText(nameDoc + " " + surnameDoc);
+                emailMedico.setText(emailDoc);
             }
         }
 

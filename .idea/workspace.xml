@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Unknown commit" />
+    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Aggiustamenti dimensioni">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionaleMedicinaDB" beforeDir="false" afterPath="$PROJECT_DIR$/GestionaleMedicinaDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/ControllerDettagliPaziente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerDettagliPaziente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Medico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Medico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/MedicoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/MedicoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Paziente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Paziente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/PazienteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/PazienteDAO.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,7 +111,7 @@
       <workItem from="1686677614886" duration="2870000" />
       <workItem from="1686680524661" duration="776000" />
       <workItem from="1686749019383" duration="16171000" />
-      <workItem from="1686840935090" duration="243000" />
+      <workItem from="1686840935090" duration="2217000" />
     </task>
     <task id="LOCAL-00001" summary="Rimozione immagine">
       <created>1685722504615</created>
@@ -392,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686841137554</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Aggiustamenti dimensioni">
+      <created>1686841635077</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1686841635077</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -410,7 +425,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Aggiunta voce in tabella Paziente per medico associato" />
     <MESSAGE value="Aggiunto controllo su alcuni input in dettagli paziente - aggiunte entità alla tabella Paziente" />
     <MESSAGE value="Add comments" />
     <MESSAGE value="Aggiunta foreign key IDPaziente a tabella Rilevazioni" />
@@ -435,6 +449,7 @@
     <MESSAGE value="Gestiti dati e controlli per il campo Informations" />
     <MESSAGE value="Aggiunto testo formattato all'alert per le informazioni" />
     <MESSAGE value="Unknown commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Unknown commit" />
+    <MESSAGE value="Aggiustamenti dimensioni" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiustamenti dimensioni" />
   </component>
 </project>

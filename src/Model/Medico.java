@@ -8,14 +8,16 @@ public class Medico {
     private String password;
     private String name;
     private String surname;
+    private String email;
 
     // Costruttore
-    public Medico(int id, String username, String password, String name, String surname) {
+    public Medico(int id, String username, String password, String name, String surname, String email) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.name = name;
         this.surname = surname;
+        this.email = email;
     }
 
     public void setId(int id) { this.id = id; }
@@ -48,5 +50,8 @@ public class Medico {
     public String getSurname() {
         return surname;
     }
+
+    public void setEmail(String email) { this.email = email; }
+    public String getEmail() { return email; }
 
 }

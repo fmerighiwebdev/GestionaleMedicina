@@ -34,7 +34,8 @@ public class PazienteDAO {
                 int ass = rs.getInt("Assumptions");
                 int quantity = rs.getInt("Quantity");
                 String info = rs.getString("Informations");
-                paziente = new Paziente(id, username, password, name, surname, symptoms, medicine, ass, quantity, info);
+                int medicoAss = rs.getInt("MedicoAss");
+                paziente = new Paziente(id, username, password, name, surname, symptoms, medicine, ass, quantity, info, medicoAss);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -127,5 +128,34 @@ public class PazienteDAO {
             e.printStackTrace();
         }
         return terapia;
+    }
+
+    public Medico getMedicoByMedicoAss(int medicoAss) {
+        Connection conn = null;
+        PreparedStatement stat = null;
+        ResultSet rs = null;
+        Medico medico = null;
+
+        try {
+            conn = DBManager.getConnection();
+
+            String query = "SELECT * FROM Medico WHERE ID = ?";
+            stat = conn.prepareStatement(query);
+            stat.setInt(1, medicoAss);
+            rs = stat.executeQuery();
+
+            if (rs.next()) {
+                int id = rs.getInt("ID");
+                String name = rs.getString("Name");
+                String surname = rs.getString("Surname");
+                String username = rs.getString("Username");
+                String password = rs.getString("Password");
+                String email = rs.getString("Email");
+                medico = new Medico(id, username, password, name, surname, email);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return medico;
     }
 }
