@@ -20,7 +20,7 @@
         </Label>
         <AnchorPane layoutX="26.0" layoutY="70.0" minWidth="-Infinity" prefHeight="90.0" prefWidth="358.0">
             <children>
-                <TextField fx:id="faketextfield1" prefHeight="90.0" prefWidth="358.0" />
+                <TextField fx:id="faketextfield1" editable="false" prefHeight="90.0" prefWidth="358.0" />
                 <HBox layoutX="104.0" layoutY="45.0" prefHeight="30.0" prefWidth="150.0">
                     <children>
                         <Label fx:id="todayDate" text="Data">
@@ -49,7 +49,7 @@
         </AnchorPane>
         <AnchorPane layoutX="422.0" layoutY="69.0" prefHeight="373.0" prefWidth="548.0">
             <children>
-                <TextField fx:id="faketextfield2" prefHeight="513.0" prefWidth="548.0" />
+                <TextField fx:id="faketextfield2" editable="false" prefHeight="513.0" prefWidth="548.0" />
                 <Label contentDisplay="CENTER" layoutX="238.0" layoutY="21.0" prefHeight="28.0" prefWidth="80.0" text="Terapia" textAlignment="JUSTIFY">
                     <font>
                         <Font name="System Bold" size="18.0" />
@@ -151,7 +151,7 @@
         </AnchorPane>
         <AnchorPane layoutX="26.0" layoutY="188.0" minWidth="-Infinity" prefHeight="337.0" prefWidth="358.0">
             <children>
-                <TextField fx:id="faketextfield3" prefHeight="391.0" prefWidth="358.0" />
+                <TextField fx:id="faketextfield3" editable="false" prefHeight="391.0" prefWidth="358.0" />
                 <Label alignment="CENTER" contentDisplay="CENTER" layoutX="103.0" layoutY="20.0" prefHeight="28.0" prefWidth="152.0" text="Dati Paziente" textAlignment="JUSTIFY">
                     <font>
                         <Font name="System Bold" size="18.0" />
@@ -173,7 +173,7 @@
                         <Image url="@images/clinic_folder.png" />
                     </image>
                 </ImageView>
-            <TextField fx:id="faketextfield4" layoutX="31.0" layoutY="77.0" prefHeight="68.0" prefWidth="296.0" />
+            <TextField fx:id="faketextfield4" editable="false" layoutX="31.0" layoutY="77.0" prefHeight="68.0" prefWidth="296.0" />
             <Label fx:id="patientName" layoutX="136.0" layoutY="95.0" text="Nome">
                <font>
                   <Font name="System Bold" size="13.0" />

@@ -20,8 +20,8 @@
       </Label>
       <AnchorPane layoutX="26.0" layoutY="70.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="74.0" prefWidth="358.0">
          <children>
-            <TextField fx:id="faketextfield1" prefHeight="74.0" prefWidth="358.0" />
-            <HBox layoutX="104.0" layoutY="45.0" prefHeight="30.0" prefWidth="150.0">
+            <TextField fx:id="faketextfield1" editable="false" prefHeight="74.0" prefWidth="358.0" />
+            <HBox layoutX="104.0" layoutY="36.0" prefHeight="30.0" prefWidth="150.0">
                <children>
                   <Label fx:id="todayDate" text="Data">
                      <font>
@@ -30,7 +30,7 @@
                   </Label>
                </children>
             </HBox>
-            <Label fx:id="fullName" layoutX="105.0" layoutY="23.0" text="Nome Cognome">
+            <Label fx:id="fullName" layoutX="104.0" layoutY="17.0" text="Nome Cognome">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
@@ -49,7 +49,7 @@
       </AnchorPane>
       <AnchorPane layoutX="422.0" layoutY="69.0" prefHeight="373.0" prefWidth="548.0">
          <children>
-            <TextField fx:id="faketextfield2" prefHeight="513.0" prefWidth="548.0" />
+            <TextField fx:id="faketextfield2" editable="false" prefHeight="513.0" prefWidth="548.0" />
             <Label contentDisplay="CENTER" layoutX="175.0" layoutY="21.0" prefHeight="28.0" prefWidth="226.0" text="Rilevazioni giornaliere" textAlignment="JUSTIFY">
                <font>
                   <Font name="Arial Bold" size="18.0" />
@@ -256,7 +256,7 @@
       </AnchorPane>
       <AnchorPane layoutX="26.0" layoutY="168.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="256.0" prefWidth="358.0">
          <children>
-            <TextField fx:id="faketextfield3" minHeight="-Infinity" minWidth="-Infinity" prefHeight="256.0" prefWidth="358.0" />
+            <TextField fx:id="faketextfield3" editable="false" minHeight="-Infinity" minWidth="-Infinity" prefHeight="256.0" prefWidth="358.0" />
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="135.0" layoutY="20.0" prefHeight="28.0" prefWidth="88.0" text="Terapia" textAlignment="JUSTIFY">
                <font>
                   <Font name="Arial Bold" size="18.0" />
@@ -333,8 +333,8 @@
       </AnchorPane>
       <AnchorPane layoutX="26.0" layoutY="448.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="134.0" prefWidth="358.0">
          <children>
-            <TextField fx:id="faketextfield4" prefHeight="134.0" prefWidth="358.0" />
-            <Label fx:id="fullName1" layoutX="43.0" layoutY="59.0" text="Medico di riferimento:">
+            <TextField fx:id="faketextfield4" editable="false" prefHeight="134.0" prefWidth="358.0" />
+            <Label fx:id="fullName1" layoutX="31.0" layoutY="59.0" text="Medico di riferimento:">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
@@ -344,7 +344,7 @@
                   <Font name="Arial Bold" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="fullName11" layoutX="43.0" layoutY="90.0" text="E-mail:">
+            <Label fx:id="fullName11" layoutX="31.0" layoutY="90.0" text="E-mail:">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
@@ -354,7 +354,7 @@
                   <Image url="@images/mail_32.png" />
                </image>
             </ImageView>
-            <Label fx:id="nomeMedico" layoutX="199.0" layoutY="59.0" text="Label" />
+            <Label fx:id="nomeMedico" layoutX="208.0" layoutY="59.0" text="Label" />
             <Label fx:id="emailMedico" layoutX="97.0" layoutY="90.0" text="Label" />
          </children>
       </AnchorPane>

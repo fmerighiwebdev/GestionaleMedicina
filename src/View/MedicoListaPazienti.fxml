@@ -38,7 +38,7 @@
          </AnchorPane>
          <AnchorPane layoutX="15.0" layoutY="170.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="519.0">
             <children>
-               <TextField fx:id="faketextfield1" disable="true" editable="false" opacity="1" prefHeight="400.0" prefWidth="516.0">
+               <TextField fx:id="faketextfield2" disable="true" editable="false" opacity="1" prefHeight="400.0" prefWidth="516.0">
                </TextField>
             <Label layoutX="194.0" layoutY="28.0" text="Lista pazienti:">
                <font>
