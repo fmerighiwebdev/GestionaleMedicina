@@ -87,9 +87,34 @@
     -fx-background-radius: 0;
     -fx-text-fill:white;
 }
-
-#faketextfield1 {
+/*Faketextfields*/
+.faketextfield1{
     -fx-border-color: transparent;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-background-color:white;
+}
+.faketextfield2{
+    -fx-border-color: transparent;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-background-color:white;
+}
+.faketextfield3{
+    -fx-border-color: transparent;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-background-color:white;
+}
+.faketextfield4{
+    -fx-border-color: transparent;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-background-color:white;
+}
+
+.faketextfield4-patient{
+    -fx-border-color: grey;
     -fx-border-radius: 20;
     -fx-background-radius: 20;
     -fx-background-color:white;
@@ -103,13 +128,13 @@
 }
 
 .patient-details-text-field {
-    -fx-background-color: #D9D9D9;
+    -fx-background-color: #ededeb;
     -fx-prompt-text-fill: #838485;
 }
 
 .patient-details-text-area {
-    -fx-background-color: #D9D9D9;
-    -fx-control-inner-background: #D9D9D9;
+    -fx-background-color: #ededeb;
+    -fx-control-inner-background: #ededeb;
 }
 
 .today-date {
@@ -117,6 +142,41 @@
     -fx-padding: 3;
     -fx-border-radius: 10;
     -fx-background-radius: 10;
+}
+
+.doctor-details-text-field{
+    -fx-background-color: #ededeb;
+    -fx-prompt-text-fill: #838485;
+}
+
+.doctor-details-text-field{
+    -fx-background-color: #ededeb;
+    -fx-control-inner-background: #ededeb;
+}
+
+
+/*Dettagli paziente therapy label*/
+.medicine-th-label{
+    -fx-background-radius: 10;
+    -fx-padding: 5;
+    -fx-background-color: #edd182;
+}
+.ass-th-label{
+    -fx-background-radius: 10;
+    -fx-padding: 5;
+    -fx-background-color: #edd182;
+}
+
+.quant-th-label{
+    -fx-background-radius: 10;
+    -fx-padding: 5;
+    -fx-background-color: #edd182;
+}
+
+.ind-th-label{
+    -fx-background-radius: 10;
+    -fx-padding: 5;
+    -fx-background-color: #edd182;
 }
 
 /* Stili valori tabella */

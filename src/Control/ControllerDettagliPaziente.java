@@ -23,6 +23,12 @@ public class ControllerDettagliPaziente {
     @FXML
     private TextField faketextfield1;
     @FXML
+    private TextField faketextfield2;
+    @FXML
+    private TextField faketextfield3;
+    @FXML
+    private TextField faketextfield4;
+    @FXML
     private TextArea symptomsTextA;
     @FXML
     private TextField medicineTextF;
@@ -262,7 +268,11 @@ public class ControllerDettagliPaziente {
         title.getStyleClass().add("title");
         logoutButton.getStyleClass().add("logout-button");
         sendButton.getStyleClass().add("send-button");
+
         faketextfield1.getStyleClass().add("faketextfield1");
+        faketextfield2.getStyleClass().add("faketextfield2");
+        faketextfield3.getStyleClass().add("faketextfield3");
+        faketextfield4.getStyleClass().add("faketextfield4");
 
         symptomsTextA.getStyleClass().add("patient-details-text-area");
         medicineTextF.getStyleClass().add("patient-details-text-field");
@@ -275,6 +285,11 @@ public class ControllerDettagliPaziente {
         yearTextF.getStyleClass().add("patient-details-text-field");
         hoursTextF.getStyleClass().add("patient-details-text-field");
         todayDate.getStyleClass().add("today-date");
+
+        medicineThLabel.getStyleClass().add("medicine-th-label");
+        assThLabel.getStyleClass().add("ass-th-label");
+        quantThLabel.getStyleClass().add("quant-th-label");
+        indThLabel.getStyleClass().add("ind-th-label");
 
         // Name and surname in label
         // Uso l'username settato per recuperare i dati dalla tabella grazie al modello creato

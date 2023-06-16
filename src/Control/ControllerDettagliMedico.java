@@ -35,6 +35,15 @@ public class ControllerDettagliMedico {
     private Label patientSurname;
 
     @FXML
+    private TextField faketextfield1;
+    @FXML
+    private TextField faketextfield2;
+    @FXML
+    private TextField faketextfield3;
+    @FXML
+    private TextField faketextfield4;
+
+    @FXML
     private TextField medTherapyTextF;
     @FXML
     private TextField assTherapyTextF;
@@ -234,6 +243,16 @@ public class ControllerDettagliMedico {
         // CSS Class
         backButton.getStyleClass().add("back-button");
         sendButton.getStyleClass().add("send-button");
+        faketextfield1.getStyleClass().add("faketextfield1");
+        faketextfield2.getStyleClass().add("faketextfield2");
+        faketextfield3.getStyleClass().add("faketextfield3");
+        faketextfield4.getStyleClass().add("faketextfield4-patient");
+
+        medTherapyTextF.getStyleClass().add("doctor-details-text-field");
+        assTherapyTextF.getStyleClass().add("doctor-details-text-field");
+        quantityTherapyTextF.getStyleClass().add("doctor-details-text-field");
+        indTherapyTextF.getStyleClass().add("doctor-details-text-field");
+        infoTextA.getStyleClass().add("doctor-details-text-field");
 
         dataColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
         sbpColumn.setCellValueFactory(new PropertyValueFactory<>("sbp"));
@@ -280,5 +299,6 @@ public class ControllerDettagliMedico {
             }
         });
     }
-
 }
+
+
