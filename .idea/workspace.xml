@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Aggiunti stili per varie soglie TableView">
-      <change beforePath="$PROJECT_DIR$/src/View/PazienteDettagli.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/PazienteDettagli.fxml" afterDir="false" />
+    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Bug fix su Label in DettagliPaziente">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/ControllerDettagliMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerDettagliMedico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/RilevazioniDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/RilevazioniDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +107,7 @@
       <workItem from="1686677614886" duration="2870000" />
       <workItem from="1686680524661" duration="776000" />
       <workItem from="1686749019383" duration="16171000" />
-      <workItem from="1686840935090" duration="9562000" />
+      <workItem from="1686840935090" duration="12456000" />
     </task>
     <task id="LOCAL-00001" summary="Rimozione immagine">
       <created>1685722504615</created>
@@ -429,7 +431,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686924134145</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Bug fix su Label in DettagliPaziente">
+      <created>1686924385374</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1686924385374</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,7 +456,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Aggiunto stile ai pannelli" />
     <MESSAGE value="Aggiunto controllo sulla data nei dettagli paziente" />
     <MESSAGE value="Aggiunto controllo sull'ora in dettagli paziente" />
     <MESSAGE value="Cambiato nome tabella Medico" />
@@ -472,6 +480,7 @@
     <MESSAGE value="La TableView in dettagliMedico mostra le rilevazioni del paziente aggiornate" />
     <MESSAGE value="Test per TableView rilevazioni" />
     <MESSAGE value="Aggiunti stili per varie soglie TableView" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aggiunti stili per varie soglie TableView" />
+    <MESSAGE value="Bug fix su Label in DettagliPaziente" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fix su Label in DettagliPaziente" />
   </component>
 </project>

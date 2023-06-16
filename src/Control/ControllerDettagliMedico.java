@@ -1,6 +1,7 @@
 package Control;
 
 import Model.*;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,6 +13,10 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -66,6 +71,8 @@ public class ControllerDettagliMedico {
         PazienteDAO pazienteDAO = new PazienteDAO();
         List<Rilevazioni> rilevazioniList = pazienteDAO.getRilevazioneByPazienteID(paziente.getId());
         rilevationsTable.setItems(FXCollections.observableList(rilevazioniList));
+
+        checkLastRilevationDate();
     }
 
     public void setMedico(Medico medico) {
@@ -176,6 +183,50 @@ public class ControllerDettagliMedico {
         sendSuccessfull.setHeaderText(null);
         sendSuccessfull.setContentText("I dati sono stati inviati correttamente al database");
         sendSuccessfull.showAndWait();
+    }
+
+    // Metodo che controlla se l'utente non inserisce una rilevazione da 3 giorni o più
+    private void checkLastRilevationDate() {
+        RilevazioniDAO rilevazioniDAO = new RilevazioniDAO();
+        LocalDate today = LocalDate.now();
+
+        LocalDate threeDaysAgo = today.minusDays(3);
+
+        List<Rilevazioni> rilevazioniList = rilevazioniDAO.getRilevazioneByPazienteID(paziente.getId());
+        if (!rilevazioniList.isEmpty()) {
+            Rilevazioni lastRilevation = rilevazioniList.get(rilevazioniList.size() - 1);
+            String lastRilevationDateStr = lastRilevation.getDate();
+
+            SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+
+            try {
+                Date lastRilevationDate = dateFormat.parse(lastRilevationDateStr);
+                LocalDate lastRilevationLocalDate = lastRilevationDate.toInstant()
+                        .atZone(ZoneId.systemDefault()).toLocalDate();
+
+                if (lastRilevationLocalDate.isBefore(threeDaysAgo)) {
+                    // Questo permette di eseguire l'alert dopo il caricamento del pannello
+                    Platform.runLater(() -> {
+                        Alert alert = new Alert(Alert.AlertType.WARNING);
+                        alert.setTitle("Attenzione");
+                        alert.setHeaderText(null);
+                        alert.setContentText("Il paziente non ha inserito una rilevazione negli ultimi 3 giorni.");
+                        alert.showAndWait();
+                    });
+                }
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        } else {
+            // Questo permette di eseguire l'alert dopo il caricamento del pannello
+            Platform.runLater(() -> {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Attenzione");
+                alert.setHeaderText(null);
+                alert.setContentText("Il paziente non ha inserito alcuna rilevazione al momento.");
+                alert.showAndWait();
+            });
+        }
     }
 
     @FXML
