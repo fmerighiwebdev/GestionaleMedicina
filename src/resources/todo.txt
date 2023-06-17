@@ -11,7 +11,7 @@ Medico:
 - Aggiunta o modifica sezione informativa --> FATTO
 
 Sistema:
-- Verifica che le assunzioni siano coerenti --> DA FARE
+- Verifica che le assunzioni siano coerenti --> FFATTO
 - Invito al paziente di inserire le relative assunzioni, se si dimentica
 di assumere farmaci per 3 giorni va avvisato il medico con un alert. --> FATTO
 - Segnala al medico i pazienti che registrano dati oltre le soglie predefinite. --> FATTO
