@@ -23,6 +23,8 @@ public class ControllerListaPazientiMedico {
     @FXML
     private TextField faketextfield1;
     @FXML
+    private TextField faketextfield2;
+    @FXML
     private FlowPane hboxButton;
     @FXML
     private Button logoutButton;
@@ -60,6 +62,7 @@ public class ControllerListaPazientiMedico {
         // CSS Class
         title.getStyleClass().add("title");
         faketextfield1.getStyleClass().add("faketextfield1");
+        faketextfield2.getStyleClass().add("faketextfield2");
         logoutButton.getStyleClass().add("logout-button");
 
         // Name and surname in labels
