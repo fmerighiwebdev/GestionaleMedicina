@@ -54,7 +54,7 @@ public class ControllerListaPazientiMedico {
 
             // Logout effettuato con successo
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("Logout");
+            alert.setTitle("Logout" + username);
             alert.setHeaderText(null);
             alert.setContentText("Logout eseguito con successo");
             alert.showAndWait();
