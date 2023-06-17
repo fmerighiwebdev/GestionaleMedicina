@@ -112,6 +112,11 @@ public class ControllerDettagliPaziente {
         String year = yearTextF.getText();
         String hours = hoursTextF.getText();
 
+        // Prendo i dati della terapia assegnata (per controllo su coerenza dati)
+        String medicineTherapy = medicineThLabel.getText();
+        int assTherapy = Integer.parseInt(assThLabel.getText());
+        int quantityTherapy = Integer.parseInt(quantThLabel.getText());
+
         // Controllo sui valori - campo vuoto
         if (symptoms.isEmpty()) {
             Alert isEmptyAlert = new Alert(Alert.AlertType.ERROR);
@@ -220,6 +225,29 @@ public class ControllerDettagliPaziente {
             isWrongAlert.setContentText("Inserisci un valore numerico valido per data e/o ora");
             isWrongAlert.showAndWait();
             return;
+        }
+
+        // Controllo sui valori - coerenza dati inviati
+        if (!medicine.equals(medicineTherapy)) {
+            Alert isWrongAlert = new Alert(Alert.AlertType.ERROR);
+            isWrongAlert.setTitle("Errore in input");
+            isWrongAlert.setHeaderText(null);
+            isWrongAlert.setContentText("Il farmaco inserito non è coerente con quello assegnato nella terapia");
+            isWrongAlert.showAndWait();
+            return;
+        } else if (Integer.parseInt(ass) != assTherapy) {
+            Alert isWrongAlert = new Alert(Alert.AlertType.ERROR);
+            isWrongAlert.setTitle("Errore in input");
+            isWrongAlert.setHeaderText(null);
+            isWrongAlert.setContentText("Il numero di assunzioni inserito non è coerente con quello assegnato nella terapia");
+            isWrongAlert.showAndWait();
+            return;
+        } else if (Integer.parseInt(quantity) != quantityTherapy) {
+            Alert isWrongAlert = new Alert(Alert.AlertType.ERROR);
+            isWrongAlert.setTitle("Errore in input");
+            isWrongAlert.setHeaderText(null);
+            isWrongAlert.setContentText("La quantità inserita non è coerente con quella assegnata nella terapia");
+            isWrongAlert.showAndWait();
         }
 
         // Creo il nuovo Access Data Object e l'oggetto Paziente
