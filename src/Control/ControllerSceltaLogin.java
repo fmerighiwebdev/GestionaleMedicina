@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 
 public class ControllerSceltaLogin {
 
+    // Dichiarazione variabili (FXML e non)
     @FXML
     private Label titoloPannelloScelta;
     @FXML
@@ -18,9 +19,11 @@ public class ControllerSceltaLogin {
     @FXML
     private Button bottoneSceltaDottore;
 
+    // Evento innescato al click su bottone di scelta "Paziente"
     @FXML
     private void bottoneSceltaPaziente(ActionEvent event) {
         try {
+            // Carica il template PazienteLogin.fxml
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/PazienteLogin.fxml"));
             Parent root = loader.load();
             Stage stage = (Stage) bottoneSceltaPaziente.getScene().getWindow();
@@ -30,9 +33,11 @@ public class ControllerSceltaLogin {
         }
     }
 
+    // Evento innescato al click sul bottone di scelta "Medico"
     @FXML
     private void bottoneSceltaDottore(ActionEvent event) {
         try {
+            // Carica il template MedicoLogin.fxml
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/MedicoLogin.fxml"));
             Parent root = loader.load();
             Stage stage = (Stage) bottoneSceltaDottore.getScene().getWindow();
@@ -42,8 +47,9 @@ public class ControllerSceltaLogin {
         }
     }
 
+    // metodo di inizializzazione
     public void initialize() {
-        // CSS Class
+        // CSS Class per lo stile
         titoloPannelloScelta.getStyleClass().add("title-choice");
         bottoneSceltaPaziente.getStyleClass().add("button-patient-choice");
         bottoneSceltaDottore.getStyleClass().add("button-doctor-choice");

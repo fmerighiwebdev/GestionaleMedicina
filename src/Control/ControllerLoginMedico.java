@@ -15,6 +15,8 @@ import javafx.stage.Stage;
 import java.sql.*;
 
 public class ControllerLoginMedico {
+
+    // Dichiarazione variabili (FXML e non)
     @FXML
     private Label titoloPannelloLogin;
     @FXML
@@ -30,9 +32,11 @@ public class ControllerLoginMedico {
     @FXML
     private Button loginButton;
 
+    // Evento innescato al click sul bottone "Indietro" in MedicoLogin
     @FXML
     private void bottoneIndietro(ActionEvent event) {
         try {
+            // Carica il template precedente SceltaLogin.fxml
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/SceltaLogin.fxml"));
             Parent root = loader.load();
             Stage stage = (Stage) backButton.getScene().getWindow();
@@ -41,21 +45,28 @@ public class ControllerLoginMedico {
             ePatientLogin.printStackTrace();
         }
     }
+
+    // Evento innescato al click sul bottone "Login" in MedicoLogin
     @FXML
     private void bottoneLoginMedico(ActionEvent event) {
+        // Prendo i dati dagli input
         String username = usernameField.getText();
         String password = passwordField.getText();
 
+        // Apro la connessione al DB
         Connection connection = DBManager.getConnection();
         try {
+            // Query di controllo credenziali
             String patientLoginQuery = "SELECT * FROM Medico WHERE Username = ? AND Password = ?";
             PreparedStatement stat = connection.prepareStatement(patientLoginQuery);
             stat.setString(1, username);
             stat.setString(2, password);
             ResultSet rs = stat.executeQuery();
 
+            // Se esiste un risultato alla query...
             if (rs.next()) {
                 try {
+                    // Carica il template MedicoListaPazienti.fxml
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/MedicoListaPazienti.fxml"));
                     Parent root = loader.load();
 
@@ -68,6 +79,7 @@ public class ControllerLoginMedico {
                 } catch(Exception ePatient) {
                     ePatient.printStackTrace();
                 }
+            // Se non esiste... (credenziali errate)
             } else {
                 Alert credentialsAlert = new Alert(Alert.AlertType.ERROR);
                 credentialsAlert.setTitle("Errore nell'accesso");
@@ -82,6 +94,8 @@ public class ControllerLoginMedico {
         }
     }
 
+    // Metodo che permette di effettuare il login premendo INVIO
+    // Innescato nel PasswordField
     @FXML
     private void handleInvio(KeyEvent key) {
         if (key.getCode() == KeyCode.ENTER) {
@@ -89,8 +103,9 @@ public class ControllerLoginMedico {
         }
     }
 
+    // Metodo di inizializzazione
     public void initialize() {
-        // CSS Class
+        // CSS Class per lo stile
         titoloPannelloLogin.getStyleClass().add("title-login");
         usernameLabel.getStyleClass().add("username-label");
         passwordLabel.getStyleClass().add("password-label");

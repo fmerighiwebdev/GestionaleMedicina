@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Bug modifiche risolto">
+    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Aggiornato todo.txt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/ControllerDettagliMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerDettagliMedico.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Control/ControllerDettagliPaziente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerDettagliPaziente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/ControllerListaPazientiMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerListaPazientiMedico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/ControllerLoginMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerLoginMedico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/ControllerLoginPaziente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerLoginPaziente.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -445,7 +449,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686930078201</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Aggiornato todo.txt">
+      <created>1686993696856</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1686993696856</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -475,7 +486,6 @@
     <MESSAGE value="Aggiunta tabella Terapia" />
     <MESSAGE value="Aggiunta valori in input a tabella Terapia e relativi controlli" />
     <MESSAGE value="Bug fix" />
-    <MESSAGE value="Aggiornato todo.txt" />
     <MESSAGE value="Modifica ListaPazienti, non prende più i pazienti associati al medico, ma tutti" />
     <MESSAGE value="Modifiche a pannelli e dati terapia" />
     <MESSAGE value="Gestiti dati e controlli per il campo Informations" />
@@ -488,6 +498,7 @@
     <MESSAGE value="Aggiunti stili per varie soglie TableView" />
     <MESSAGE value="Bug fix su Label in DettagliPaziente" />
     <MESSAGE value="Bug modifiche risolto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug modifiche risolto" />
+    <MESSAGE value="Aggiornato todo.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiornato todo.txt" />
   </component>
 </project>

@@ -14,6 +14,8 @@ import java.sql.*;
 import java.time.LocalDate;
 
 public class ControllerDettagliPaziente {
+
+    // Dichiarazione variabili (FXML e non)
     @FXML
     private TextField title;
     @FXML
@@ -70,12 +72,12 @@ public class ControllerDettagliPaziente {
     private String username;
     private LocalDate date;
 
-    // Setto l'username preso dal controller di login paziente
+    // Set username
     public void setUsername(String username) {
         this.username = username;
     }
 
-    // Evento collegato al bottone "Logout" in PazienteDettagli.fxml
+    // Evento innescato al click sul bottone "Logout" in PazienteDettagli
     @FXML
     private void bottoneLogout(ActionEvent event) {
         try {
@@ -96,7 +98,7 @@ public class ControllerDettagliPaziente {
         }
     }
 
-    // Evento collegato al bottone "Invia" in PazienteDettagli.fxml
+    // Evento innescato al click sul bottone "Invia" in PazienteDettagli
     @FXML
     private void sendRilevations(ActionEvent event) {
         // Prendo i dati dagli input
@@ -198,6 +200,7 @@ public class ControllerDettagliPaziente {
             int yearIntVal = Integer.parseInt(year);
             int hoursIntVal = Integer.parseInt(hours);
 
+            // Controllo che non venga inserita una data successiva a quella odierna
             LocalDate inputDate = LocalDate.of(yearIntVal, monthIntVal, dayIntVal);
             date = LocalDate.now();
 
@@ -210,7 +213,8 @@ public class ControllerDettagliPaziente {
                 return;
             }
 
-            if (hoursIntVal < 0 || hoursIntVal > 24) {
+            // Controllo che l'ora sia coerente (00 - 23)
+            if (hoursIntVal < 0 || hoursIntVal > 23) {
                 Alert isWrongAlert = new Alert(Alert.AlertType.ERROR);
                 isWrongAlert.setTitle("Errore in input");
                 isWrongAlert.setHeaderText(null);
@@ -227,7 +231,7 @@ public class ControllerDettagliPaziente {
             return;
         }
 
-        // Controllo sui valori - coerenza dati inviati
+        // Controllo sui valori - coerenza dati inviati con terapia assegnata
         if (!medicine.equals(medicineTherapy)) {
             Alert isWrongAlert = new Alert(Alert.AlertType.ERROR);
             isWrongAlert.setTitle("Errore in input");
@@ -281,7 +285,7 @@ public class ControllerDettagliPaziente {
             rilevazioniDAO.insertRilevazione(rilevazioni);
         }
 
-        // Invio eseguito
+        // Invio dei dati eseguito
         Alert sendSuccessfull = new Alert(Alert.AlertType.CONFIRMATION);
         sendSuccessfull.setTitle("Invio completato");
         sendSuccessfull.setHeaderText(null);
@@ -289,10 +293,10 @@ public class ControllerDettagliPaziente {
         sendSuccessfull.showAndWait();
     }
 
-    // Setting proprietà statiche
+    // Metodo di inizializzazione
     @FXML
     public void initialize() {
-        // CSS Class
+        // CSS Class per lo stile
         title.getStyleClass().add("title");
         logoutButton.getStyleClass().add("logout-button");
         sendButton.getStyleClass().add("send-button");
@@ -319,7 +323,7 @@ public class ControllerDettagliPaziente {
         quantThLabel.getStyleClass().add("quant-th-label");
         indThLabel.getStyleClass().add("ind-th-label");
 
-        // Name and surname in label
+        // Label con nome e cognome paziente
         // Uso l'username settato per recuperare i dati dalla tabella grazie al modello creato
         PazienteDAO pazienteDAO = new PazienteDAO();
         Paziente paziente = pazienteDAO.getPazienteByUsername(username);
@@ -329,6 +333,8 @@ public class ControllerDettagliPaziente {
             String surname = paziente.getSurname();
             fullName.setText(name + " " + surname);
 
+            // Creo l'oggetto Terapia
+            // Prendo i dati all'interno della tabella all'ID del paziente relativo
             Terapia terapia = pazienteDAO.getTerapiaByPazienteID(paziente.getId());
 
             if (terapia != null) {
@@ -337,12 +343,15 @@ public class ControllerDettagliPaziente {
                 int quantTh = terapia.getQuantityTherapy();
                 String indTh = terapia.getIndTherapy();
 
+                // Labels con terapia assegnata
                 medicineThLabel.setText(medTh);
                 assThLabel.setText(String.valueOf(assTh));
                 quantThLabel.setText(String.valueOf(quantTh));
                 indThLabel.setText(indTh);
             }
 
+            // Creo l'oggetto Medico
+            // Prendo i dati all'interno della tabella in base al MedicoAss relativo
             Medico medico = pazienteDAO.getMedicoByMedicoAss(paziente.getMedicoAss());
 
             if (medico != null) {
@@ -350,12 +359,13 @@ public class ControllerDettagliPaziente {
                 String surnameDoc = medico.getSurname();
                 String emailDoc = medico.getEmail();
 
+                // Sezione contatti del medico
                 nomeMedico.setText(nameDoc + " " + surnameDoc);
                 emailMedico.setText(emailDoc);
             }
         }
 
-        // Data di oggi
+        // Label con data di oggi
         date = LocalDate.now();
         int day = date.getDayOfMonth();
         int month = date.getMonthValue();

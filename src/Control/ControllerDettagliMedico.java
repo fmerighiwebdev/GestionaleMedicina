@@ -23,6 +23,7 @@ import java.util.Optional;
 
 public class ControllerDettagliMedico {
 
+    // Dichiarazione variabili (FXML e non)
     @FXML
     private Button backButton;
     @FXML
@@ -69,10 +70,12 @@ public class ControllerDettagliMedico {
     private Paziente paziente;
     private LocalDate date;
 
+    // Set username
     public void setUsername(String username) {
         this.username = username;
     }
 
+    // Set Paziente
     public void setPaziente(Paziente paziente) {
         this.paziente = paziente;
         String name = paziente.getName();
@@ -87,26 +90,31 @@ public class ControllerDettagliMedico {
         checkLastRilevationDate();
     }
 
+    // Set Medico
     public void setMedico(Medico medico) {
         String name = medico.getName();
         String surname = medico.getSurname();
         doctorFullName.setText(name + " " + surname);
     }
 
+    // Evento innescato al click sul bottone "Cambia..." nel pannello MedicoDettagli
     @FXML
     private void indietroButton(ActionEvent event) {
         Stage stage = (Stage) backButton.getScene().getWindow();
         stage.close();
     }
 
+    // Evento innescato sul bottone "Invia" nel pannello MedicoDettagli
     @FXML
     private void sendTherapy(ActionEvent event) {
+        // Prende i dati dai TextField
         String medTherapy = medTherapyTextF.getText();
         String assTherapy = assTherapyTextF.getText();
         String quantityTherapy = quantityTherapyTextF.getText();
         String indTherapy = indTherapyTextF.getText();
         String info = infoTextA.getText();
 
+        // Controllo sui valori - campo vuoto
         if (medTherapy.isEmpty()) {
             Alert isEmptyAlert = new Alert(Alert.AlertType.ERROR);
             isEmptyAlert.setTitle("Errore in input");
@@ -135,6 +143,10 @@ public class ControllerDettagliMedico {
             isEmptyAlert.setContentText("Inserisci eventuali indicazioni riguardanti la terapia");
             isEmptyAlert.showAndWait();
             return;
+        // Il campo "Informazioni" può essere VUOTO
+        // Se viene lasciato vuoto, viene mostrato un alert che chiede una conferma (SI / NO)
+        // Se il medico preme "SI" i dati vengono inviati comunque, senza aggiornare / inserire info
+        // Se il medico preme "NO" ritorna alla compilazione e non viene inviato nulla
         } else if (info.isEmpty()) {
             Alert isEmptyAlert = new Alert(Alert.AlertType.ERROR);
             isEmptyAlert.setTitle("Conferma invio");
@@ -158,6 +170,7 @@ public class ControllerDettagliMedico {
             }
         }
 
+        // Controllo sui valori - valore errato
         try {
             int assIntVal = Integer.parseInt(assTherapy);
             int quantityIntVal = Integer.parseInt(quantityTherapy);
@@ -170,6 +183,7 @@ public class ControllerDettagliMedico {
             return;
         }
 
+        // Creo il Data Access Object TerapiaDAO e l'oggetto Terapia
         TerapiaDAO terapiaDAO = new TerapiaDAO();
         int assIntVal = Integer.parseInt(assTherapy);
         int quantityIntVal = Integer.parseInt(quantityTherapy);
@@ -186,10 +200,12 @@ public class ControllerDettagliMedico {
             terapiaDAO.insertTerapia(terapia);
         }
 
+        // Creo il Data Access Object PazienteDAO
+        // Chiamo il metodo all'interno dell'oggetto per aggiornare le info del paziente
         PazienteDAO pazienteDAO = new PazienteDAO();
         pazienteDAO.updatePazienteInfo(paziente.getUsername(), info);
 
-        // Invio eseguito
+        // Invio dei dati eseguito
         Alert sendSuccessfull = new Alert(Alert.AlertType.CONFIRMATION);
         sendSuccessfull.setTitle("Invio completato");
         sendSuccessfull.setHeaderText(null);
@@ -197,14 +213,16 @@ public class ControllerDettagliMedico {
         sendSuccessfull.showAndWait();
     }
 
-    // Metodo che controlla se l'utente non inserisce una rilevazione da 3 giorni o più
+    // Metodo che controlla se l'utente non inserisce una rilevazione da tre giorni o più
     private void checkLastRilevationDate() {
         RilevazioniDAO rilevazioniDAO = new RilevazioniDAO();
         LocalDate today = LocalDate.now();
 
         LocalDate threeDaysAgo = today.minusDays(3);
-
+        // Creo una lista contenente TUTTE le rilevazioni inserite dal paziente, in base al suo ID
         List<Rilevazioni> rilevazioniList = rilevazioniDAO.getRilevazioneByPazienteID(paziente.getId());
+        // Se la lista NON è vuota...
+        // Vengono eseguiti i controlli sulla data e, se necessario, viene notificato il medico
         if (!rilevazioniList.isEmpty()) {
             Rilevazioni lastRilevation = rilevazioniList.get(rilevazioniList.size() - 1);
             String lastRilevationDateStr = lastRilevation.getDate();
@@ -229,6 +247,8 @@ public class ControllerDettagliMedico {
             } catch (ParseException e) {
                 e.printStackTrace();
             }
+        // Se la lista è vuota...
+        // Viene notificato il medico, che il relativo paziente non ha ancora inserito alcuna rilevazione
         } else {
             // Questo permette di eseguire l'alert dopo il caricamento del pannello
             Platform.runLater(() -> {
@@ -241,9 +261,10 @@ public class ControllerDettagliMedico {
         }
     }
 
+    // Metodo di inizializzazione
     @FXML
     public void initialize() {
-        // CSS Class
+        // CSS Class per lo stile degli elementi
         backButton.getStyleClass().add("back-button");
         sendButton.getStyleClass().add("send-button");
         faketextfield1.getStyleClass().add("faketextfield1");
@@ -262,7 +283,8 @@ public class ControllerDettagliMedico {
         sbpColumn.setCellValueFactory(new PropertyValueFactory<>("sbp"));
         dbpColumn.setCellValueFactory(new PropertyValueFactory<>("dbp"));
 
-        // Imposto uno stile per le varie soglie di valori
+        // Imposto uno stile per le varie soglie di valori nella TableView
+        // Per SBP e DBP
         sbpColumn.setCellFactory(column -> new TableCell<Rilevazioni, Integer>() {
             protected void updateItem(Integer item, boolean empty) {
                 super.updateItem(item, empty);
@@ -303,7 +325,7 @@ public class ControllerDettagliMedico {
             }
         });
 
-        // Data di oggi
+        // Label con data di oggi
         date = LocalDate.now();
         int day = date.getDayOfMonth();
         int month = date.getMonthValue();
