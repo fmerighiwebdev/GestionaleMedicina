@@ -240,7 +240,7 @@ public class ControllerDettagliMedico {
                         Alert alert = new Alert(Alert.AlertType.WARNING);
                         alert.setTitle("Attenzione");
                         alert.setHeaderText(null);
-                        alert.setContentText("Il paziente non ha inserito una rilevazione negli ultimi 3 giorni.");
+                        alert.setContentText("Il paziente non ha inserito una rilevazione per più di 3 giorni.");
                         alert.showAndWait();
                     });
                 }

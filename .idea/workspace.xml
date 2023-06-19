@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Aggiunti commenti nei controller">
+    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Alcune modifiche aggiuntive">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,13 +107,8 @@
       <workItem from="1686749019383" duration="16171000" />
       <workItem from="1686840935090" duration="12456000" />
       <workItem from="1686928947384" duration="3023000" />
-    </task>
-    <task id="LOCAL-00002" summary="Aggiunti layout e controller per dettagli medico e paziente">
-      <created>1685885182320</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1685885182320</updated>
+      <workItem from="1687013928200" duration="2148000" />
+      <workItem from="1687183679371" duration="48000" />
     </task>
     <task id="LOCAL-00003" summary="Agggiunta GUI PazienteDettagli.fxml">
       <created>1685972928932</created>
@@ -451,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686996601421</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Alcune modifiche aggiuntive">
+      <created>1687008689033</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1687008689033</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -469,7 +471,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Cambiato nome tabella Medico" />
     <MESSAGE value="Cambiati i nomi da Dottore a Medico per correttezza nello sviluppo" />
     <MESSAGE value="Aggiunti bottoni in ListaPazienti del Medico" />
     <MESSAGE value="Gestito l'inserimento / aggiornamento dei dati nella tabella rilevazioni" />
@@ -494,6 +495,7 @@
     <MESSAGE value="Bug modifiche risolto" />
     <MESSAGE value="Aggiornato todo.txt" />
     <MESSAGE value="Aggiunti commenti nei controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aggiunti commenti nei controller" />
+    <MESSAGE value="Alcune modifiche aggiuntive" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alcune modifiche aggiuntive" />
   </component>
 </project>
