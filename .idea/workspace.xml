@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Alcune modifiche aggiuntive">
+    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Bug fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionaleMedicinaDB" beforeDir="false" afterPath="$PROJECT_DIR$/GestionaleMedicinaDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/ControllerDettagliMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerDettagliMedico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/ControllerDettagliPaziente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerDettagliPaziente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/RilevazioniDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/RilevazioniDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/MedicoDettagli.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/MedicoDettagli.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,14 +113,11 @@
       <workItem from="1686840935090" duration="12456000" />
       <workItem from="1686928947384" duration="3023000" />
       <workItem from="1687013928200" duration="2148000" />
-      <workItem from="1687183679371" duration="48000" />
-    </task>
-    <task id="LOCAL-00003" summary="Agggiunta GUI PazienteDettagli.fxml">
-      <created>1685972928932</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1685972928932</updated>
+      <workItem from="1687183679371" duration="463000" />
+      <workItem from="1687269564800" duration="92000" />
+      <workItem from="1687269736292" duration="1271000" />
+      <workItem from="1688464464889" duration="540000" />
+      <workItem from="1688812676621" duration="7301000" />
     </task>
     <task id="LOCAL-00004" summary="Aggiunta dettagli">
       <created>1685977417926</created>
@@ -453,7 +455,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687008689033</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Bug fix">
+      <created>1687184136493</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1687184136494</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -480,7 +489,6 @@
     <MESSAGE value="Bug fix - Tab in login" />
     <MESSAGE value="Aggiunta tabella Terapia" />
     <MESSAGE value="Aggiunta valori in input a tabella Terapia e relativi controlli" />
-    <MESSAGE value="Bug fix" />
     <MESSAGE value="Modifica ListaPazienti, non prende più i pazienti associati al medico, ma tutti" />
     <MESSAGE value="Modifiche a pannelli e dati terapia" />
     <MESSAGE value="Gestiti dati e controlli per il campo Informations" />
@@ -496,6 +504,7 @@
     <MESSAGE value="Aggiornato todo.txt" />
     <MESSAGE value="Aggiunti commenti nei controller" />
     <MESSAGE value="Alcune modifiche aggiuntive" />
-    <option name="LAST_COMMIT_MESSAGE" value="Alcune modifiche aggiuntive" />
+    <MESSAGE value="Bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fix" />
   </component>
 </project>

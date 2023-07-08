@@ -3,6 +3,7 @@ package Control;
 import Model.*;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -66,6 +67,8 @@ public class ControllerDettagliMedico {
     @FXML
     private TableColumn<Rilevazioni, Integer> dbpColumn;
 
+    private ObservableList<Rilevazioni> obsRilevazioniList;
+
     private String username;
     private Paziente paziente;
     private LocalDate date;
@@ -85,7 +88,10 @@ public class ControllerDettagliMedico {
 
         PazienteDAO pazienteDAO = new PazienteDAO();
         List<Rilevazioni> rilevazioniList = pazienteDAO.getRilevazioneByPazienteID(paziente.getId());
-        rilevationsTable.setItems(FXCollections.observableList(rilevazioniList));
+
+        obsRilevazioniList.clear();
+        obsRilevazioniList.addAll(rilevazioniList);
+        rilevationsTable.setItems(obsRilevazioniList);
 
         checkLastRilevationDate();
     }
@@ -278,6 +284,8 @@ public class ControllerDettagliMedico {
         quantityTherapyTextF.getStyleClass().add("doctor-details-text-field");
         indTherapyTextF.getStyleClass().add("doctor-details-text-field");
         infoTextA.getStyleClass().add("doctor-details-text-field");
+
+        obsRilevazioniList = FXCollections.observableArrayList();
 
         dataColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
         sbpColumn.setCellValueFactory(new PropertyValueFactory<>("sbp"));

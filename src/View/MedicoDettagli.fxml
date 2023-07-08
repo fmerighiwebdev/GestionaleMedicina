@@ -161,7 +161,7 @@
                     <children>
                   <TableView fx:id="rilevationsTable" prefHeight="200.0" prefWidth="200.0">
                     <columns>
-                      <TableColumn fx:id="dataColumn" prefWidth="90.0" text="Data" />
+                      <TableColumn fx:id="dataColumn" prefWidth="90.0" text="Data"/>
                       <TableColumn fx:id="sbpColumn" prefWidth="101.0" text="SBP" />
                         <TableColumn fx:id="dbpColumn" prefWidth="117.0" text="DBP" />
                     </columns>

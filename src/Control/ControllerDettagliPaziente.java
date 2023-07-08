@@ -232,14 +232,14 @@ public class ControllerDettagliPaziente {
         }
 
         // Controllo sui valori - coerenza dati inviati con terapia assegnata
-        if (!medicine.equals(medicineTherapy)) {
+        if (!medicine.equals(medicineTherapy) || medicineTherapy.contains("-")) {
             Alert isWrongAlert = new Alert(Alert.AlertType.ERROR);
             isWrongAlert.setTitle("Errore in input");
             isWrongAlert.setHeaderText(null);
             isWrongAlert.setContentText("Il farmaco inserito non è coerente con quello assegnato nella terapia");
             isWrongAlert.showAndWait();
             return;
-        } else if (Integer.parseInt(ass) != assTherapy) {
+        } else if ((Integer.parseInt(ass) != assTherapy)) {
             Alert isWrongAlert = new Alert(Alert.AlertType.ERROR);
             isWrongAlert.setTitle("Errore in input");
             isWrongAlert.setHeaderText(null);
@@ -284,6 +284,8 @@ public class ControllerDettagliPaziente {
             // Inserisci una rilevazione alla tabella se non presente in data odierna
             rilevazioniDAO.insertRilevazione(rilevazioni);
         }
+
+        pazienteDAO.insertPaziente(paziente);
 
         // Invio dei dati eseguito
         Alert sendSuccessfull = new Alert(Alert.AlertType.CONFIRMATION);

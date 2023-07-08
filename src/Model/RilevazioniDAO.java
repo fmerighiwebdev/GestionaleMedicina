@@ -41,7 +41,8 @@ public class RilevazioniDAO {
         try {
             conn = DBManager.getConnection();
 
-            String query = "UPDATE Rilevazioni SET SBP = ?, DBP = ?, Day = ?, Month = ?, Year = ?, Hours = ?, IDPaziente = ?";
+            String query = "UPDATE Rilevazioni SET SBP = ?, DBP = ?, Day = ?, Month = ?, " +
+                    "Year = ?, Hours = ? WHERE IDPaziente = ? AND Day = ? AND Month = ? AND Year = ?";
 
             stat = conn.prepareStatement(query);
             stat.setInt(1, rilevazioni.getSbp());
@@ -51,6 +52,9 @@ public class RilevazioniDAO {
             stat.setInt(5, rilevazioni.getYear());
             stat.setInt(6, rilevazioni.getHours());
             stat.setInt(7, rilevazioni.getIdPaziente());
+            stat.setInt(8, rilevazioni.getDay());
+            stat.setInt(9, rilevazioni.getMonth());
+            stat.setInt(10, rilevazioni.getYear());
 
             stat.executeUpdate();
         } catch (SQLException e) {
@@ -98,8 +102,7 @@ public class RilevazioniDAO {
             stat.setInt(1, pazienteId);
             rs = stat.executeQuery();
 
-            if (rs.next()) {
-                int id = rs.getInt("ID");
+            while (rs.next()) {
                 int sbp = rs.getInt("SBP");
                 int dbp = rs.getInt("DBP");
                 int day = rs.getInt("Day");

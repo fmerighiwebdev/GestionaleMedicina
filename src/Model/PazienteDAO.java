@@ -174,7 +174,7 @@ public class PazienteDAO {
             stat.setInt(1, pazienteId);
             rs = stat.executeQuery();
 
-            if (rs.next()) {
+            while (rs.next()) {
                 int id = rs.getInt("ID");
                 int sbp = rs.getInt("SBP");
                 int dbp = rs.getInt("DBP");
