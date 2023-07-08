@@ -2,6 +2,7 @@ package Control;
 
 
 import Model.*;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -116,8 +117,8 @@ public class ControllerDettagliPaziente {
 
         // Prendo i dati della terapia assegnata (per controllo su coerenza dati)
         String medicineTherapy = medicineThLabel.getText();
-        int assTherapy = Integer.parseInt(assThLabel.getText());
-        int quantityTherapy = Integer.parseInt(quantThLabel.getText());
+        int assTherapy = parseIntegerValue(assThLabel.getText());
+        int quantityTherapy = parseIntegerValue(quantThLabel.getText());
 
         // Controllo sui valori - campo vuoto
         if (symptoms.isEmpty()) {
@@ -172,26 +173,24 @@ public class ControllerDettagliPaziente {
         }
 
         // Controllo sui valori - valore errato
-        try {
-            int assIntVal = Integer.parseInt(ass);
-            int quantityIntVal = Integer.parseInt(quantity);
-        } catch (NumberFormatException eNumber) {
-            Alert isWrongAlert = new Alert(Alert.AlertType.ERROR);
-            isWrongAlert.setTitle("Errore in input");
-            isWrongAlert.setHeaderText(null);
-            isWrongAlert.setContentText("Inserisci un valore numerico valido per N°assunzioni e/o quantità");
-            isWrongAlert.showAndWait();
+        int assIntVal = parseIntegerValue(ass);
+        int quantityIntVal = parseIntegerValue(quantity);
+        if (assIntVal == Integer.MIN_VALUE || quantityIntVal == Integer.MIN_VALUE) {
+            Alert isEmptyAlert = new Alert(Alert.AlertType.ERROR);
+            isEmptyAlert.setTitle("Errore in input");
+            isEmptyAlert.setHeaderText(null);
+            isEmptyAlert.setContentText("Inserisci un valore numerico valido per n° ass. e/o quantità");
+            isEmptyAlert.showAndWait();
             return;
         }
-        try {
-            int sbpIntVal = Integer.parseInt(sbp);
-            int dbpIntVal = Integer.parseInt(dbp);
-        } catch (NumberFormatException eNumber) {
-            Alert isWrongAlert = new Alert(Alert.AlertType.ERROR);
-            isWrongAlert.setTitle("Errore in input");
-            isWrongAlert.setHeaderText(null);
-            isWrongAlert.setContentText("Inserisci un valore numerico valido per SBP e/o DBP");
-            isWrongAlert.showAndWait();
+        int sbpIntVal = parseIntegerValue(sbp);
+        int dbpIntVal = parseIntegerValue(dbp);
+        if (sbpIntVal == Integer.MIN_VALUE || dbpIntVal == Integer.MIN_VALUE) {
+            Alert isEmptyAlert = new Alert(Alert.AlertType.ERROR);
+            isEmptyAlert.setTitle("Errore in input");
+            isEmptyAlert.setHeaderText(null);
+            isEmptyAlert.setContentText("Inserisci un valore numerico valido per SBP e/o DBP");
+            isEmptyAlert.showAndWait();
             return;
         }
         try {
@@ -239,19 +238,20 @@ public class ControllerDettagliPaziente {
             isWrongAlert.setContentText("Il farmaco inserito non è coerente con quello assegnato nella terapia");
             isWrongAlert.showAndWait();
             return;
-        } else if ((Integer.parseInt(ass) != assTherapy)) {
+        } else if ((assIntVal != assTherapy)) {
             Alert isWrongAlert = new Alert(Alert.AlertType.ERROR);
             isWrongAlert.setTitle("Errore in input");
             isWrongAlert.setHeaderText(null);
             isWrongAlert.setContentText("Il numero di assunzioni inserito non è coerente con quello assegnato nella terapia");
             isWrongAlert.showAndWait();
             return;
-        } else if (Integer.parseInt(quantity) != quantityTherapy) {
+        } else if (quantityIntVal != quantityTherapy) {
             Alert isWrongAlert = new Alert(Alert.AlertType.ERROR);
             isWrongAlert.setTitle("Errore in input");
             isWrongAlert.setHeaderText(null);
             isWrongAlert.setContentText("La quantità inserita non è coerente con quella assegnata nella terapia");
             isWrongAlert.showAndWait();
+            return;
         }
 
         // Creo il nuovo Access Data Object e l'oggetto Paziente
@@ -293,6 +293,23 @@ public class ControllerDettagliPaziente {
         sendSuccessfull.setHeaderText(null);
         sendSuccessfull.setContentText("I dati sono stati inviati correttamente al database");
         sendSuccessfull.showAndWait();
+    }
+
+    private void checkTerapia() {
+        String medicineTherapy = medicineThLabel.getText();
+        int assTherapy = parseIntegerValue(assThLabel.getText());
+        int quantityTherapy = parseIntegerValue(quantThLabel.getText());
+
+        if (medicineTherapy.contains("-") && assTherapy == Integer.MIN_VALUE &&
+                quantityTherapy == Integer.MIN_VALUE) {
+            Platform.runLater(() -> {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Attenzione");
+                alert.setHeaderText(null);
+                alert.setContentText("Non è stata inserita alcuna terapia, impossibile inviare i dati");
+                alert.showAndWait();
+            });
+        }
     }
 
     // Metodo di inizializzazione
@@ -365,6 +382,8 @@ public class ControllerDettagliPaziente {
                 nomeMedico.setText(nameDoc + " " + surnameDoc);
                 emailMedico.setText(emailDoc);
             }
+
+            checkTerapia();
         }
 
         // Label con data di oggi
@@ -376,6 +395,14 @@ public class ControllerDettagliPaziente {
         String formattedDate = String.format("%02d/%02d/%04d", day, month, year);
 
         todayDate.setText(formattedDate);
+    }
+
+    private int parseIntegerValue(String value) {
+        try {
+            return Integer.parseInt(value);
+        } catch (NumberFormatException e) {
+            return Integer.MIN_VALUE;
+        }
     }
 
 }
