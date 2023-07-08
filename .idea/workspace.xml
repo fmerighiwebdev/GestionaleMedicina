@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Bug fix inserimenti/aggiornamenti Pazienti e Rilevazioni e fix voci TableView">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestionaleMedicinaDB" beforeDir="false" afterPath="$PROJECT_DIR$/GestionaleMedicinaDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/ControllerDettagliPaziente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerDettagliPaziente.java" afterDir="false" />
-    </list>
+    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Bug fix terapia Paziente" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,14 +110,7 @@
       <workItem from="1687269564800" duration="92000" />
       <workItem from="1687269736292" duration="1271000" />
       <workItem from="1688464464889" duration="540000" />
-      <workItem from="1688812676621" duration="11701000" />
-    </task>
-    <task id="LOCAL-00005" summary="Modifica Labels">
-      <created>1685977825434</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1685977825434</updated>
+      <workItem from="1688812676621" duration="12120000" />
     </task>
     <task id="LOCAL-00006" summary="Nuove modifiche estetiche">
       <created>1685978540608</created>
@@ -459,7 +448,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688839521719</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Bug fix terapia Paziente">
+      <created>1688845092359</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1688845092359</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -477,7 +473,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Aggiunti bottoni in ListaPazienti del Medico" />
     <MESSAGE value="Gestito l'inserimento / aggiornamento dei dati nella tabella rilevazioni" />
     <MESSAGE value="Aggiunta transition tra Lista Pazienti Medico e Medico Dettagli" />
     <MESSAGE value="Aggiunta possibilità di tornare indietro da dettagli medico" />
@@ -502,6 +497,7 @@
     <MESSAGE value="Alcune modifiche aggiuntive" />
     <MESSAGE value="Bug fix" />
     <MESSAGE value="Bug fix inserimenti/aggiornamenti Pazienti e Rilevazioni e fix voci TableView" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug fix inserimenti/aggiornamenti Pazienti e Rilevazioni e fix voci TableView" />
+    <MESSAGE value="Bug fix terapia Paziente" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fix terapia Paziente" />
   </component>
 </project>
