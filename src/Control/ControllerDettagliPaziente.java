@@ -306,7 +306,7 @@ public class ControllerDettagliPaziente {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Attenzione");
                 alert.setHeaderText(null);
-                alert.setContentText("Non è stata inserita alcuna terapia, impossibile inviare i dati");
+                alert.setContentText("Non è stata assegnata alcuna terapia, contattare il medico di riferimento. Impossibile inviare dati al momento.");
                 alert.showAndWait();
             });
         }
