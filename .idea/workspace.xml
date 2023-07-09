@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Bug fix">
+    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Aggiunte voci al database">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestionaleMedicinaDB" beforeDir="false" afterPath="$PROJECT_DIR$/GestionaleMedicinaDB" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,21 +114,7 @@
       <workItem from="1688464464889" duration="540000" />
       <workItem from="1688812676621" duration="12200000" />
       <workItem from="1688858725117" duration="771000" />
-      <workItem from="1688892095452" duration="1086000" />
-    </task>
-    <task id="LOCAL-00008" summary="Altre modifiche">
-      <created>1685979734891</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1685979734891</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Aggiunta bottoni e dettagli">
-      <created>1686063107804</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1686063107804</updated>
+      <workItem from="1688892095452" duration="2232000" />
     </task>
     <task id="LOCAL-00010" summary="Some fixes">
       <created>1686227033473</created>
@@ -460,7 +445,21 @@
       <option name="project" value="LOCAL" />
       <updated>1688859485494</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Aggiunte voci al database">
+      <created>1688893299239</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1688893299239</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Aggiunte voci al database">
+      <created>1688893629576</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1688893629576</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -478,7 +477,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Gestito l'inserimento / aggiornamento dei dati nella tabella rilevazioni" />
     <MESSAGE value="Aggiunta transition tra Lista Pazienti Medico e Medico Dettagli" />
     <MESSAGE value="Aggiunta possibilità di tornare indietro da dettagli medico" />
     <MESSAGE value="Possibilità di premere INVIO al login per accedere" />
@@ -503,6 +501,7 @@
     <MESSAGE value="Bug fix inserimenti/aggiornamenti Pazienti e Rilevazioni e fix voci TableView" />
     <MESSAGE value="Bug fix terapia Paziente" />
     <MESSAGE value="Bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug fix" />
+    <MESSAGE value="Aggiunte voci al database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunte voci al database" />
   </component>
 </project>
