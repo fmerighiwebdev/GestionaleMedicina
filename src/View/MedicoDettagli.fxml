@@ -18,10 +18,10 @@
                 <Font name="System Bold Italic" size="18.0" />
             </font>
         </Label>
-        <AnchorPane layoutX="26.0" layoutY="70.0" minWidth="-Infinity" prefHeight="90.0" prefWidth="358.0">
+        <AnchorPane layoutX="26.0" layoutY="70.0" minWidth="-Infinity" prefHeight="75.0" prefWidth="377.0">
             <children>
-                <TextField fx:id="faketextfield1" editable="false" prefHeight="90.0" prefWidth="358.0" />
-                <HBox layoutX="104.0" layoutY="45.0" prefHeight="30.0" prefWidth="150.0">
+                <TextField fx:id="faketextfield1" editable="false" prefHeight="75.0" prefWidth="377.0" />
+                <HBox layoutX="104.0" layoutY="40.0" prefHeight="30.0" prefWidth="150.0">
                     <children>
                         <Label fx:id="todayDate" text="Data">
                             <font>
@@ -30,7 +30,7 @@
                         </Label>
                     </children>
                 </HBox>
-                <Label fx:id="doctorFullName" layoutX="105.0" layoutY="23.0" text="Nome Cognome">
+                <Label fx:id="doctorFullName" layoutX="104.0" layoutY="23.0" text="Nome Cognome">
                     <font>
                         <Font name="System Bold" size="13.0" />
                     </font>
@@ -40,14 +40,14 @@
                         <Image url="@images/doctor_profile_icon.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="backButton" layoutX="264.0" layoutY="31.0" mnemonicParsing="false" onAction="#indietroButton" text="Cambia...">
+                <Button fx:id="backButton" layoutX="283.0" layoutY="28.0" mnemonicParsing="false" onAction="#indietroButton" text="Cambia...">
                     <font>
                         <Font name="Arial" size="13.0" />
                     </font>
                 </Button>
             </children>
         </AnchorPane>
-        <AnchorPane layoutX="422.0" layoutY="69.0" prefHeight="373.0" prefWidth="548.0">
+        <AnchorPane layoutX="426.0" layoutY="70.0" prefHeight="513.0" prefWidth="509.0">
             <children>
                 <TextField fx:id="faketextfield2" editable="false" prefHeight="513.0" prefWidth="548.0" />
                 <Label contentDisplay="CENTER" layoutX="238.0" layoutY="21.0" prefHeight="28.0" prefWidth="80.0" text="Terapia" textAlignment="JUSTIFY">
@@ -149,42 +149,55 @@
             </Label>
             </children>
         </AnchorPane>
-        <AnchorPane layoutX="26.0" layoutY="188.0" minWidth="-Infinity" prefHeight="337.0" prefWidth="358.0">
+        <AnchorPane layoutX="26.0" layoutY="159.0" minWidth="-Infinity" prefHeight="423.0" prefWidth="377.0">
             <children>
-                <TextField fx:id="faketextfield3" editable="false" prefHeight="391.0" prefWidth="358.0" />
-                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="103.0" layoutY="20.0" prefHeight="28.0" prefWidth="152.0" text="Dati Paziente" textAlignment="JUSTIFY">
+                <TextField fx:id="faketextfield3" editable="false" prefHeight="423.0" prefWidth="377.0" />
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="113.0" layoutY="14.0" prefHeight="28.0" prefWidth="152.0" text="Dati Paziente" textAlignment="JUSTIFY">
                     <font>
                         <Font name="System Bold" size="18.0" />
                     </font>
                 </Label>
-                <VBox layoutX="31.0" layoutY="163.0" prefHeight="200.0" prefWidth="296.0">
+                <VBox layoutX="18.0" layoutY="202.0" prefHeight="200.0" prefWidth="345.0">
                     <children>
                   <TableView fx:id="rilevationsTable" prefHeight="200.0" prefWidth="200.0">
                     <columns>
-                      <TableColumn fx:id="dataColumn" prefWidth="90.0" text="Data"/>
-                      <TableColumn fx:id="sbpColumn" prefWidth="101.0" text="SBP" />
-                        <TableColumn fx:id="dbpColumn" prefWidth="117.0" text="DBP" />
+                      <TableColumn fx:id="dataColumn" editable="false" prefWidth="115.0" resizable="false" sortable="false" text="Data" />
+                      <TableColumn fx:id="sbpColumn" editable="false" prefWidth="125.0" resizable="false" sortable="false" text="SBP" />
+                        <TableColumn fx:id="dbpColumn" editable="false" prefWidth="113.0" resizable="false" sortable="false" text="DBP" />
                     </columns>
                   </TableView>
                     </children>
                 </VBox>
-                <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="79.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="71.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@images/clinic_folder.png" />
                     </image>
                 </ImageView>
-            <TextField fx:id="faketextfield4" editable="false" layoutX="31.0" layoutY="77.0" prefHeight="68.0" prefWidth="296.0" />
-            <Label fx:id="patientName" layoutX="136.0" layoutY="95.0" text="Nome">
+            <TextField fx:id="faketextfield4" editable="false" layoutX="14.0" layoutY="48.0" prefHeight="146.0" prefWidth="354.0" />
+            <Label fx:id="patientName" layoutX="113.0" layoutY="66.0" text="Nome">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="79.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="71.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images/patient_profile_icon.png" />
                </image>
             </ImageView>
-            <Label fx:id="patientSurname" layoutX="136.0" layoutY="111.0" text="Cognome">
+            <Label fx:id="patientSurname" layoutX="164.0" layoutY="66.0" text="Cognome">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="faketextfield5" editable="false" layoutX="23.0" layoutY="101.0" prefHeight="82.0" prefWidth="334.0" />
+            <Label fx:id="patientSymptoms" layoutX="103.0" layoutY="113.0" text="Sintomi" wrapText="true" />
+            <Label fx:id="patientInformations" layoutX="79.0" layoutY="155.0" text="Informazioni" wrapText="true" />
+            <Label layoutX="35.0" layoutY="113.0" text="Sintomi:">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="155.0" text="Info:">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>

@@ -120,6 +120,13 @@
     -fx-background-color:white;
 }
 
+.faketextfield5-patient{
+    -fx-border-color: grey;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-background-color:white;
+}
+
 .pazientiBotton{
     -fx-border-radius: 10;
     -fx-background-radius: 10;

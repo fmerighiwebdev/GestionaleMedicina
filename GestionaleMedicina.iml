@@ -6,7 +6,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="zulu-19" jdkType="JavaSDK" />
-    <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
@@ -16,5 +15,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

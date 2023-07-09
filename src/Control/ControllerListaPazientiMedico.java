@@ -136,6 +136,7 @@ public class ControllerListaPazientiMedico {
                         Stage stage = new Stage();
                         stage.setScene(new Scene(root));
                         stage.show();
+                        stage.setResizable(false);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }

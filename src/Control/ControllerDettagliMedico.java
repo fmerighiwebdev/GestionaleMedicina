@@ -35,6 +35,10 @@ public class ControllerDettagliMedico {
     @FXML
     private Label patientName;
     @FXML
+    private Label patientSymptoms;
+    @FXML
+    private Label patientInformations;
+    @FXML
     private Label patientSurname;
     @FXML
     private Label todayDate;
@@ -47,6 +51,8 @@ public class ControllerDettagliMedico {
     private TextField faketextfield3;
     @FXML
     private TextField faketextfield4;
+    @FXML
+    private TextField faketextfield5;
 
     @FXML
     private TextField medTherapyTextF;
@@ -86,6 +92,12 @@ public class ControllerDettagliMedico {
         String surname = paziente.getSurname();
         patientName.setText(name);
         patientSurname.setText(surname);
+
+        String patientSymptomsText = paziente.getSymptoms();
+        patientSymptoms.setText(patientSymptomsText);
+
+        String patientInformationText = paziente.getInfo();
+        patientInformations.setText(patientInformationText);
 
         PazienteDAO pazienteDAO = new PazienteDAO();
         List<Rilevazioni> rilevazioniList = pazienteDAO.getRilevazioneByPazienteID(paziente.getId());
@@ -298,6 +310,7 @@ public class ControllerDettagliMedico {
         faketextfield2.getStyleClass().add("faketextfield2");
         faketextfield3.getStyleClass().add("faketextfield3");
         faketextfield4.getStyleClass().add("faketextfield4-patient");
+        faketextfield5.getStyleClass().add("faketextfield5-patient");
         todayDate.getStyleClass().add("today-date");
 
         medTherapyTextF.getStyleClass().add("doctor-details-text-field");
