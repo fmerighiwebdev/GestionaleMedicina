@@ -18,6 +18,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -225,37 +226,57 @@ public class ControllerDettagliMedico {
         LocalDate today = LocalDate.now();
 
         LocalDate threeDaysAgo = today.minusDays(3);
+
+        List<Rilevazioni> rilevazioniList = rilevazioniDAO.getRilevazioneByPazienteID(paziente.getId());
+
+        boolean hasRecentRilevations = false;
+
+        for (Rilevazioni rilevazione : rilevazioniList) {
+            LocalDate rilevationDate = LocalDate.parse(rilevazione.getDate(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+            if (rilevationDate.isAfter(threeDaysAgo) || rilevationDate.isEqual(threeDaysAgo)) {
+                hasRecentRilevations = true;
+                break;
+            }
+        }
+
+        if (!hasRecentRilevations) {
+            Platform.runLater(() -> {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Attenzione");
+                alert.setHeaderText(null);
+                alert.setContentText("Il paziente non ha inserito una rilevazione per più di 3 giorni.");
+                alert.showAndWait();
+            });
+        }
+    }
+    /* private void checkLastRilevationDate() {
+        RilevazioniDAO rilevazioniDAO = new RilevazioniDAO();
+        LocalDate today = LocalDate.now();
+
+        LocalDate threeDaysAgo = today.minusDays(3);
         // Creo una lista contenente TUTTE le rilevazioni inserite dal paziente, in base al suo ID
         List<Rilevazioni> rilevazioniList = rilevazioniDAO.getRilevazioneByPazienteID(paziente.getId());
         // Se la lista NON è vuota...
         // Vengono eseguiti i controlli sulla data e, se necessario, viene notificato il medico
         if (!rilevazioniList.isEmpty()) {
-            Rilevazioni lastRilevation = rilevazioniList.get(rilevazioniList.size() - 1);
-            String lastRilevationDateStr = lastRilevation.getDate();
 
-            SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+            String lastRilevationStr = rilevazioniList.get(rilevazioniList.size() - 1).getDate();
+            LocalDate lastRilevationLocalDate = LocalDate.parse(lastRilevationStr, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
 
-            try {
-                Date lastRilevationDate = dateFormat.parse(lastRilevationDateStr);
-                LocalDate lastRilevationLocalDate = lastRilevationDate.toInstant()
-                        .atZone(ZoneId.systemDefault()).toLocalDate();
-
-                if (lastRilevationLocalDate.isBefore(threeDaysAgo)) {
-                    // Questo permette di eseguire l'alert dopo il caricamento del pannello
-                    Platform.runLater(() -> {
-                        Alert alert = new Alert(Alert.AlertType.WARNING);
-                        alert.setTitle("Attenzione");
-                        alert.setHeaderText(null);
-                        alert.setContentText("Il paziente non ha inserito una rilevazione per più di 3 giorni.");
-                        alert.showAndWait();
-                    });
-                }
-            } catch (ParseException e) {
-                e.printStackTrace();
+            if (lastRilevationLocalDate.isBefore(threeDaysAgo)) {
+                // Questo permette di eseguire l'alert dopo il caricamento del pannello
+                Platform.runLater(() -> {
+                    Alert alert = new Alert(Alert.AlertType.WARNING);
+                    alert.setTitle("Attenzione");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Il paziente non ha inserito una rilevazione per più di 3 giorni.");
+                    alert.showAndWait();
+                });
             }
+        }
         // Se la lista è vuota...
         // Viene notificato il medico, che il relativo paziente non ha ancora inserito alcuna rilevazione
-        } else {
+        else {
             // Questo permette di eseguire l'alert dopo il caricamento del pannello
             Platform.runLater(() -> {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -265,7 +286,7 @@ public class ControllerDettagliMedico {
                 alert.showAndWait();
             });
         }
-    }
+    } */
 
     // Metodo di inizializzazione
     @FXML
