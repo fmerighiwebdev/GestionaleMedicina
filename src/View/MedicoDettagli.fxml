@@ -152,12 +152,12 @@
         <AnchorPane layoutX="26.0" layoutY="159.0" minWidth="-Infinity" prefHeight="423.0" prefWidth="377.0">
             <children>
                 <TextField fx:id="faketextfield3" editable="false" prefHeight="423.0" prefWidth="377.0" />
-                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="113.0" layoutY="14.0" prefHeight="28.0" prefWidth="152.0" text="Dati Paziente" textAlignment="JUSTIFY">
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="115.0" layoutY="6.0" prefHeight="28.0" prefWidth="152.0" text="Dati Paziente" textAlignment="JUSTIFY">
                     <font>
                         <Font name="System Bold" size="18.0" />
                     </font>
                 </Label>
-                <VBox layoutX="18.0" layoutY="202.0" prefHeight="200.0" prefWidth="345.0">
+                <VBox layoutX="19.0" layoutY="212.0" prefHeight="200.0" prefWidth="345.0">
                     <children>
                   <TableView fx:id="rilevationsTable" prefHeight="200.0" prefWidth="200.0">
                     <columns>
@@ -168,36 +168,31 @@
                   </TableView>
                     </children>
                 </VBox>
-                <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="71.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@images/clinic_folder.png" />
-                    </image>
-                </ImageView>
-            <TextField fx:id="faketextfield4" editable="false" layoutX="14.0" layoutY="48.0" prefHeight="160.0" prefWidth="354.0" />
-            <Label fx:id="patientName" layoutX="113.0" layoutY="66.0" text="Nome">
+            <TextField fx:id="faketextfield4" editable="false" layoutX="14.0" layoutY="36.0" prefHeight="167.0" prefWidth="354.0" />
+            <Label fx:id="patientName" layoutX="115.0" layoutY="50.0" text="Nome">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="71.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="69.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images/patient_profile_icon.png" />
                </image>
             </ImageView>
-            <Label fx:id="patientSurname" layoutX="164.0" layoutY="66.0" text="Cognome">
+            <Label fx:id="patientSurname" layoutX="115.0" layoutY="66.0" text="Cognome">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <TextField fx:id="faketextfield5" editable="false" layoutX="23.0" layoutY="101.0" prefHeight="95.0" prefWidth="334.0" />
-            <Label fx:id="patientSymptoms" layoutX="103.0" layoutY="113.0" wrapText="true" alignment="CENTER" />
-            <Label fx:id="patientInformations" layoutX="79.0" layoutY="155.0" wrapText="true" alignment="CENTER" />
+            <TextField fx:id="faketextfield5" editable="false" layoutX="23.0" layoutY="89.0" prefHeight="107.0" prefWidth="334.0" />
+            <Label fx:id="patientSymptoms" alignment="CENTER" layoutX="103.0" layoutY="113.0" wrapText="true" />
+            <Label fx:id="patientInformations" alignment="CENTER" layoutX="79.0" layoutY="155.0" wrapText="true" />
             <Label layoutX="35.0" layoutY="113.0" text="Sintomi:">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <Label layoutX="35.0" layoutY="155.0" text="Info:">
+            <Label layoutX="35.0" layoutY="163.0" text="Info:">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
