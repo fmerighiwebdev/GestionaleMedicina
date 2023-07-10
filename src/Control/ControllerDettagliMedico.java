@@ -241,6 +241,17 @@ public class ControllerDettagliMedico {
 
         List<Rilevazioni> rilevazioniList = rilevazioniDAO.getRilevazioneByPazienteID(paziente.getId());
 
+        if (rilevazioniList.isEmpty()) {
+            Platform.runLater(() -> {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Attenzione");
+                alert.setHeaderText(null);
+                alert.setContentText("Il paziente non ha inserito alcuna rilevazione al momento.");
+                alert.showAndWait();
+            });
+            return;
+        }
+
         boolean hasRecentRilevations = false;
 
         for (Rilevazioni rilevazione : rilevazioniList) {
