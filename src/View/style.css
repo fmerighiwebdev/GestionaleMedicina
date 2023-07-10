@@ -87,7 +87,7 @@
     -fx-background-radius: 0;
     -fx-text-fill:white;
 }
-/*Faketextfields*/
+/* Fake text fields */
 .faketextfield1{
     -fx-border-color: transparent;
     -fx-border-radius: 20;
@@ -162,7 +162,7 @@
 }
 
 
-/*Dettagli paziente therapy label*/
+/* Dettagli paziente - Therapy label */
 .medicine-th-label{
     -fx-background-radius: 10;
     -fx-padding: 5;
@@ -184,6 +184,12 @@
     -fx-background-radius: 10;
     -fx-padding: 5;
     -fx-background-color: #edd182;
+}
+
+.symp-info-label {
+    -fx-background-radius: 10;
+    -fx-padding: 5;
+    -fx-background-color: #e0e0e0;
 }
 
 /* Stili valori tabella */

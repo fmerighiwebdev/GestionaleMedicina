@@ -261,44 +261,6 @@ public class ControllerDettagliMedico {
             });
         }
     }
-    /* private void checkLastRilevationDate() {
-        RilevazioniDAO rilevazioniDAO = new RilevazioniDAO();
-        LocalDate today = LocalDate.now();
-
-        LocalDate threeDaysAgo = today.minusDays(3);
-        // Creo una lista contenente TUTTE le rilevazioni inserite dal paziente, in base al suo ID
-        List<Rilevazioni> rilevazioniList = rilevazioniDAO.getRilevazioneByPazienteID(paziente.getId());
-        // Se la lista NON è vuota...
-        // Vengono eseguiti i controlli sulla data e, se necessario, viene notificato il medico
-        if (!rilevazioniList.isEmpty()) {
-
-            String lastRilevationStr = rilevazioniList.get(rilevazioniList.size() - 1).getDate();
-            LocalDate lastRilevationLocalDate = LocalDate.parse(lastRilevationStr, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-
-            if (lastRilevationLocalDate.isBefore(threeDaysAgo)) {
-                // Questo permette di eseguire l'alert dopo il caricamento del pannello
-                Platform.runLater(() -> {
-                    Alert alert = new Alert(Alert.AlertType.WARNING);
-                    alert.setTitle("Attenzione");
-                    alert.setHeaderText(null);
-                    alert.setContentText("Il paziente non ha inserito una rilevazione per più di 3 giorni.");
-                    alert.showAndWait();
-                });
-            }
-        }
-        // Se la lista è vuota...
-        // Viene notificato il medico, che il relativo paziente non ha ancora inserito alcuna rilevazione
-        else {
-            // Questo permette di eseguire l'alert dopo il caricamento del pannello
-            Platform.runLater(() -> {
-                Alert alert = new Alert(Alert.AlertType.WARNING);
-                alert.setTitle("Attenzione");
-                alert.setHeaderText(null);
-                alert.setContentText("Il paziente non ha inserito alcuna rilevazione al momento.");
-                alert.showAndWait();
-            });
-        }
-    } */
 
     // Metodo di inizializzazione
     @FXML
@@ -318,6 +280,8 @@ public class ControllerDettagliMedico {
         quantityTherapyTextF.getStyleClass().add("doctor-details-text-field");
         indTherapyTextF.getStyleClass().add("doctor-details-text-field");
         infoTextA.getStyleClass().add("doctor-details-text-field");
+        patientSymptoms.getStyleClass().add("symp-info-label");
+        patientInformations.getStyleClass().add("symp-info-label");
 
         obsRilevazioniList = FXCollections.observableArrayList();
 

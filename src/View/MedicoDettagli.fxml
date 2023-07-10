@@ -173,7 +173,7 @@
                         <Image url="@images/clinic_folder.png" />
                     </image>
                 </ImageView>
-            <TextField fx:id="faketextfield4" editable="false" layoutX="14.0" layoutY="48.0" prefHeight="146.0" prefWidth="354.0" />
+            <TextField fx:id="faketextfield4" editable="false" layoutX="14.0" layoutY="48.0" prefHeight="160.0" prefWidth="354.0" />
             <Label fx:id="patientName" layoutX="113.0" layoutY="66.0" text="Nome">
                <font>
                   <Font name="System Bold" size="13.0" />
@@ -189,12 +189,12 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <TextField fx:id="faketextfield5" editable="false" layoutX="23.0" layoutY="101.0" prefHeight="82.0" prefWidth="334.0" />
-            <Label fx:id="patientSymptoms" layoutX="103.0" layoutY="113.0" text="Sintomi" wrapText="true" />
-            <Label fx:id="patientInformations" layoutX="79.0" layoutY="155.0" text="Informazioni" wrapText="true" />
+            <TextField fx:id="faketextfield5" editable="false" layoutX="23.0" layoutY="101.0" prefHeight="95.0" prefWidth="334.0" />
+            <Label fx:id="patientSymptoms" layoutX="103.0" layoutY="113.0" wrapText="true" alignment="CENTER" />
+            <Label fx:id="patientInformations" layoutX="79.0" layoutY="155.0" wrapText="true" alignment="CENTER" />
             <Label layoutX="35.0" layoutY="113.0" text="Sintomi:">
                <font>
-                  <Font name="System Bold Italic" size="13.0" />
+                  <Font name="System Bold" size="13.0" />
                </font>
             </Label>
             <Label layoutX="35.0" layoutY="155.0" text="Info:">
