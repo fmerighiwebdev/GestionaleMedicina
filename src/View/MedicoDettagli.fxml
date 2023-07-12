@@ -185,8 +185,8 @@
                </font>
             </Label>
             <TextField fx:id="faketextfield5" editable="false" layoutX="23.0" layoutY="89.0" prefHeight="107.0" prefWidth="334.0" />
-            <Label fx:id="patientSymptoms" alignment="CENTER" layoutX="103.0" layoutY="113.0" wrapText="true" />
-            <Label fx:id="patientInformations" alignment="CENTER" layoutX="79.0" layoutY="155.0" wrapText="true" />
+            <Label fx:id="patientSymptoms" alignment="CENTER" layoutX="103.0" layoutY="113.0" wrapText="true" text="-" />
+            <Label fx:id="patientInformations" alignment="CENTER" layoutX="79.0" layoutY="155.0" wrapText="true" text="-" />
             <Label layoutX="35.0" layoutY="117.0" text="Sintomi:">
                <font>
                   <Font name="System Bold" size="13.0" />

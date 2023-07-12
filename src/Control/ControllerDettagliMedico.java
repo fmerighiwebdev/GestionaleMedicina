@@ -94,10 +94,18 @@ public class ControllerDettagliMedico {
         patientSurname.setText(surname);
 
         String patientSymptomsText = paziente.getSymptoms();
-        patientSymptoms.setText(patientSymptomsText);
+        if (patientSymptomsText == null || patientSymptomsText.isEmpty()) {
+            patientSymptoms.setText("-");
+        } else {
+            patientSymptoms.setText(patientSymptomsText);
+        }
 
         String patientInformationText = paziente.getInfo();
-        patientInformations.setText(patientInformationText);
+        if (patientInformationText == null || patientInformationText.isEmpty()) {
+            patientInformations.setText("-");
+        } else {
+            patientInformations.setText(patientInformationText);
+        }
 
         PazienteDAO pazienteDAO = new PazienteDAO();
         List<Rilevazioni> rilevazioniList = pazienteDAO.getRilevazioneByPazienteID(paziente.getId());
