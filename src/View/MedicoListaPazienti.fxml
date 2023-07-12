@@ -19,17 +19,17 @@
                      <Image url="@images/doctor_profile_icon.png" />
                   </image>
                </ImageView>
-            <Label fx:id="nameLabel" layoutX="109.0" layoutY="45.0" text="Nome">
+            <Label fx:id="nameLabel" layoutX="121.0" layoutY="35.0" text="Nome">
                <font>
                   <Font name="System Italic" size="16.0" />
                </font>
             </Label>
-            <Label layoutX="109.0" layoutY="16.0" text="Profilo">
+            <Label layoutX="109.0" layoutY="14.0" text="Profilo">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <Label fx:id="surnameLabel" layoutX="169.0" layoutY="45.0" text="Cognome">
+            <Label fx:id="surnameLabel" layoutX="121.0" layoutY="51.0" text="Cognome">
                <font>
                   <Font name="System Italic" size="16.0" />
                </font>

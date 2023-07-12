@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Fix label">
-      <change beforePath="$PROJECT_DIR$/src/Control/ControllerDettagliMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerDettagliMedico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionaleMedicinaDB" beforeDir="false" afterPath="$PROJECT_DIR$/GestionaleMedicinaDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/MedicoDettagli.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/MedicoDettagli.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/MedicoListaPazienti.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/MedicoListaPazienti.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/images/clinic_folder.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/images/paper_16.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
