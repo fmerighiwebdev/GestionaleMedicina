@@ -7,13 +7,6 @@ import java.sql.SQLException;
 
 public class TerapiaDAO {
 
-    // Factory
-    private TerapiaFactory terapiaFactory;
-
-    public TerapiaDAO() {
-        this.terapiaFactory = new DefaultTerapiaFactory();
-    }
-
     public void insertTerapia(Terapia terapia) {
         Connection conn = null;
         PreparedStatement stat = null;

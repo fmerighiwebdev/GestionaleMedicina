@@ -12,12 +12,10 @@ import java.util.List;
 public class MedicoDAO {
 
     // Factory
-    private MedicoFactory medicoFactory;
-    private PazienteFactory pazienteFactory;
+    private final Factory factory;
 
     public MedicoDAO() {
-        this.medicoFactory = new DefaultMedicoFactory();
-        this.pazienteFactory = new DefaultPazienteFactory();
+        this.factory = new DefaultFactory();
     }
 
     public Medico getDottoreByUsername(String username) {
@@ -40,7 +38,7 @@ public class MedicoDAO {
                 String name = rs.getString("Name");
                 String surname = rs.getString("Surname");
                 String email = rs.getString("Email");
-                medico = medicoFactory.createMedico(id, username, password, name, surname, email);
+                medico = factory.createMedico(id, username, password, name, surname, email);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -74,7 +72,7 @@ public class MedicoDAO {
                 int quantity = rs.getInt("Quantity");
                 String info = rs.getString("Informations");
                 int medicoAss = rs.getInt("MedicoAss");
-                Paziente paziente = pazienteFactory.createPaziente(id, username, password, name, surname, symptoms, medicine, ass, quantity, info, medicoAss);
+                Paziente paziente = factory.createPaziente(id, username, password, name, surname, symptoms, medicine, ass, quantity, info, medicoAss);
                 pazienti.add(paziente);
             }
 

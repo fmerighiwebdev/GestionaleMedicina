@@ -10,7 +10,6 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 import java.util.List;
@@ -35,7 +34,7 @@ public class ControllerListaPazientiMedico {
 
     private String username;
 
-    MedicoFactory medicoFactory = new DefaultMedicoFactory();
+    Factory factory = new DefaultFactory();
 
     // Set username
     public void setUsername(String username) {

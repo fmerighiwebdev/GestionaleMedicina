@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Add Logger and log.txt">
+    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Bug fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,14 +118,7 @@
       <workItem from="1688892095452" duration="3518000" />
       <workItem from="1688982826259" duration="338000" />
       <workItem from="1689203544056" duration="20000" />
-      <workItem from="1689203583640" duration="15650000" />
-    </task>
-    <task id="LOCAL-00015" summary="Aggiunto controllo su alcuni input in dettagli paziente - aggiunte entità alla tabella Paziente">
-      <created>1686476657712</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1686476657712</updated>
+      <workItem from="1689203583640" duration="17943000" />
     </task>
     <task id="LOCAL-00016" summary="Add comments">
       <created>1686477195115</created>
@@ -463,7 +456,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689245456586</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Bug fix">
+      <created>1689260865866</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1689260865866</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,12 +500,12 @@
     <MESSAGE value="Alcune modifiche aggiuntive" />
     <MESSAGE value="Bug fix inserimenti/aggiornamenti Pazienti e Rilevazioni e fix voci TableView" />
     <MESSAGE value="Bug fix terapia Paziente" />
-    <MESSAGE value="Bug fix" />
     <MESSAGE value="Aggiunte voci al database" />
     <MESSAGE value="Altri inserimenti per test finali" />
     <MESSAGE value="Fix label" />
     <MESSAGE value="Add Factory pattern" />
     <MESSAGE value="Add Logger and log.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Logger and log.txt" />
+    <MESSAGE value="Bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fix" />
   </component>
 </project>

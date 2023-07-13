@@ -12,16 +12,10 @@ import java.util.List;
 public class PazienteDAO {
 
     // Factory
-    private PazienteFactory pazienteFactory;
-    private MedicoFactory medicoFactory;
-    private TerapiaFactory terapiaFactory;
-    private RilevazioniFactory rilevazioniFactory;
+    private final Factory factory;
 
     public PazienteDAO() {
-        this.pazienteFactory = new DefaultPazienteFactory();
-        this.medicoFactory = new DefaultMedicoFactory();
-        this.terapiaFactory = new DefaultTerapiaFactory();
-        this.rilevazioniFactory = new DefaultRilevazioniFactory();
+        this.factory = new DefaultFactory();
     }
 
     // Prendo tutti i dati dal paziente con username = username
@@ -50,7 +44,7 @@ public class PazienteDAO {
                 int quantity = rs.getInt("Quantity");
                 String info = rs.getString("Informations");
                 int medicoAss = rs.getInt("MedicoAss");
-                paziente = pazienteFactory.createPaziente(id, username, password, name, surname, symptoms, medicine, ass, quantity, info, medicoAss);
+                paziente = factory.createPaziente(id, username, password, name, surname, symptoms, medicine, ass, quantity, info, medicoAss);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -137,7 +131,7 @@ public class PazienteDAO {
                 int assTh = rs.getInt("AssumptionsTherapy");
                 int quantTh = rs.getInt("QuantityTherapy");
                 String indTh = rs.getString("IndicationsTherapy");
-                terapia = terapiaFactory.createTerapia(medTh, assTh, quantTh, indTh, pazienteID);
+                terapia = factory.createTerapia(medTh, assTh, quantTh, indTh, pazienteID);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -166,7 +160,7 @@ public class PazienteDAO {
                 String username = rs.getString("Username");
                 String password = rs.getString("Password");
                 String email = rs.getString("Email");
-                medico = medicoFactory.createMedico(id, username, password, name, surname, email);
+                medico = factory.createMedico(id, username, password, name, surname, email);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -196,7 +190,7 @@ public class PazienteDAO {
                 int year = rs.getInt("Year");
                 int hours = rs.getInt("Hours");
                 int idPaziente = rs.getInt("IDPaziente");
-                Rilevazioni rilevazioni = rilevazioniFactory.createRilevazione(sbp, dbp, day, month, year, hours, idPaziente);
+                Rilevazioni rilevazioni = factory.createRilevazione(sbp, dbp, day, month, year, hours, idPaziente);
                 rilevazioniList.add(rilevazioni);
             }
         } catch (SQLException e) {
