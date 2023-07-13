@@ -76,6 +76,9 @@ public class ControllerDettagliPaziente {
     private String username;
     private LocalDate date;
 
+    // Singleton e logger
+    private Logger logger = Logger.getInstance();
+
     // Set username
     public void setUsername(String username) {
         this.username = username;
@@ -283,9 +286,11 @@ public class ControllerDettagliPaziente {
         if (rilevazioniEsistenti) {
             // Aggiorna la tabella se era già presente una voce in data odierna
             rilevazioniDAO.updateRilevazione(rilevazioni);
+            logger.logPazienteInserimentoRilevazione(fullName.getText());
         } else {
             // Inserisci una rilevazione alla tabella se non presente in data odierna
             rilevazioniDAO.insertRilevazione(rilevazioni);
+            logger.logPazienteInserimentoRilevazione(fullName.getText());
         }
 
         pazienteDAO.insertPaziente(paziente);

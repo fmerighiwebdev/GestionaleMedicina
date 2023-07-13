@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Add Factory pattern" />
+    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Add Factory pattern">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionaleMedicinaDB" beforeDir="false" afterPath="$PROJECT_DIR$/GestionaleMedicinaDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/ControllerDettagliMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerDettagliMedico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/ControllerDettagliPaziente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerDettagliPaziente.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,14 +121,7 @@
       <workItem from="1688892095452" duration="3518000" />
       <workItem from="1688982826259" duration="338000" />
       <workItem from="1689203544056" duration="20000" />
-      <workItem from="1689203583640" duration="9154000" />
-    </task>
-    <task id="LOCAL-00013" summary="Aggiunta tabella Misurazioni e voci in tabella Paziente">
-      <created>1686324208204</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1686324208204</updated>
+      <workItem from="1689203583640" duration="12626000" />
     </task>
     <task id="LOCAL-00014" summary="Aggiunta voce in tabella Paziente per medico associato">
       <created>1686324462966</created>
@@ -461,7 +459,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689241469561</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Add Factory pattern">
+      <created>1689241514069</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1689241514069</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

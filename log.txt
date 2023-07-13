@@ -1,0 +1,2 @@
+[2023-07-13 12:36:51] Inserita TERAPIA per paziente 'Dino Tomasini' da parte del medico 'Davide Ricci'
+[2023-07-13 12:47:23] Inserita RILEVAZIONE da parte di 'Bruno Tedesco'

@@ -81,6 +81,9 @@ public class ControllerDettagliMedico {
     private Paziente paziente;
     private LocalDate date;
 
+    // Singleton per logger
+    private Logger logger = Logger.getInstance();
+
     // Set username
     public void setUsername(String username) {
         this.username = username;
@@ -223,9 +226,13 @@ public class ControllerDettagliMedico {
         if (terapiaEsistente) {
             // Aggiorna la tabella se era già presente una voce per il paziente
             terapiaDAO.updateTerapia(terapia);
+            String patientFullName = paziente.getName() + " " + paziente.getSurname();
+            logger.logMedicoInserimentoTerapia(patientFullName, doctorFullName.getText());
         } else {
             // Inserisce una voce alla tabella se non era presente per il paziente
             terapiaDAO.insertTerapia(terapia);
+            String patientFullName = paziente.getName() + " " + paziente.getSurname();
+            logger.logMedicoInserimentoTerapia(patientFullName, doctorFullName.getText());
         }
 
         // Creo il Data Access Object PazienteDAO
