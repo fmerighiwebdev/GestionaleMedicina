@@ -287,10 +287,12 @@ public class ControllerDettagliPaziente {
             // Aggiorna la tabella se era già presente una voce in data odierna
             rilevazioniDAO.updateRilevazione(rilevazioni);
             logger.logPazienteInserimentoRilevazione(fullName.getText());
+            logger.close();
         } else {
             // Inserisci una rilevazione alla tabella se non presente in data odierna
             rilevazioniDAO.insertRilevazione(rilevazioni);
             logger.logPazienteInserimentoRilevazione(fullName.getText());
+            logger.close();
         }
 
         pazienteDAO.insertPaziente(paziente);

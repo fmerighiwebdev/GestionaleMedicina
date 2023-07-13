@@ -228,11 +228,13 @@ public class ControllerDettagliMedico {
             terapiaDAO.updateTerapia(terapia);
             String patientFullName = paziente.getName() + " " + paziente.getSurname();
             logger.logMedicoInserimentoTerapia(patientFullName, doctorFullName.getText());
+            logger.close();
         } else {
             // Inserisce una voce alla tabella se non era presente per il paziente
             terapiaDAO.insertTerapia(terapia);
             String patientFullName = paziente.getName() + " " + paziente.getSurname();
             logger.logMedicoInserimentoTerapia(patientFullName, doctorFullName.getText());
+            logger.close();
         }
 
         // Creo il Data Access Object PazienteDAO

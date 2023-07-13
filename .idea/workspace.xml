@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Add Factory pattern">
+    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Add Logger and log.txt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestionaleMedicinaDB" beforeDir="false" afterPath="$PROJECT_DIR$/GestionaleMedicinaDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/ControllerDettagliMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerDettagliMedico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/ControllerDettagliPaziente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerDettagliPaziente.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,14 +118,7 @@
       <workItem from="1688892095452" duration="3518000" />
       <workItem from="1688982826259" duration="338000" />
       <workItem from="1689203544056" duration="20000" />
-      <workItem from="1689203583640" duration="12626000" />
-    </task>
-    <task id="LOCAL-00014" summary="Aggiunta voce in tabella Paziente per medico associato">
-      <created>1686324462966</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1686324462966</updated>
+      <workItem from="1689203583640" duration="15650000" />
     </task>
     <task id="LOCAL-00015" summary="Aggiunto controllo su alcuni input in dettagli paziente - aggiunte entità alla tabella Paziente">
       <created>1686476657712</created>
@@ -466,7 +456,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689241514069</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Add Logger and log.txt">
+      <created>1689245456586</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1689245456586</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -484,7 +481,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Bug fix - Tab in login" />
     <MESSAGE value="Aggiunta tabella Terapia" />
     <MESSAGE value="Aggiunta valori in input a tabella Terapia e relativi controlli" />
     <MESSAGE value="Modifica ListaPazienti, non prende più i pazienti associati al medico, ma tutti" />
@@ -509,6 +505,7 @@
     <MESSAGE value="Altri inserimenti per test finali" />
     <MESSAGE value="Fix label" />
     <MESSAGE value="Add Factory pattern" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Factory pattern" />
+    <MESSAGE value="Add Logger and log.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Logger and log.txt" />
   </component>
 </project>
