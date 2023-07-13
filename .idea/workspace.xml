@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Fix label">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestionaleMedicinaDB" beforeDir="false" afterPath="$PROJECT_DIR$/GestionaleMedicinaDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/ControllerDettagliMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerDettagliMedico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/ControllerDettagliPaziente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerDettagliPaziente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/ControllerListaPazientiMedico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/ControllerListaPazientiMedico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/MedicoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/MedicoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/PazienteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/PazienteDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/RilevazioniDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/RilevazioniDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/TerapiaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/TerapiaDAO.java" afterDir="false" />
-    </list>
+    <list default="true" id="6ed1ea84-1e27-4c2f-a73e-748ac0c6634b" name="Changes" comment="Add Factory pattern" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -127,14 +116,7 @@
       <workItem from="1688892095452" duration="3518000" />
       <workItem from="1688982826259" duration="338000" />
       <workItem from="1689203544056" duration="20000" />
-      <workItem from="1689203583640" duration="9080000" />
-    </task>
-    <task id="LOCAL-00012" summary="Creata tabella Dottore e aggiornate le labels nome e cognome">
-      <created>1686321870556</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1686321870556</updated>
+      <workItem from="1689203583640" duration="9154000" />
     </task>
     <task id="LOCAL-00013" summary="Aggiunta tabella Misurazioni e voci in tabella Paziente">
       <created>1686324208204</created>
@@ -472,7 +454,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688982857333</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="Add Factory pattern">
+      <created>1689241469560</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1689241469561</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -490,7 +479,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Possibilità di premere INVIO al login per accedere" />
     <MESSAGE value="Bug fix - Tab in login" />
     <MESSAGE value="Aggiunta tabella Terapia" />
     <MESSAGE value="Aggiunta valori in input a tabella Terapia e relativi controlli" />
@@ -515,6 +503,7 @@
     <MESSAGE value="Aggiunte voci al database" />
     <MESSAGE value="Altri inserimenti per test finali" />
     <MESSAGE value="Fix label" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix label" />
+    <MESSAGE value="Add Factory pattern" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Factory pattern" />
   </component>
 </project>
