@@ -9,6 +9,12 @@ import java.util.List;
 
 public class RilevazioniDAO {
 
+    private RilevazioniFactory rilevazioniFactory;
+
+    public RilevazioniDAO() {
+        this.rilevazioniFactory = new DefaultRilevazioniFactory();
+    }
+
     public void insertRilevazione(Rilevazioni rilevazioni) {
         Connection conn = null;
         PreparedStatement stat = null;
@@ -110,7 +116,7 @@ public class RilevazioniDAO {
                 int year = rs.getInt("Year");
                 int hours = rs.getInt("Hours");
                 int idPaziente = rs.getInt("IDPaziente");
-                Rilevazioni rilevazioni = new Rilevazioni(sbp, dbp, day, month, year, hours, idPaziente);
+                Rilevazioni rilevazioni = rilevazioniFactory.createRilevazione(sbp, dbp, day, month, year, hours, idPaziente);
                 rilevazioniList.add(rilevazioni);
             }
         } catch (SQLException e) {

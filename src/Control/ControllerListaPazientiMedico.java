@@ -1,8 +1,6 @@
 package Control;
 
-import Model.Medico;
-import Model.MedicoDAO;
-import Model.Paziente;
+import Model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -36,6 +34,8 @@ public class ControllerListaPazientiMedico {
     private Label surnameLabel;
 
     private String username;
+
+    MedicoFactory medicoFactory = new DefaultMedicoFactory();
 
     // Set username
     public void setUsername(String username) {

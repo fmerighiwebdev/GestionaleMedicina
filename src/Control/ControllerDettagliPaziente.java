@@ -11,8 +11,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ControllerDettagliPaziente {
 
@@ -293,6 +296,7 @@ public class ControllerDettagliPaziente {
         sendSuccessfull.setHeaderText(null);
         sendSuccessfull.setContentText("I dati sono stati inviati correttamente al database");
         sendSuccessfull.showAndWait();
+
     }
 
     private void checkTerapia() {

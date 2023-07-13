@@ -19,6 +19,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -238,6 +239,7 @@ public class ControllerDettagliMedico {
         sendSuccessfull.setHeaderText(null);
         sendSuccessfull.setContentText("I dati sono stati inviati correttamente al database");
         sendSuccessfull.showAndWait();
+
     }
 
     // Metodo che controlla se l'utente non inserisce una rilevazione da tre giorni o più
@@ -360,6 +362,7 @@ public class ControllerDettagliMedico {
 
         todayDate.setText(formattedDate);
     }
+
 }
 
 

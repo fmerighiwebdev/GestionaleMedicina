@@ -1,3 +1,6 @@
+import Control.ControllerDettagliMedico;
+import Control.ControllerDettagliPaziente;
+import Model.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
