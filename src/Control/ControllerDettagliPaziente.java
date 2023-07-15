@@ -1,6 +1,5 @@
 package Control;
 
-
 import Model.*;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
